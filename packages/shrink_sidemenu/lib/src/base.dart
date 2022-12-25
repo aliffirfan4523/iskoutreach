@@ -156,7 +156,7 @@ abstract class SideMenuState extends State<SideMenu> {
   Widget _getCloseButton(double statusBarHeight) {
     return widget.closeIcon != null
         ? Positioned(
-            top: 20,
+            top: 60,
             left: 20,
             right: widget.inverse ? 0 : null,
             child: IconButton(

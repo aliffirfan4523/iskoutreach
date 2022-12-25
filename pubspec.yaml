@@ -47,6 +47,8 @@ dependencies:
   get_storage: ^2.0.3
   shrink_sidemenu: 
     path: "./packages/shrink_sidemenu"
+  toggle_switch: ^2.0.1
+  flutter_switch: ^0.3.2
 
 dev_dependencies:
   flutter_test:

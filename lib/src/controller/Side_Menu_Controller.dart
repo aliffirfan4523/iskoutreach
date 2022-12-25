@@ -3,10 +3,12 @@ import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 
 GlobalKey<SideMenuState> sideMenuKey = GlobalKey<SideMenuState>();
 GlobalKey<SideMenuState> _endSideMenuKey = GlobalKey<SideMenuState>();
-bool isOpened = false;
+
+final ToggleMenu toggleMenu = ToggleMenu();
 
 
 class ToggleMenu {
+  bool isOpened = false;
   ToggleMenu([bool end = false]) {
     if (end) {
       final _state = _endSideMenuKey.currentState!;

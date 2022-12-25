@@ -34,49 +34,50 @@ class _HomePageState extends State<HomePage> {
       				iconSize: 30,
       				onPressed: () {
       					ToggleMenu();
-      					print(isOpened);
+      					print(toggleMenu.isOpened);
       					},
       					),
       			],
       			),
       		),
 				SizedBox(height: 10),
-      	Padding(
-      		padding: const EdgeInsets.only(left: 50,top: 20, bottom: 20),
-      		child: FittedBox(
-      			fit: BoxFit.fitWidth,
-      			child: Column(
-      				crossAxisAlignment: CrossAxisAlignment.start,
-      				children: [
-	    				AnimatedTextKit(
-	    					isRepeatingAnimation: true,
-	    					pause: Duration(seconds: 3),
-	    					repeatForever: true,
-	    					animatedTexts: [
-		    					TypewriterAnimatedText('Selamat Datang Ke',
-		    						textAlign: TextAlign.left,
-		    						speed: Duration(milliseconds: 50),
-		    						textStyle: GoogleFonts.montserrat(
-		    							fontSize: 25,
-		    							),
-		    						),
-		    					TypewriterAnimatedText('ISK Outreach',
-		    						textAlign: TextAlign.left,
-		    						speed: Duration(milliseconds: 50),
-		    						textStyle: GoogleFonts.montserrat(
-		    							fontSize: 25,
-		    							fontWeight: FontWeight.w600,
-		    							),
-		    						),
-	    					],
-	    					onTap: () {
-	    						print("Tap Event");
-	    						},
-      						),
+				Container(
+					margin: EdgeInsets.only(top: 20, bottom: 20),
+					child: Padding(
+						padding: const EdgeInsets.only(left: 20,top: 20, bottom: 20),
+						child: Column(
+							crossAxisAlignment: CrossAxisAlignment.start,
+							children: [
+							AnimatedTextKit(
+								isRepeatingAnimation: true,
+								pause: Duration(seconds: 3),
+								repeatForever: true,
+								animatedTexts: [
+								TypewriterAnimatedText('Selamat Datang Ke ISK Outreach',
+									textAlign: TextAlign.center,
+									speed: Duration(milliseconds: 50),
+									textStyle: GoogleFonts.montserrat(
+										fontSize: 22,
+										fontWeight: FontWeight.w600,
+										),
+									),
+								TypewriterAnimatedText('ISK Outreach',
+									textAlign: TextAlign.left,
+									speed: Duration(milliseconds: 50),
+									textStyle: GoogleFonts.montserrat(
+										fontSize: 25,
+										fontWeight: FontWeight.w600,
+										),
+									),
+								],
+								onTap: () {
+									print("Tap Event");
+									},
+									),
 							],
+							),
 						),
-      			),
-      		),
+					),
       	SizedBox(height: 200),
       	Container(
       		width: double.infinity,

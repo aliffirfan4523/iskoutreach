@@ -35,7 +35,7 @@ class _SettingPageState extends State<SettingPage> {
 						iconSize: 30,
 						onPressed: () {
 							ToggleMenu();
-							print(isOpened);
+							print(toggleMenu.isOpened);
 							},
 						),
 					],
@@ -62,11 +62,6 @@ class _SettingPageState extends State<SettingPage> {
 										_isLightTheme.value ? ThemeMode.light : ThemeMode.dark,
 										);
 									themeModeController.saveThemeStatus();
-									setState(() {
-										isColorChanged = _isLightTheme.value;
-										isDark = val;
-										print(isDark);				  
-										});
 									},
 									),
 							false.obs,
