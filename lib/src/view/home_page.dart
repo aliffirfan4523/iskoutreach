@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iskoutreach/src/controller/Side_Menu_Controller.dart';
 
 import '../../main.dart';
+import '../controller/url_controller.dart';
 
 class HomePage extends StatefulWidget {
   final bool isOpened;
@@ -29,15 +30,28 @@ class _HomePageState extends State<HomePage> {
       		child: Row(
       			mainAxisAlignment: MainAxisAlignment.spaceBetween,
       			children: [
-      			IconButton(
-      				icon: Icon(Icons.menu_rounded),
-      				iconSize: 30,
-      				onPressed: () {
-      					ToggleMenu();
-      					print(toggleMenu.isOpened);
-      					},
-      					),
-      			],
+	      			IconButton(
+	      				icon: Icon(Icons.menu_rounded),
+	      				iconSize: 30,
+	      				onPressed: () {
+	      					ToggleMenu();
+	      					print(toggleMenu.isOpened);
+	      				},
+	      			),
+	      			Container(
+	      				decoration: BoxDecoration(
+	      					color: Color.fromARGB(255, 123, 0, 245),
+	      					borderRadius: BorderRadius.circular(10.0),
+	      					),
+	      				child: TextButton(
+	      					onPressed: () => launchURL(),
+	      					child: Text('Daftar Sekarang',
+	      						style: TextStyle(
+	      							fontSize: 13.0)
+	      						),
+	      					),
+	      				),
+      				],
       			),
       		),
 				SizedBox(height: 10),

@@ -49,6 +49,8 @@ dependencies:
     path: "./packages/shrink_sidemenu"
   toggle_switch: ^2.0.1
   flutter_switch: ^0.3.2
+  webview_flutter: ^4.0.1
+  url_launcher: ^6.1.7
 
 dev_dependencies:
   flutter_test:

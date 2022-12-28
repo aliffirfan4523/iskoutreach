@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iskoutreach/src/view/homePage_background.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../controller/Side_Menu_Controller.dart';
 import '../../controller/theme_mode_controller.dart';
@@ -14,6 +15,8 @@ class SideMenuPages extends StatefulWidget {
   @override
   State<SideMenuPages> createState() => _SideMenuPagesState();
 }
+
+//https://spskt4.moe.gov.my/spat4_mohon/index.cfm
 
 class _SideMenuPagesState extends State<SideMenuPages> {
 
@@ -30,18 +33,6 @@ class _SideMenuPagesState extends State<SideMenuPages> {
       currentBackground(),
       GestureDetector(
         onTap: () => ToggleMenu(),
-        // onHorizontalDragUpdate: (details) {  
-       //    // Note: Sensitivity is integer used when you don't want to mess up vertical drag
-       //    int sensitivity = 0;
-       //    if (details.delta.dx > sensitivity) {
-       //        // Right Swipe
-
-       //    } else if(details.delta.dx < -sensitivity){
-       //        //Left Swipe
-       //      toggleMenu();
-
-       //    }
-        // },
         child: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(vertical: 50.0),
@@ -55,7 +46,7 @@ class _SideMenuPagesState extends State<SideMenuPages> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           const CircleAvatar(
                             radius: 22.0,
