@@ -35,7 +35,6 @@ class _SettingPageState extends State<SettingPage> {
 						iconSize: 30,
 						onPressed: () {
 							ToggleMenu();
-							print(toggleMenu.isOpened);
 							},
 						),
 					],
@@ -80,6 +79,6 @@ class _SettingPageState extends State<SettingPage> {
 				title: Text("Theme Color"),
 				),
 			],
-			);
+		);
 	}
 }

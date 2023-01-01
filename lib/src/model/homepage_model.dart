@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../view/home_page.dart';
+import '../view/name_card/name_card.dart';
 import '../view/setting_page.dart';
 
 
@@ -12,16 +13,10 @@ final List<Widget> current_pages = <Widget>[
     	color: Colors.white,
     	child: const Icon(Icons.favorite_rounded)
     ),
+    NameCard(),
+    NameCard(),
     const SettingPage(),  
-  ];
+];
 
-  
-class CurrentShowPages extends StatelessWidget {
 
-  int currentPages = 0;
 
-  @override
-  Widget build(BuildContext context) {
-    return current_pages[currentPages];
-  }
-}

@@ -1,12 +1,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iskoutreach/src/provider/homepage_provider.dart';
 import 'package:iskoutreach/src/view/homePage_background.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../main.dart';
 import '../../controller/Side_Menu_Controller.dart';
 import '../../controller/theme_mode_controller.dart';
+import '../../controller/url_controller.dart';
 import '../../model/homepage_model.dart';
+import '../home_page.dart';
+import '../name_card/name_card.dart';
 
 class SideMenuPages extends StatefulWidget {
   SideMenuPages({super.key});
@@ -21,11 +27,12 @@ class SideMenuPages extends StatefulWidget {
 class _SideMenuPagesState extends State<SideMenuPages> {
 
   final _isLightTheme = themeModeController.isLightTheme;
-  CurrentShowPages currentShowPages = CurrentShowPages();
+
 
   @override
   Widget build(BuildContext context) {
     bool changeThemeMode = true;
+    final center = MediaQuery.of(context).size.height / 2;
     dynamic thememodeIcon =_isLightTheme.value? Icons.light_mode : Icons.dark_mode;
     return Stack(
       fit: StackFit.loose,
@@ -35,7 +42,7 @@ class _SideMenuPagesState extends State<SideMenuPages> {
         onTap: () => ToggleMenu(),
         child: SafeArea(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(vertical: 50.0),
+            padding: EdgeInsets.symmetric(vertical: center/3),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,11 +74,10 @@ class _SideMenuPagesState extends State<SideMenuPages> {
                 ),
                 ListTile(
                   onTap: () {
-                  setState(() {
-                    currentShowPages.currentPages = 0;
-                    ToggleMenu();
-                    print(currentShowPages.currentPages);
-                  });
+                    setState(() {
+                      Provider.of<HomePageNotifier>(context, listen: false).updateCurrentPage(0);
+                      ToggleMenu();         
+                    });
                   },
                   leading: const Icon(Icons.home, size: 20.0, color: Colors.white),
                   title: const Text("Home"),
@@ -80,12 +86,8 @@ class _SideMenuPagesState extends State<SideMenuPages> {
                 ),
                 ListTile(
                   onTap: () {
-                    setState(() {
-                    currentShowPages.currentPages = 1;
+                    Provider.of<HomePageNotifier>(context, listen: false).updateCurrentPage(4);
                     ToggleMenu();
-                    print(currentShowPages.currentPages);
-
-                  });
                   },
                   leading: const Icon(Icons.verified_user,
                       size: 20.0, color: Colors.white),
@@ -106,10 +108,13 @@ class _SideMenuPagesState extends State<SideMenuPages> {
                   // padding: EdgeInsets.zero,
                 ),
                 ListTile(
-                  onTap: () {},
-                  leading: const Icon(Icons.shopping_cart,
+                  onTap: () {
+                    Provider.of<HomePageNotifier>(context, listen: false).updateCurrentPage(3);
+                    ToggleMenu();
+                  },
+                  leading: const Icon(Icons.list,
                       size: 20.0, color: Colors.white),
-                  title: const Text("Cart"),
+                  title: const Text("Name List"),
                   textColor: Colors.white,
                   dense: true,
 
@@ -142,6 +147,11 @@ class _SideMenuPagesState extends State<SideMenuPages> {
 
            //        // padding: EdgeInsets.zero,
            //      ),
+                ListTile(
+                  leading: const Icon(Icons.app_registration_rounded, color: Colors.white),
+                  title: const Text("Daftar Sekarang", selectionColor: Colors.white,),
+                  onTap: () => launchURL(),
+                ),
                 ListTile(
                   onTap: () {
                     if(_isLightTheme.value==true){
