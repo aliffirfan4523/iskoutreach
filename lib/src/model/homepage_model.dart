@@ -8,7 +8,7 @@ import '../view/setting_page.dart';
 
 
 final List<Widget> current_pages = <Widget>[
-    const HomePage(isOpened: false),
+    HomePage(),
     Container(
     	color: Colors.white,
     	child: const Icon(Icons.favorite_rounded)

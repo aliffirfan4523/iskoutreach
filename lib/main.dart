@@ -1,26 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 import 'package:get/get.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
 import 'src/model/homepage_model.dart';
 import 'src/provider/homepage_provider.dart';
-import 'src/view/sideMenu/side_menu.dart';
+import 'src/view/CustomError.dart';
 
 
 void main() async {
   runApp(
-  	GetMaterialApp(
-  		home:  MainPage(),
-  		theme: Themes.lightTheme,
-      darkTheme: Themes.datkTheme,
-      themeMode: ThemeController.theme,
-  	)
+  	IskApp()
   );
 }
 
-GlobalKey<SideMenuState> sideMenuKey = GlobalKey<SideMenuState>();
+class IskApp extends StatelessWidget {
+  const IskApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+    	home:  MainPage(),
+    	theme: Themes.lightTheme,
+      darkTheme: Themes.datkTheme,
+      themeMode: ThemeController.theme,
+    );
+  }
+}
 
 
 
@@ -46,17 +54,36 @@ class _MainPageState extends State<MainPage> {
     return ChangeNotifierProvider(
     	create: (_) => HomePageNotifier(currentPage: 0),
     	builder: (context, child) {
-    		return SideMenu(
+    		return Scaffold(
+    		  body: SafeArea(
+            child: SingleChildScrollView(
+              child: current_pages[Provider.of<HomePageNotifier>(context).currentPage],
+            ),
+          ),
+    		);    
+        /*
+        return SideMenu(
           key: sideMenuKey,
           menu: SideMenuPages(),
           type: SideMenuType.slideNRotate,
           child: SafeArea(
               child: current_pages[Provider.of<HomePageNotifier>(context).currentPage],
             ),
-      	);    	  
+        )
+        */	  
     	},
 		);
   }
+  Widget bottomNavigationBar(int index)=>Container(
+    height: 50,
+    width: 60,
+    child: Column(
+      children: [
+        Icon(Icons.home, size: 30),
+        Text("s",),
+      ],
+    ),
+  );
 }
 
 

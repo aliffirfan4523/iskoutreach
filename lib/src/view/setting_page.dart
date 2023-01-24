@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../controller/Side_Menu_Controller.dart';
 import '../controller/theme_mode_controller.dart';
 
 class SettingPage extends StatefulWidget {
@@ -34,7 +33,6 @@ class _SettingPageState extends State<SettingPage> {
 						icon: const Icon(Icons.menu_rounded),
 						iconSize: 30,
 						onPressed: () {
-							ToggleMenu();
 							},
 						),
 					],

@@ -2,4 +2,4 @@ TODO
 
 -add splash screen
 -add translation for english and malay
--fix page not changing in mainpage
+-add horizontal scrollable bottom navigation bar on homepage
