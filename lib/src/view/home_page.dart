@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 
 import '../controller/theme_controller.dart';
 import '../controller/theme_mode_controller.dart';
@@ -95,7 +96,10 @@ class _HomePageState extends State<HomePage> {
 							  		      	  		}, icon: Icon(thememodeIcon, color: Colors.white),
 							  		      	  	),
 							  		      	  	TextButton(
-							  		      	  		onPressed: () => launchURL(), 
+							  		      	  		onPressed: () {
+							  		      	  			print('test');
+							  		      	  		  launchURL();
+							  		      	  		}, 
 							  		      	  		child: const Text("Daftar Sekarang"),
 							  		      	  		style: TextButton.styleFrom(
 							  		      	  			backgroundColor: ThemeController.changeThemeMode? Colors.white: Colors.black,
@@ -245,8 +249,8 @@ class _MenuButtonState extends State<MenuButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-    	width: 300,
     	margin: const EdgeInsets.only(left: 10, right: 10),
+    	constraints: BoxConstraints(minWidth: 100, maxWidth: 200),
     	decoration: BoxDecoration(
     		boxShadow: [
     		 	BoxShadow(
@@ -289,13 +293,6 @@ class _MenuButtonState extends State<MenuButton> {
 	    				currentPages: 3,
 	    				location: NameCard(),
 	    				),
-	    			IconTextButton(
-	    				context: context,
-	    				icon: Icons.collections_bookmark_rounded, 
-	    				text: "Pengiktirafan",
-	    				currentPages: 3,
-	    				location: NameCard(),
-	    				),
 	    			],
 	    		),
 	    		Row(
@@ -303,22 +300,15 @@ class _MenuButtonState extends State<MenuButton> {
 	    			children: [
 	    			IconTextButton(
 	    				context: context,
-	    				icon: Icons.home, 
-	    				text: "Hgome",
+	    				icon: Icons.person_rounded,
+	    				text: "Senarai Pensyarah",
 	    				currentPages: 3,
 	    				location: NameCard(),
 	    				),
 	    			IconTextButton(
 	    				context: context,
-	    				icon: Icons.home, 
-	    				text: "Hgome",
-	    				currentPages: 3,
-	    				location: NameCard(),
-	    				),
-	    			IconTextButton(
-	    				context: context,
-	    				icon: Icons.home, 
-	    				text: "Hgome",
+	    				icon: FontAwesome5.tshirt, 
+	    				text: "Etika Pemakaian",
 	    				currentPages: 3,
 	    				location: NameCard(),
 	    				),
@@ -357,7 +347,7 @@ Widget IconTextButton({
 		  child: Column(
 		  	children: [
 		  		Icon(icon, size: 20),
-		  		Text(text),
+		  		Text(text, style: const TextStyle(fontSize: 12, )),
 		  	],
 		  ),
 		),
