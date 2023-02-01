@@ -10,6 +10,7 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import '../controller/theme_controller.dart';
 import '../controller/theme_mode_controller.dart';
 import '../controller/url_controller.dart';
+import '../model/text_model.dart';
 import '../provider/homepage_provider.dart';
 import 'name_card/example_name_card.dart';
 import 'name_card/name_card.dart';
@@ -31,8 +32,8 @@ class _HomePageState extends State<HomePage> {
 
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             height: 400,
@@ -65,69 +66,54 @@ class _HomePageState extends State<HomePage> {
                       bottomRight: Radius.circular(60),
                     ),
                   ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 20.0, left: 20, right: 20),
-                    child: Column(
-                      children: [
-                        Row(
+                  child: Column(
+                  	mainAxisSize: MainAxisSize.max,
+      						  crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
+                          //image logo
                             Image.asset(
                               "images/logo.png",
                               width: 130,
                               height: 60,
                             ),
+                            //theme button
                             IconButton(
-                              hoverColor: Colors.grey,
-                              padding: EdgeInsets.only(left: 40, right: 60),
-                              onPressed: () {
-                                if (_isLightTheme.value == true) {
-                                  _isLightTheme.value = false;
-                                } else {
-                                  _isLightTheme.value = true;
-                                }
-                                setState(() {
-                                  ThemeController.changeThemeMode =
-                                      _isLightTheme.value;
-                                });
-                                print(_isLightTheme.value);
-                                Get.changeThemeMode(
-                                  _isLightTheme.value
-                                      ? ThemeMode.light
-                                      : ThemeMode.dark,
-                                );
-                                themeModeController.saveThemeStatus();
-                              },
+                            	hoverColor: Colors.black,
+                            	onPressed:()=>toggleTheme(), 
                               icon: Icon(thememodeIcon, color: Colors.white),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        AnimatedTextKit(
-                          isRepeatingAnimation: true,
-                          pause: const Duration(seconds: 3),
-                          repeatForever: true,
-                          animatedTexts: [
-                            TypewriterAnimatedText(
-                              'Selamat Datang Ke \nISK Outreach',
-                              textAlign: TextAlign.center,
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: GoogleFonts.montserrat(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w600,
-                              ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      AnimatedTextKit(
+                        isRepeatingAnimation: true,
+                        pause: const Duration(seconds: 3),
+                        repeatForever: true,
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                            'Selamat Datang Ke \nISK Outreach',
+                            textAlign: TextAlign.center,
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: GoogleFonts.montserrat(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w600,
                             ),
-                          ],
-                          onTap: () {
-                            print("Tap Event");
-                          },
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                        onTap: () {
+                          print("Tap Event");
+                        },
+                      ),
+                    ],
                   ),
                 ),
                 RoundShapeBackground(
@@ -152,8 +138,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Positioned(
                   top: 220,
-                  left: 20,
                   right: 20,
+                  left: 20,
                   child: MenuButton(),
                 ),
               ],
@@ -188,11 +174,13 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
                   child: Text(
-                    "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus Teknologi Sistem Komputer Dan Maklumat di Kolej Vokasional Sungai Buloh",
+                  	sejaraIsk,
                     style: GoogleFonts.poppins(
                       fontWeight: FontWeight.normal,
-                      fontSize: 15,
+                      fontSize: 13,
                     ),
+
+                    textAlign: TextAlign.center,
                     overflow: TextOverflow.clip,
                   ),
                 ),
@@ -203,6 +191,24 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+   void toggleTheme(){
+    if (_isLightTheme.value == true) {
+      _isLightTheme.value = false;
+      } else {
+        _isLightTheme.value = true;
+      }
+      setState(() {
+        ThemeController.changeThemeMode =
+        _isLightTheme.value;
+        });
+      print(_isLightTheme.value);
+      Get.changeThemeMode(
+        _isLightTheme.value
+        ? ThemeMode.light
+        : ThemeMode.dark,
+        );
+      themeModeController.saveThemeStatus();
+    }
 }
 
 class RoundShapeBackground extends StatelessWidget {
@@ -261,7 +267,6 @@ class _MenuButtonState extends State<MenuButton> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 10, right: 10),
-      constraints: BoxConstraints(minWidth: 100, maxWidth: 200),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -283,13 +288,7 @@ class _MenuButtonState extends State<MenuButton> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconTextButton(
-                context: context,
-                icon: Icons.home,
-                text: "ExnameCard",
-                currentPages: 3,
-                location: ExNameCard(),
-              ),
+            //tempoh pengajian
               IconTextButton(
                 context: context,
                 icon: Icons.calendar_view_month_rounded,
@@ -297,6 +296,7 @@ class _MenuButtonState extends State<MenuButton> {
                 currentPages: 3,
                 location: TempohPengajian(),
               ),
+              //senarai kursus yang ditawarkan
               IconTextButton(
                 context: context,
                 icon: Icons.subject_rounded,
@@ -304,11 +304,20 @@ class _MenuButtonState extends State<MenuButton> {
                 currentPages: 3,
                 location: SenaraiKursus(),
               ),
+              //pengiktirafan
+              IconTextButton(
+                context: context,
+                icon: Icons.home,
+                text: "Pengiktirafan",
+                currentPages: 3,
+                location: ExNameCard(),
+              ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+            	//senarai pensyarah
               IconTextButton(
                 context: context,
                 icon: Icons.person_rounded,
@@ -316,6 +325,7 @@ class _MenuButtonState extends State<MenuButton> {
                 currentPages: 3,
                 location: NameCard(),
               ),
+              //kod pemakaian
               IconTextButton(
                 context: context,
                 icon: FontAwesome5.tshirt,
@@ -323,6 +333,7 @@ class _MenuButtonState extends State<MenuButton> {
                 currentPages: 3,
                 location: NameCard(),
               ),
+              
               IconTextButton(
                 context: context,
                 icon: Icons.home,
@@ -358,25 +369,17 @@ Widget IconTextButton({
       child: Column(
         children: [
           Icon(icon, size: 20),
-          Text(text,
-              style: const TextStyle(
-                fontSize: 12,
-              )),
+          Text(
+          	text,
+            style: const TextStyle(
+              fontSize: 12,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
     ),
   );
 }
 
-class customShape extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
-  }
 
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    throw UnimplementedError();
-  }
-}

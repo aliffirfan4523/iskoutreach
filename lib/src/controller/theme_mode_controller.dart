@@ -21,3 +21,4 @@ class ThemeModeController{
 		Get.changeThemeMode(isLightTheme.value ? ThemeMode.light : ThemeMode.dark);
 	}
 }
+

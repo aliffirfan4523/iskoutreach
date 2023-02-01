@@ -14,6 +14,7 @@ class ThemeController extends GetxController {
     box.write('darkmode', Get.isDarkMode);
     print(Get.isDarkMode);
   }
+
 }
 
 class Themes {
@@ -44,3 +45,5 @@ class Themes {
     ),  
   );
 }
+
+

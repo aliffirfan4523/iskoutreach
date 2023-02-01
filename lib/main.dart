@@ -7,6 +7,7 @@ import 'src/controller/theme_mode_controller.dart';
 import 'src/model/homepage_model.dart';
 import 'src/provider/homepage_provider.dart';
 import 'src/view/CustomError.dart';
+import 'src/view/home_page.dart';
 
 void main() async {
   runApp(IskApp());
@@ -52,17 +53,16 @@ class _MainPageState extends State<MainPage> {
         return Scaffold(
           body: SafeArea(
             child: SingleChildScrollView(
-              child: current_pages[
-                  Provider.of<HomePageNotifier>(context).currentPage],
+              child: HomePage(),
             ),
           ),
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () {
               print('test');
-              launchURL();
+              launchWhatsapp();
             },
             label: const Text('Daftar Sekarang'),
-            icon: const Icon(Icons.app_registration_rounded),
+            icon: const Icon(Icons.whatsapp_rounded),
             backgroundColor: Colors.blue,
           ),
         );
