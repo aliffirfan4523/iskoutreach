@@ -1,23 +1,23 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iskoutreach/src/view/senarai_kursus_view.dart';
 import 'package:iskoutreach/src/view/tempoh_pengajian.dart';
-import 'package:provider/provider.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 
 import '../controller/theme_controller.dart';
 import '../controller/theme_mode_controller.dart';
-import '../controller/url_controller.dart';
 import '../model/text_model.dart';
-import '../provider/homepage_provider.dart';
-import 'name_card/example_name_card.dart';
 import 'name_card/name_card.dart';
+import 'pengiktirafan_view.dart';
 
 final _isLightTheme = themeModeController.isLightTheme;
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       AnimatedTextKit(
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                   left: -70,
                   size: 200,
                 ),
-                Positioned(
+                const Positioned(
                   top: 220,
                   right: 20,
                   left: 20,
@@ -293,24 +293,21 @@ class _MenuButtonState extends State<MenuButton> {
                 context: context,
                 icon: Icons.calendar_view_month_rounded,
                 text: "Tempoh \nPengajian",
-                currentPages: 3,
-                location: TempohPengajian(),
+                location: const TempohPengajian(),
               ),
               //senarai kursus yang ditawarkan
               IconTextButton(
                 context: context,
                 icon: Icons.subject_rounded,
                 text: "Senarai Kursus \nDitawarkan",
-                currentPages: 3,
-                location: SenaraiKursus(),
+                location: const SenaraiKursus(),
               ),
               //pengiktirafan
               IconTextButton(
                 context: context,
-                icon: Icons.home,
+                icon: FontAwesomeIcons.award,
                 text: "Pengiktirafan",
-                currentPages: 3,
-                location: ExNameCard(),
+                location: const Pengiktirafan(),
               ),
             ],
           ),
@@ -322,7 +319,6 @@ class _MenuButtonState extends State<MenuButton> {
                 context: context,
                 icon: Icons.person_rounded,
                 text: "Senarai Pensyarah",
-                currentPages: 3,
                 location: NameCard(),
               ),
               //kod pemakaian
@@ -330,15 +326,13 @@ class _MenuButtonState extends State<MenuButton> {
                 context: context,
                 icon: FontAwesome5.tshirt,
                 text: "Etika Pemakaian",
-                currentPages: 3,
                 location: NameCard(),
               ),
               
               IconTextButton(
                 context: context,
-                icon: Icons.home,
-                text: "Hgome",
-                currentPages: 3,
+                icon: Icons.circle_rounded,
+                text: "Pengiktirafan",
                 location: NameCard(),
               ),
             ],
@@ -353,7 +347,6 @@ Widget IconTextButton({
   required BuildContext context,
   required IconData icon,
   required String text,
-  required int currentPages,
   required Widget location,
 }) {
   return InkWell(

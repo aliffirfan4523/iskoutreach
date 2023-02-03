@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iskoutreach/src/controller/url_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:get/get.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
 import 'src/model/homepage_model.dart';
@@ -21,10 +22,25 @@ class IskApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      // builder: (context, child) => ResponsiveWrapper.builder(
+      //   BouncingScrollWrapper.builder(context, child!),
+      //   maxWidth: 1200,
+      //   minWidth: 450,
+      //   defaultScale: true,
+      //   breakpoints: [
+      //     const ResponsiveBreakpoint.resize(450, name: MOBILE),
+      //     const ResponsiveBreakpoint.autoScale(800, name: TABLET),
+      //     const ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+      //     const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+      //     const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+      //   ],
+
+      // ),
       home: MainPage(),
       theme: Themes.lightTheme,
       darkTheme: Themes.datkTheme,
       themeMode: ThemeController.theme,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -79,17 +95,4 @@ class _MainPageState extends State<MainPage> {
       },
     );
   }
-
-  Widget bottomNavigationBar(int index) => Container(
-        height: 50,
-        width: 60,
-        child: Column(
-          children: [
-            Icon(Icons.home, size: 30),
-            Text(
-              "s",
-            ),
-          ],
-        ),
-      );
 }
