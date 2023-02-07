@@ -19,20 +19,18 @@ class ThemeController extends GetxController {
 
 class Themes {
   static final lightTheme = ThemeData(
+    colorScheme: ColorScheme.light(
+      primary: mainColor,
+      secondary: mainColor,
+    ),
+    appBarTheme: AppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
+      iconTheme: IconThemeData(
+        color: Color(0xFF0C0C0F),
+      ),
+    ),
     brightness: Brightness.light,
-    iconTheme: IconThemeData(
-      color: Colors.white,
-    ),
-    textTheme: TextTheme(
-      bodyText1: TextStyle(),
-      bodyText2: TextStyle(),
-    ).apply(
-      bodyColor: Colors.white, 
-      displayColor: Colors.blue, 
-    ),
-  );
-  static final datkTheme = ThemeData(
-    brightness: Brightness.dark,
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
@@ -40,7 +38,27 @@ class Themes {
       bodyText1: TextStyle(),
       bodyText2: TextStyle(),
     ).apply(
-      bodyColor: Colors.black, 
+      bodyColor:  Color(0xFF0C0C0F), 
+      displayColor: Colors.blue, 
+    ),
+  );
+  static final datkTheme = ThemeData(
+    brightness: Brightness.dark,
+    iconTheme: IconThemeData(
+      color: Colors.white,
+    ),
+    appBarTheme: AppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
+      iconTheme: IconThemeData(
+        color: Color(0xFFF5F0F0),
+      ),
+    ),
+    textTheme: TextTheme(
+      bodyText1: TextStyle(),
+      bodyText2: TextStyle(),
+    ).apply(
+      bodyColor: Color(0xFFF5F0F0), 
       displayColor: Colors.blue, 
     ),  
   );

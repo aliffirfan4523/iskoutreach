@@ -55,6 +55,9 @@ dependencies:
   fluttericon: ^2.0.0
   responsive_framework: ^0.2.0
   font_awesome_flutter: ^10.3.0
+  horizontal_card_pager: 
+    path: assets/packages/Horizontal_Card_Pager
+  card_swiper: ^2.0.4
 
 dev_dependencies:
   flutter_test:

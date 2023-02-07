@@ -83,10 +83,17 @@ class _HomePageState extends State<HomePage> {
                               height: 60,
                             ),
                             //theme button
-                            IconButton(
-                            	hoverColor: Colors.black,
-                            	onPressed:()=>toggleTheme(), 
-                              icon: Icon(thememodeIcon, color: Colors.white),
+                            Stack(
+                              children: [
+                                Container(
+                                  height: 40,
+                                  width: 40,
+                                ),
+                                IconButton(
+                                  icon: Icon(thememodeIcon, color: Colors.white),
+                                  onPressed :()=>toggleTheme(),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -331,9 +338,9 @@ class _MenuButtonState extends State<MenuButton> {
               
               IconTextButton(
                 context: context,
-                icon: Icons.circle_rounded,
-                text: "Pengiktirafan",
-                location: NameCard(),
+                icon: FontAwesome5.question_circle,
+                text: "Syarat Permohonan",
+                location: MyCardList(),
               ),
             ],
           )
@@ -365,8 +372,9 @@ Widget IconTextButton({
           Text(
           	text,
             style: const TextStyle(
-              fontSize: 12,
+              fontSize: 11,
             ),
+            softWrap: true,
             textAlign: TextAlign.center,
           ),
         ],

@@ -22,7 +22,6 @@ class _PengiktirafanState extends State<Pengiktirafan> {
         appBar: customAppBar(context: context,title: "Pengiktirafan", icon: Icons.menu),
         body: Column(
           children: [
-          Spacer(flex: 1,),
             Padding(
                   padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
                   child: Text(
