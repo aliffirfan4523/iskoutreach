@@ -18,8 +18,8 @@ class NameCard extends StatefulWidget {
 
 class _NameCardState extends State<NameCard> {
   final List<Map> myProducts =
-    List.generate(100, (index) => {"id": index, "name": "Product $index"})
-      .toList();
+      List.generate(100, (index) => {"id": index, "name": "Product $index"})
+          .toList();
   int currentImage = 0;
   int maxNumber = items.length;
 
@@ -37,69 +37,38 @@ class _NameCardState extends State<NameCard> {
       currentImage--;
       if (currentImage < 0) {
         currentImage = maxNumber - 1;
-      }      
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    
     final orientation = MediaQuery.of(context).orientation;
     return Scaffold(
-      appBar: customAppBar(context: context,title: "Nama Pensyarah", icon: Icons.menu),
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // Column(
-            //   children: [
-            //     Text(cardlistpng[1].nama, 
-            //       textAlign: TextAlign.center, 
-            //       style: TextStyle(
-            //         fontFamily: 'Inter',
-            //         fontSize: 14,
-            //         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-            //         fontWeight: FontWeight.bold,
-            //         height: 1
-            //       ),
-            //     ),
-            //     Text(cardlistpng[1].jawatan, 
-            //       textAlign: TextAlign.center, 
-            //       style: TextStyle(
-            //         fontFamily: 'Inter',
-            //         fontSize: 12,
-            //         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-            //         fontWeight: FontWeight.normal,
-            //         height: 1
-            //       ),
-            //     ),
-            //     Text(cardlistpng[1].jawatanLain, 
-            //       textAlign: TextAlign.center, 
-            //       style: TextStyle(
-            //         fontFamily: 'Inter',
-            //         fontSize: 12,
-            //         letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-            //         fontWeight: FontWeight.normal,
-            //         height: 1
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            Swiper(
-              itemBuilder: (BuildContext context, int index) {
-                return Image.network(
-                  "https://via.placeholder.com/288x188",
-                  fit: BoxFit.fill,
-                );
+      appBar: customAppBar(
+          context: context, title: "Nama Pensyarah", icon: Icons.menu),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 60,
+          ),
+          SizedBox(
+            height: 300,
+            child: Swiper(
+              itemBuilder: (context, index) {
+                return cardlistpng[index];
               },
-              itemCount: 10,
+              itemWidth: 500,
+              itemHeight: 600.0,
               viewportFraction: 0.8,
-              scale: 0.9,
-              pagination: const SwiperPagination(),
+              scale: 0.5,
+              autoplay: true,
+              itemCount: cardlistpng.length,
               control: const SwiperControl(),
-            )
-          ]
-        )
+              pagination: SwiperPagination(),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -111,14 +80,19 @@ class MyCardList extends StatefulWidget {
 }
 
 class _MyCardListState extends State<MyCardList> {
-  final List<String> _imageUrls = [    'https://picsum.photos/300/200',    'https://picsum.photos/300/200',    'https://picsum.photos/300/200',    'https://picsum.photos/300/200',    'https://picsum.photos/300/200',  ];
-    double currentSkinOpacity = 1.0;
+  final List<String> _imageUrls = [
+    'https://picsum.photos/300/200',
+    'https://picsum.photos/300/200',
+    'https://picsum.photos/300/200',
+    'https://picsum.photos/300/200',
+    'https://picsum.photos/300/200',
+  ];
+  double currentSkinOpacity = 1.0;
   double nextSkinOpacity = 0.0;
   int currentImageIndex = 0;
   int nextImageIndex = 1;
 
-
-    void nextNumber() {
+  void nextNumber() {
     setState(() {
       currentImageIndex++;
       if (currentImageIndex == cardlistpng.length) {
@@ -132,7 +106,7 @@ class _MyCardListState extends State<MyCardList> {
       currentImageIndex--;
       if (currentImageIndex < 0) {
         currentImageIndex = cardlistpng.length - 1;
-      }      
+      }
     });
   }
 
@@ -140,7 +114,8 @@ class _MyCardListState extends State<MyCardList> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: customAppBar(context: context,title: "Nama Pensyarah", icon: Icons.menu),
+      appBar: customAppBar(
+          context: context, title: "Nama Pensyarah", icon: Icons.menu),
       body: GestureDetector(
         onHorizontalDragEnd: (DragEndDetails details) {
           if (details.primaryVelocity == 0) {
@@ -171,136 +146,141 @@ class _MyCardListState extends State<MyCardList> {
         child: Column(
           children: [
             Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                color : Color.fromRGBO(255, 255, 255, 1),
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(255, 255, 255, 1),
                 ),
-              child: Stack(
-                children: <Widget>[
-                Container(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
-                    gradient : LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Color.fromRGBO(70, 99, 204, 1),Color.fromRGBO(3, 23, 96, 1)]
-                      ),
-                    )
-                  ),
+                child: Stack(children: <Widget>[
+                  Container(
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color.fromRGBO(70, 99, 204, 1),
+                              Color.fromRGBO(3, 23, 96, 1)
+                            ]),
+                      )),
                   Positioned(
-                  bottom: 160,
-                  left: 20,
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Text(cardlistpng[currentImageIndex].nama, 
-                          textAlign: TextAlign.center, 
-                          style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 14,
-                          letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.bold,
-                          height: 1
-                          ),),
-                        Text(cardlistpng[currentImageIndex].jawatan, 
-                        textAlign: TextAlign.center, 
-                        style: TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 12,
-                        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                        fontWeight: FontWeight.normal,
-                        height: 1
-                        ),),
-                        Text(cardlistpng[currentImageIndex].jawatanLain, 
-                        textAlign: TextAlign.center, 
-                        style: TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 12,
-                        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                        fontWeight: FontWeight.normal,
-                        height: 1
-                        ),)
-                      ],
-                    ),
-                  )
-                  ),
-                  Positioned(
-                  top: 100,
-                  left: 60,
-                  child: Text('TENAGA PENSYARAH', 
-                    textAlign: TextAlign.left, 
-                    style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontSize: 14,
-                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1
-                    ),)
-                  ),
-                  Positioned(
-                  top: 120,
-                  left: 30,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width-60,
-                    child: Text(pensyarah, 
-                      textAlign: TextAlign.left, 
-                      style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 14,
-                      letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                      fontWeight: FontWeight.normal,
-                      height: 1
-                      ),
-                      softWrap: true,
-                      ),
-                  )
-                  ),
-                  Positioned(
-                  bottom: 0,
-                  right: 20,
-                  child: Container(
-                    width: 230,
-                    height: 310,
-                    decoration: BoxDecoration(
-                      image : DecorationImage(
-                        image: AssetImage(cardlistpng[currentImageIndex].imageLink),
-                        fit: BoxFit.fitWidth
+                      bottom: 160,
+                      left: 20,
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Text(
+                              cardlistpng[currentImageIndex].nama,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 14,
+                                  letterSpacing:
+                                      0 /*percentages not used in flutter. defaulting to zero*/,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                            Text(
+                              cardlistpng[currentImageIndex].jawatan,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 12,
+                                  letterSpacing:
+                                      0 /*percentages not used in flutter. defaulting to zero*/,
+                                  fontWeight: FontWeight.normal,
+                                  height: 1),
+                            ),
+                            Text(
+                              cardlistpng[currentImageIndex].jawatanLain,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 12,
+                                  letterSpacing:
+                                      0 /*percentages not used in flutter. defaulting to zero*/,
+                                  fontWeight: FontWeight.normal,
+                                  height: 1),
+                            )
+                          ],
                         ),
-                      )
-                    )
+                      )),
+                  Positioned(
+                      top: 100,
+                      left: 60,
+                      child: Text(
+                        'TENAGA PENSYARAH',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 14,
+                            letterSpacing:
+                                0 /*percentages not used in flutter. defaulting to zero*/,
+                            fontWeight: FontWeight.normal,
+                            height: 1),
+                      )),
+                  Positioned(
+                      top: 120,
+                      left: 30,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width - 60,
+                        child: Text(
+                          pensyarah,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 14,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1),
+                          softWrap: true,
+                        ),
+                      )),
+                  Positioned(
+                      bottom: 0,
+                      right: 20,
+                      child: Container(
+                          width: 230,
+                          height: 310,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    cardlistpng[currentImageIndex].imageLink),
+                                fit: BoxFit.fitWidth),
+                          ))),
+                  Positioned(
+                    left: 20,
+                    top: MediaQuery.of(context).size.height * 0.5,
+                    child: IconButton(
+                      splashColor: Colors.grey,
+                      hoverColor: Colors.grey,
+                      icon: Icon(FontAwesome5.arrow_circle_left),
+                      onPressed: () {
+                        previousNumber();
+                      },
+                    ),
                   ),
                   Positioned(
-                     left: 20,
-                     top: MediaQuery.of(context).size.height * 0.5,
-                     child: IconButton(
-                       splashColor: Colors.grey,
-                       hoverColor: Colors.grey,
-                       icon: Icon(FontAwesome5.arrow_circle_left),
-                       onPressed: (){ previousNumber();},
-                     ),
-                   ),
-                   Positioned(
-                     right: 5,
-                     top: MediaQuery.of(context).size.height * 0.5,
-                     child: IconButton(
-                       splashColor: Colors.grey,
-                       hoverColor: Colors.grey,
-                       icon: Icon(FontAwesome5.arrow_circle_right),
-                       onPressed: (){nextNumber();},
-                     ),
-                   ),
-                ]
-              )
-            ),
+                    right: 5,
+                    top: MediaQuery.of(context).size.height * 0.5,
+                    child: IconButton(
+                      splashColor: Colors.grey,
+                      hoverColor: Colors.grey,
+                      icon: Icon(FontAwesome5.arrow_circle_right),
+                      onPressed: () {
+                        nextNumber();
+                      },
+                    ),
+                  ),
+                ])),
           ],
         ),
       ),
-      );
+    );
   }
 }
-
 
 class IconTile extends StatelessWidget {
   final IconData? icon;
@@ -322,4 +302,3 @@ class IconTile extends StatelessWidget {
     );
   }
 }
-

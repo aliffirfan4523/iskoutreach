@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/controller/url_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:get/get.dart';
@@ -78,7 +79,7 @@ class _MainPageState extends State<MainPage> {
               launchWhatsapp();
             },
             label: const Text('Daftar Sekarang'),
-            icon: const Icon(Icons.whatsapp_rounded),
+            icon: const Icon(FontAwesome5.whatsapp_square),
             backgroundColor: Colors.blue,
           ),
         );
