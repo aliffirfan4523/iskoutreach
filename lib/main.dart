@@ -78,8 +78,8 @@ class _MainPageState extends State<MainPage> {
               print('test');
               launchWhatsapp();
             },
-            label: const Text('Daftar Sekarang'),
-            icon: const Icon(FontAwesome5.whatsapp_square),
+            label: const Text('Pertanyaan Lanjut?'),
+            icon: const Icon(FontAwesome5.whatsapp),
             backgroundColor: Colors.blue,
           ),
         );

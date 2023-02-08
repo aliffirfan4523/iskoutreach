@@ -54,12 +54,12 @@ class _HomePageState extends State<HomePage> {
                         //second parameter is top to down
                       ),
                     ],
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Color(0xFF0075FF),
-                          Color(0xFF035671),
+                          Colors.indigo.shade400,
+                          Colors.indigo.shade900,
                         ]),
                     borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(60),
@@ -123,6 +123,8 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+                /*
+                * error shape
                 RoundShapeBackground(
                   top: 91,
                   right: -70,
@@ -130,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 RoundShapeBackground(
                   top: -127,
-                  right: 10,
+                  right: 40,
                   size: 200,
                 ),
                 RoundShapeBackground(
@@ -143,10 +145,11 @@ class _HomePageState extends State<HomePage> {
                   left: -70,
                   size: 200,
                 ),
+                */
                 const Positioned(
                   top: 220,
-                  right: 20,
-                  left: 20,
+                  right: 15,
+                  left: 15,
                   child: MenuButton(),
                 ),
               ],
@@ -246,7 +249,7 @@ class RoundShapeBackground extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.5),
           borderRadius: BorderRadius.circular(300),
-          backgroundBlendMode: BlendMode.color,
+          backgroundBlendMode: BlendMode.overlay,
           gradient: const LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
@@ -285,10 +288,10 @@ class _MenuButtonState extends State<MenuButton> {
             //second parameter is top to down
           ),
         ],
-        color: Colors.grey,
+        color: Colors.indigo.shade600,
         borderRadius: const BorderRadius.all(Radius.circular(30)),
       ),
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -301,6 +304,7 @@ class _MenuButtonState extends State<MenuButton> {
                 icon: Icons.calendar_view_month_rounded,
                 text: "Tempoh \nPengajian",
                 location: const TempohPengajian(),
+                heroTag: 'tempoh_pengajian'
               ),
               //senarai kursus yang ditawarkan
               IconTextButton(
@@ -308,6 +312,7 @@ class _MenuButtonState extends State<MenuButton> {
                 icon: Icons.subject_rounded,
                 text: "Senarai Kursus \nDitawarkan",
                 location: const SenaraiKursus(),
+                heroTag: 'senarai_kursus_ditawarkan'
               ),
               //pengiktirafan
               IconTextButton(
@@ -315,6 +320,7 @@ class _MenuButtonState extends State<MenuButton> {
                 icon: FontAwesomeIcons.award,
                 text: "Pengiktirafan",
                 location: const Pengiktirafan(),
+                heroTag: 'pengiktirafan'
               ),
             ],
           ),
@@ -327,6 +333,7 @@ class _MenuButtonState extends State<MenuButton> {
                 icon: Icons.person_rounded,
                 text: "Senarai Pensyarah",
                 location: NameCard(),
+                heroTag: 'senarai_pensyarah'
               ),
               //kod pemakaian
               IconTextButton(
@@ -334,13 +341,15 @@ class _MenuButtonState extends State<MenuButton> {
                 icon: FontAwesome5.tshirt,
                 text: "Etika Pemakaian",
                 location: NameCard(),
+                heroTag: 'etika_pemakaian'
               ),
               
               IconTextButton(
                 context: context,
                 icon: FontAwesome5.question_circle,
                 text: "Syarat Permohonan",
-                location: MyCardList(),
+                location: SenaraiKursus(),
+                heroTag: 'syarat_permohonan'
               ),
             ],
           )
@@ -355,6 +364,7 @@ Widget IconTextButton({
   required IconData icon,
   required String text,
   required Widget location,
+  required String heroTag,
 }) {
   return InkWell(
     onTap: () {
@@ -368,7 +378,10 @@ Widget IconTextButton({
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Icon(icon, size: 20),
+          Hero(
+            tag: heroTag,
+            child: Icon(icon, size: 20)
+          ),
           Text(
           	text,
             style: const TextStyle(

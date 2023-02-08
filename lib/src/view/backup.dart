@@ -74,3 +74,72 @@
                   //     onPressed: (){nextNumber();},
                   //   ),
                   // ),
+
+                  Expanded(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 400,
+                width: double.infinity,
+                child: Stack(
+                  children: [
+                    Container(
+                      color: Colors.blueGrey,
+                    ),
+                    //current image
+                    Opacity(
+                      opacity: currentSkinOpacity,
+                      child: Image.asset(
+                        cardlistpng[currentImageIndex].imageLink,
+                        fit: BoxFit.fitWidth,
+                        width: double.infinity,
+                      ),
+                    ),
+                    //next image
+                    Opacity(
+                      opacity: currentSkinOpacity,
+                      child: Image.asset(
+                        cardlistpng[nextImageIndex].imageLink,
+                        fit: BoxFit.fitWidth,
+                        width: double.infinity,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: HorizontalCardPager(
+                  initialPage : 0, // default value is 2
+                  onPageChanged: (page) {
+                    setState(() {
+                        if ((page - currentImageIndex.toDouble()).abs() >= 1) {
+                          currentImageIndex = nextImageIndex;
+                          currentSkinOpacity = 1.0;
+                          nextSkinOpacity = 0;
+                        } else if (page > currentImageIndex) {
+                          nextImageIndex = currentImageIndex + 1;
+                          nextSkinOpacity = page - currentImageIndex.toDouble();
+                          currentSkinOpacity = 1 - nextSkinOpacity;
+                        } else if (page < currentImageIndex) {
+                          nextImageIndex = currentImageIndex - 1;
+                          nextSkinOpacity = currentImageIndex.toDouble() - page;
+                          currentSkinOpacity = 1.0 - nextSkinOpacity;
+                        }
+
+                        print(currentSkinOpacity.toString() +
+                            "/" +
+                            nextSkinOpacity.toString());
+                      });
+                    print("page : $page");
+                  },
+                  onSelectedItem: (page) {
+                    
+                    print("selected : $page");
+                  },
+                  items: items,  // set ImageCardItem or IconTitleCardItem class
+                ),
+              )
+            ],
+          ),
+        )

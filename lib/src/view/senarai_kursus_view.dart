@@ -9,9 +9,17 @@ class SenaraiKursus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  ScrollController _controller = ScrollController();
+
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(context: context,title: "Senarai Kursus", icon: Icons.menu),
+        appBar: customAppBar(
+          context: context,
+          title: "Senarai Kursus", 
+          icon: Icons.menu, 
+          controller: _controller,
+          heroTag: 'senarai_kursus'
+        ),
         body: Column(
           children: [
           ],
