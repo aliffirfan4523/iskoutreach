@@ -39,3 +39,6 @@ to:
 
 static  Color accentColor = Color(0x1A0097A7);
 will change the opacity to 10%.
+
+-shrink apk size
+https://itnext.io/flutter-minimizing-tips-42113f02b678
