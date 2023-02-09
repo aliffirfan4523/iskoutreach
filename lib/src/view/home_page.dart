@@ -170,12 +170,12 @@ class _HomePageState extends State<HomePage> {
                   //second parameter is top to down
                 ),
               ],
-              gradient: const LinearGradient(
+              gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Color(0xFF0075FF),
-                    Color(0xFF035671),
+                    Colors.indigo.shade400,
+                    Colors.indigo.shade900,
                   ]),
               borderRadius: const BorderRadius.all(Radius.circular(30)),
             ),

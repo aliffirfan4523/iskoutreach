@@ -30,16 +30,7 @@ class TempohPengajian extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(20),
                 child: const Text(
-                  "Tempoh pengajian bagi Program Sijil Vokasional Malaysia adalah selama 4 semester iaitu 2 tahun",
-                  style: TextStyle(fontSize: 14),
-                  softWrap: true,
-                  textAlign: TextAlign.justify,
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                child: const Text(
-                  "Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu. Ia terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
+                  "Tempoh pengajian bagi Program Sijil Vokasional Malaysia adalah selama 4 semester iaitu 2 tahun. Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu. Ia terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
                   style: TextStyle(fontSize: 14),
                   softWrap: true,
                   textAlign: TextAlign.justify,
@@ -57,6 +48,16 @@ class TempohPengajian extends StatelessWidget {
                   width: width, 
                   imageLink: 'images/tempoh_pengajian/SVM.jpg',
                   heroTag: 'tempoh_pengajian_svm',
+                ),
+              ),
+              const SizedBox(height:10),
+              Container(
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  "Tempoh pengajian bagi Program Diploma Vokasional Malaysia adalah selama 5 semester iaitu 2 tahun dan 6 bulan. Setiap pelajar yang melepasi syarat kemasukan ke Diploma Vokasional Malaysia akan menyambungkan pembelajaran selama 4 semester dan akan menjalani On-Job-Training (OJT) selama 6 bulan pada semester ke-5",
+                  style: TextStyle(fontSize: 14),
+                  softWrap: true,
+                  textAlign: TextAlign.justify,
                 ),
               ),
               const SizedBox(height:10),

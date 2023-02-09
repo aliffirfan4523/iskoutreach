@@ -44,11 +44,10 @@ class _PengiktirafanState extends State<Pengiktirafan> {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: ImagePreview(
-                width: double.infinity, 
-                imageLink: "images/MBOT.jpg",
-                heroTag: 'pengiktirafan_mbot',
-              ),
+              child: Image.asset(
+                "images/MBOT.jpg",
+                width: MediaQuery.of(context).size.width-60,
+              )
             ),
           ],
         ),

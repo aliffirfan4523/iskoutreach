@@ -16,7 +16,8 @@ void showSecondPage({
 				title: '', 
 				context: context, 
 				controller: null, 
-				icon: FontAwesome5.certificate
+				icon: FontAwesome5.certificate,
+				isIconTrue: false
 			),
 			body: Center(
 				child: Hero(

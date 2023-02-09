@@ -87,34 +87,32 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - assets/images/
-    - assets\images\tempoh_pengajian
-assets\images\png\pn_azira.png
-assets\images\png\pn_diyana.png
-assets\images\png\pn_elyani.png
-assets\images\png\pn_farah.png
-assets\images\png\pn_ilham.png
-assets\images\png\pn_intan.png
-assets\images\png\pn_masyi.png
-assets\images\png\pn_norshidah.png
-assets\images\png\pn_rohani.png
-assets\images\png\pn_rohaya.png
-assets\images\png\pn_solehah.png
-assets\images\tempoh_pengajian\DVM.jpg
-assets\images\tempoh_pengajian\SVM.jpg
-assets\images\logo.png
-assets\images\MBOT.jpg
-assets\images\pn_azira.jpeg
-assets\images\pn_diyana.jpeg
-assets\images\pn_elyani.jpeg
-assets\images\pn_farah.jpeg
-assets\images\pn_ilham.jpeg
-assets\images\pn_intan.jpeg
-assets\images\pn_masyi.jpeg
-assets\images\pn_norshidah.jpeg
-assets\images\pn_rohani.jpeg
-assets\images\pn_rohaya.jpeg
-assets\images\pn_solehah.jpeg
+    - assets/images/png/pn_azira.png
+    - assets/images/png/pn_diyana.png
+    - assets/images/png/pn_elyani.png
+    - assets/images/png/pn_farah.png
+    - assets/images/png/pn_ilham.png
+    - assets/images/png/pn_intan.png
+    - assets/images/png/pn_masyi.png
+    - assets/images/png/pn_norshidah.png
+    - assets/images/png/pn_rohani.png
+    - assets/images/png/pn_rohaya.png
+    - assets/images/png/pn_solehah.png
+    - assets/images/tempoh_pengajian/DVM.jpg
+    - assets/images/tempoh_pengajian/SVM.jpg
+    - assets/images/logo.png
+    - assets/images/MBOT.jpg
+    - assets/images/pn_azira.jpeg
+    - assets/images/pn_diyana.jpeg
+    - assets/images/pn_elyani.jpeg
+    - assets/images/pn_farah.jpeg
+    - assets/images/pn_ilham.jpeg
+    - assets/images/pn_intan.jpeg
+    - assets/images/pn_masyi.jpeg
+    - assets/images/pn_norshidah.jpeg
+    - assets/images/pn_rohani.jpeg
+    - assets/images/pn_rohaya.jpeg
+    - assets/images/pn_solehah.jpeg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

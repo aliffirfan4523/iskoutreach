@@ -7,6 +7,7 @@ ScrollAppBar customAppBar({
 	dynamic icon, 
 	required controller,
 	required String heroTag,
+	bool isIconTrue = true,
 	}) {
 	final controller = ScrollController();
 	return ScrollAppBar(
@@ -56,7 +57,7 @@ ScrollAppBar customAppBar({
 				tag: heroTag,
 				child: Padding(
 				  padding: const EdgeInsets.only(right:50.0),
-				  child: Icon(icon),
+				  child: isIconTrue ? Icon(icon) : Container(),
 				)
 			),
 		],
