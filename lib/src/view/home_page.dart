@@ -67,8 +67,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   child: Column(
-                  	mainAxisSize: MainAxisSize.max,
-      						  crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(20.0),
@@ -76,9 +76,9 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                          //image logo
+                            //image logo
                             Image.asset(
-                              "images/logo.png",
+                              "assets/images/logo.png",
                               width: 130,
                               height: 60,
                             ),
@@ -90,8 +90,9 @@ class _HomePageState extends State<HomePage> {
                                   width: 40,
                                 ),
                                 IconButton(
-                                  icon: Icon(thememodeIcon, color: Colors.white),
-                                  onPressed :()=>toggleTheme(),
+                                  icon:
+                                      Icon(thememodeIcon, color: Colors.white),
+                                  onPressed: () => toggleTheme(),
                                 ),
                               ],
                             ),
@@ -184,12 +185,11 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
                   child: Text(
-                  	sejaraIsk,
+                    sejaraIsk,
                     style: GoogleFonts.poppins(
                       fontWeight: FontWeight.normal,
                       fontSize: 13,
                     ),
-
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.clip,
                   ),
@@ -201,24 +201,22 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-   void toggleTheme(){
+
+  void toggleTheme() {
     if (_isLightTheme.value == true) {
       _isLightTheme.value = false;
-      } else {
-        _isLightTheme.value = true;
-      }
-      setState(() {
-        ThemeController.changeThemeMode =
-        _isLightTheme.value;
-        });
-      print(_isLightTheme.value);
-      Get.changeThemeMode(
-        _isLightTheme.value
-        ? ThemeMode.light
-        : ThemeMode.dark,
-        );
-      themeModeController.saveThemeStatus();
+    } else {
+      _isLightTheme.value = true;
     }
+    setState(() {
+      ThemeController.changeThemeMode = _isLightTheme.value;
+    });
+    print(_isLightTheme.value);
+    Get.changeThemeMode(
+      _isLightTheme.value ? ThemeMode.light : ThemeMode.dark,
+    );
+    themeModeController.saveThemeStatus();
+  }
 }
 
 class RoundShapeBackground extends StatelessWidget {
@@ -298,59 +296,53 @@ class _MenuButtonState extends State<MenuButton> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-            //tempoh pengajian
+              //tempoh pengajian
               IconTextButton(
-                context: context,
-                icon: Icons.calendar_view_month_rounded,
-                text: "Tempoh \nPengajian",
-                location: const TempohPengajian(),
-                heroTag: 'tempoh_pengajian'
-              ),
+                  context: context,
+                  icon: Icons.calendar_view_month_rounded,
+                  text: "Tempoh \nPengajian",
+                  location: const TempohPengajian(),
+                  heroTag: 'tempoh_pengajian'),
               //senarai kursus yang ditawarkan
               IconTextButton(
-                context: context,
-                icon: Icons.subject_rounded,
-                text: "Senarai Kursus \nDitawarkan",
-                location: const SenaraiKursus(),
-                heroTag: 'senarai_kursus_ditawarkan'
-              ),
+                  context: context,
+                  icon: Icons.subject_rounded,
+                  text: "Senarai Kursus \nDitawarkan",
+                  location: const SenaraiKursus(),
+                  heroTag: 'senarai_kursus_ditawarkan'),
               //pengiktirafan
               IconTextButton(
-                context: context,
-                icon: FontAwesomeIcons.award,
-                text: "Pengiktirafan",
-                location: const Pengiktirafan(),
-                heroTag: 'pengiktirafan'
-              ),
+                  context: context,
+                  icon: FontAwesomeIcons.award,
+                  text: "Pengiktirafan",
+                  location: const Pengiktirafan(),
+                  heroTag: 'pengiktirafan'),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-            	//senarai pensyarah
+              //senarai pensyarah
               IconTextButton(
-                context: context,
-                icon: Icons.person_rounded,
-                text: "Senarai Pensyarah",
-                location: NameCard(),
-                heroTag: 'senarai_pensyarah'
-              ),
+                  context: context,
+                  icon: Icons.person_rounded,
+                  text: "Senarai Pensyarah",
+                  location: NameCard(),
+                  heroTag: 'senarai_pensyarah'),
               //kod pemakaian
               IconTextButton(
-                context: context,
-                icon: FontAwesome5.tshirt,
-                text: "Etika Pemakaian",
-                location: NameCard(),
-                heroTag: 'etika_pemakaian'
-              ),
-              
+                  context: context,
+                  icon: FontAwesome5.tshirt,
+                  text: "Etika Pemakaian",
+                  location: NameCard(),
+                  heroTag: 'etika_pemakaian'),
+
               IconTextButton(
-                context: context,
-                icon: FontAwesome5.question_circle,
-                text: "Syarat Permohonan",
-                location: SenaraiKursus(),
-                heroTag: 'syarat_permohonan'
-              ),
+                  context: context,
+                  icon: FontAwesome5.question_circle,
+                  text: "Syarat Permohonan",
+                  location: SenaraiKursus(),
+                  heroTag: 'syarat_permohonan'),
             ],
           )
         ],
@@ -378,12 +370,9 @@ Widget IconTextButton({
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Hero(
-            tag: heroTag,
-            child: Icon(icon, size: 20)
-          ),
+          Hero(tag: heroTag, child: Icon(icon, size: 20)),
           Text(
-          	text,
+            text,
             style: const TextStyle(
               fontSize: 11,
             ),
@@ -395,5 +384,3 @@ Widget IconTextButton({
     ),
   );
 }
-
-

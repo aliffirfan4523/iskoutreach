@@ -22,12 +22,11 @@ class _PengiktirafanState extends State<Pengiktirafan> {
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
-          context: context,
-          title: "Pengiktirafan", 
-          icon: Icons.menu, 
-          controller: _controller,
-          heroTag: 'pengiktirafan'
-        ),
+            context: context,
+            title: "Pengiktirafan",
+            icon: Icons.menu,
+            controller: _controller,
+            heroTag: 'pengiktirafan'),
         body: Column(
           children: [
             Padding(
@@ -43,12 +42,11 @@ class _PengiktirafanState extends State<Pengiktirafan> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: Image.asset(
-                "images/MBOT.jpg",
-                width: MediaQuery.of(context).size.width-60,
-              )
-            ),
+                padding: const EdgeInsets.all(20),
+                child: Image.asset(
+                  "assets/images/MBOT.jpg",
+                  width: MediaQuery.of(context).size.width - 60,
+                )),
           ],
         ),
       ),
