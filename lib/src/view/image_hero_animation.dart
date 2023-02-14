@@ -15,7 +15,6 @@ void showSecondPage({
 				heroTag: heroTag,
 				title: '', 
 				context: context, 
-				controller: null, 
 				icon: FontAwesome5.certificate,
 				isIconTrue: false
 			),

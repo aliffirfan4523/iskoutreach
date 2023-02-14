@@ -12,7 +12,6 @@ class ThemeController extends GetxController {
   void changeTheme() {
     Get.isDarkMode ? Get.changeThemeMode(ThemeMode.light) : Get.changeThemeMode(ThemeMode.dark);
     box.write('darkmode', Get.isDarkMode);
-    print(Get.isDarkMode);
   }
 
 }

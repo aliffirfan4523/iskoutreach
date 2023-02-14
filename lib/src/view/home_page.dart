@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iskoutreach/src/view/etika_pemakaian_view.dart';
 import 'package:iskoutreach/src/view/senarai_kursus_view.dart';
+import 'package:iskoutreach/src/view/syarat_permohonan_view.dart';
 import 'package:iskoutreach/src/view/tempoh_pengajian.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 
@@ -113,13 +115,11 @@ class _HomePageState extends State<HomePage> {
                             speed: const Duration(milliseconds: 50),
                             textStyle: GoogleFonts.montserrat(
                               fontSize: 22,
+                              color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
-                        onTap: () {
-                          print("Tap Event");
-                        },
                       ),
                     ],
                   ),
@@ -185,7 +185,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
                   child: Text(
-                    sejaraIsk,
+                    introduction,
                     style: GoogleFonts.poppins(
                       fontWeight: FontWeight.normal,
                       fontSize: 13,
@@ -211,7 +211,6 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       ThemeController.changeThemeMode = _isLightTheme.value;
     });
-    print(_isLightTheme.value);
     Get.changeThemeMode(
       _isLightTheme.value ? ThemeMode.light : ThemeMode.dark,
     );
@@ -279,9 +278,17 @@ class _MenuButtonState extends State<MenuButton> {
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.2), //color of shadow
-            spreadRadius: 2, //spread radius
-            blurRadius: 3, // blur radius
-            offset: const Offset(0, 2), // changes position of shadow
+            spreadRadius: 1, //spread radius
+            blurRadius: 5, // blur radius
+            offset: const Offset(10, 10), // changes position of shadow
+            //first paramerter of offset is left-right
+            //second parameter is top to down
+          ),
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2), //color of shadow
+            spreadRadius: 1, //spread radius
+            blurRadius: 5, // blur radius
+            offset: const Offset(-10, -10), // changes position of shadow
             //first paramerter of offset is left-right
             //second parameter is top to down
           ),
@@ -334,14 +341,14 @@ class _MenuButtonState extends State<MenuButton> {
                   context: context,
                   icon: FontAwesome5.tshirt,
                   text: "Etika Pemakaian",
-                  location: NameCard(),
+                  location: EtikaPemakaian(),
                   heroTag: 'etika_pemakaian'),
 
               IconTextButton(
                   context: context,
                   icon: FontAwesome5.question_circle,
                   text: "Syarat Permohonan",
-                  location: SenaraiKursus(),
+                  location: SyaratPermohonan(),
                   heroTag: 'syarat_permohonan'),
             ],
           )
@@ -364,17 +371,17 @@ Widget IconTextButton({
         context,
         MaterialPageRoute(builder: (context) => location),
       );
-      print("Button Tapped $text");
     },
     child: Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Hero(tag: heroTag, child: Icon(icon, size: 20)),
+          Hero(tag: heroTag, child: Icon(icon, size: 20, color: Colors.white,)),
           Text(
             text,
             style: const TextStyle(
               fontSize: 11,
+              color: Colors.white
             ),
             softWrap: true,
             textAlign: TextAlign.center,

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:photo_view/photo_view.dart';
 
 import '../model/text_model.dart';
 import 'widget/custom_appbar.dart';
-import 'widget/image_preview_widget.dart';
 
 class Pengiktirafan extends StatefulWidget {
   const Pengiktirafan({super.key});
@@ -24,13 +21,13 @@ class _PengiktirafanState extends State<Pengiktirafan> {
         appBar: customAppBar(
             context: context,
             title: "Pengiktirafan",
-            icon: Icons.menu,
-            controller: _controller,
+            icon: FontAwesomeIcons.award,
             heroTag: 'pengiktirafan'),
         body: Column(
           children: [
+            SizedBox(height: 20,),
             Padding(
-              padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
+              padding: const EdgeInsets.only(left: 30, top: 5, bottom: 50),
               child: Text(
                 pengiktirafan,
                 style: GoogleFonts.poppins(

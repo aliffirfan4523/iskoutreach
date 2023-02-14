@@ -4,6 +4,7 @@ TODO
 -add translation for english and malay
 -add horizontal scrollable bottom navigation bar on homepage-cancelled
 -add floating action button on homepage for register now
+-fix expansion tile not closing when other tiles clicked(imma leave this bug for now just in case this bug was not too important)
 
 
 Senarai maklumat di dalam aplikasi
@@ -13,8 +14,10 @@ Senarai kursus/subjek yang ditawarkan
 Pengiktirafan
 Senarai pensyarah
 Kod Pemakaian
-Peta Kolej
+Kerjasama dengan IBM
+-Peta Kolej-tidak perlu
 Syarat Permohonan
 Daftar Sekarang
 
 
+Senarai maklumat yang perlu diambil dari laman web

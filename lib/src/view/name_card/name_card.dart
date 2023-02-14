@@ -21,11 +21,19 @@ class _NameCardState extends State<NameCard> {
         context: context, 
         title: "Senarai Pensyarah", 
         icon: Icons.person_rounded,
-        controller: _controller,
         heroTag: 'senarai_pensyarah'
       ),
       body: Column(
         children: [
+          Container(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              "Terdapat 11 orang tenaga pengajar yang berpengalaman dan berdedikasi yang akan membantu pelajar dalam proses pembelajaran. ",
+              style: TextStyle(fontSize: 14),
+              softWrap: true,
+              textAlign: TextAlign.justify,
+            ),
+          ),
           SizedBox(
             height: 60,
           ),

@@ -11,21 +11,18 @@ class TempohPengajian extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     final _controller = ScrollController();
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
             context: context,
             title: "Tempoh Pengajian",
-            icon: Icons.menu,
-            controller: _controller,
+            icon: Icons.calendar_view_month_rounded,
             heroTag: 'tempoh_pengajian'),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             Container(
               padding: const EdgeInsets.all(20),
               child: const Text(
@@ -40,13 +37,17 @@ class TempohPengajian extends StatelessWidget {
               "Tempoh pengajian Sijil Vokasional Malaysia (SVM)",
               textAlign: TextAlign.left,
             ),
-            const SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: ImagePreview(
-                width: width,
-                imageLink: 'assets/images/tempoh_pengajian/SVM.jpg',
-                heroTag: 'tempoh_pengajian_svm',
+              padding: const EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30.0),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width-120,
+                  child: Image.asset(
+                    'assets/images/tempoh_pengajian/SVM.jpg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -64,13 +65,17 @@ class TempohPengajian extends StatelessWidget {
               "Tempoh pengajian Diploma vokasional Malaysia (DVM)",
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: ImagePreview(
-                width: width,
-                imageLink: 'assets/images/tempoh_pengajian/DVM.jpg',
-                heroTag: 'tempoh_pengajian_dvm',
+              padding: const EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30.0),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width-120,
+                  child: Image.asset(
+                    'assets/images/tempoh_pengajian/DVM.jpg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
               ),
             ),
           ],

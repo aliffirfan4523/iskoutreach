@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scroll_app_bar/scroll_app_bar.dart';
 
-ScrollAppBar customAppBar({
+AppBar customAppBar({
 	required BuildContext context,
 	required String title, 
 	dynamic icon, 
-	required controller,
 	required String heroTag,
 	bool isIconTrue = true,
 	}) {
-	final controller = ScrollController();
-	return ScrollAppBar(
+	return AppBar(
 		shape: ShapeBorder.lerp(
 			const RoundedRectangleBorder(
 				borderRadius: BorderRadius.only(
@@ -42,22 +41,21 @@ ScrollAppBar customAppBar({
 				),
 			),
 		),
-		title: Text(title),
+		title: Text(title, style: TextStyle(fontSize: 15),),
 		backgroundColor: Colors.transparent,
-		controller: controller,
 		elevation: 0,
 		leading: IconButton(
 			onPressed: () {
 				Navigator.pop(context);
 			},
-			icon: const Icon(Icons.arrow_left_rounded),
+			icon: const Icon(FontAwesomeIcons.caretLeft, color: Colors.white),
 		),
 		actions: [
 			Hero(
 				tag: heroTag,
 				child: Padding(
 				  padding: const EdgeInsets.only(right:50.0),
-				  child: isIconTrue ? Icon(icon) : Container(),
+				  child: isIconTrue ? Icon(icon, color: Colors.white,) : Container(),
 				)
 			),
 		],

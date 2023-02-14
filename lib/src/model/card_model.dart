@@ -290,7 +290,7 @@ class CardWidget extends StatelessWidget {
                     height: 1),
               )),
           Positioned(
-              top: 59,
+              top: 60,
               left: 28,
               child: Text(
                 jawatan,
@@ -305,7 +305,7 @@ class CardWidget extends StatelessWidget {
                     height: 1),
               )),
           Positioned(
-              top: 88,
+              top: 90,
               left: 28,
               child: Text(
                 jawatanLain,
