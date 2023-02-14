@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/card_model.dart';
+import '../widget/Unordered_List.dart';
 import '../widget/custom_appbar.dart';
 
 class NameCard extends StatefulWidget {
@@ -10,7 +11,6 @@ class NameCard extends StatefulWidget {
 }
 
 class _NameCardState extends State<NameCard> {
-
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
@@ -18,21 +18,19 @@ class _NameCardState extends State<NameCard> {
 
     return Scaffold(
       appBar: customAppBar(
-        context: context, 
-        title: "Senarai Pensyarah", 
-        icon: Icons.person_rounded,
-        heroTag: 'senarai_pensyarah'
-      ),
+          context: context,
+          title: "Senarai Pensyarah",
+          icon: Icons.person_rounded,
+          heroTag: 'senarai_pensyarah'),
       body: Column(
         children: [
-          Container(
-            padding: const EdgeInsets.all(20),
-            child: Text(
-              "Terdapat 11 orang tenaga pengajar yang berpengalaman dan berdedikasi yang akan membantu pelajar dalam proses pembelajaran. ",
-              style: TextStyle(fontSize: 14),
-              softWrap: true,
-              textAlign: TextAlign.justify,
-            ),
+          UnorderedListItem(
+            bottom: 20,
+            left: 20,
+            right: 20,
+            text:
+                "Terdapat 11 orang tenaga pengajar yang berpengalaman dan berdedikasi yang akan membantu pelajar dalam proses pembelajaran. ",
+            top: 25,
           ),
           SizedBox(
             height: 60,

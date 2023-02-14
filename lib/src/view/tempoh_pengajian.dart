@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
 import 'image_hero_animation.dart';
 import 'widget/custom_appbar.dart';
@@ -23,26 +25,40 @@ class TempohPengajian extends StatelessWidget {
             child: Column(
           children: <Widget>[
             const SizedBox(height: 30),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text(
-                "Tempoh pengajian bagi Program Sijil Vokasional Malaysia adalah selama 4 semester iaitu 2 tahun. Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu. Ia terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
-                style: TextStyle(fontSize: 14),
-                softWrap: true,
-                textAlign: TextAlign.justify,
-              ),
-            ),
-            const SizedBox(height: 10),
             const Text(
               "Tempoh pengajian Sijil Vokasional Malaysia (SVM)",
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 10),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text: "selama 4 semester iaitu 2 tahun.",
+              top: 5,
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                  "Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu.",
+              top: 5,
+            ),
+            UnorderedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                  "terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
+              top: 5,
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width-120,
+                  width: MediaQuery.of(context).size.width - 180,
                   child: Image.asset(
                     'assets/images/tempoh_pengajian/SVM.jpg',
                     fit: BoxFit.fitWidth,
@@ -51,26 +67,32 @@ class TempohPengajian extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text(
-                "Tempoh pengajian bagi Program Diploma Vokasional Malaysia adalah selama 5 semester iaitu 2 tahun dan 6 bulan. Setiap pelajar yang melepasi syarat kemasukan ke Diploma Vokasional Malaysia akan menyambungkan pembelajaran selama 4 semester dan akan menjalani On-Job-Training (OJT) selama 6 bulan pada semester ke-5",
-                style: TextStyle(fontSize: 14),
-                softWrap: true,
-                textAlign: TextAlign.justify,
-              ),
-            ),
-            const SizedBox(height: 10),
             const Text(
               "Tempoh pengajian Diploma vokasional Malaysia (DVM)",
               textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 10),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text: "selama 5 semester iaitu 2 tahun dan 6 bulan.",
+              top: 5,
+            ),
+            UnorderedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                  "Setiap pelajar yang melepasi syarat kemasukan ke Diploma Vokasional Malaysia akan menyambungkan pembelajaran selama 4 semester dan akan menjalani On-Job-Training (OJT) selama 6 bulan pada semester ke-5",
+              top: 5,
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width-120,
+                  width: MediaQuery.of(context).size.width - 180,
                   child: Image.asset(
                     'assets/images/tempoh_pengajian/DVM.jpg',
                     fit: BoxFit.fitWidth,
@@ -78,6 +100,7 @@ class TempohPengajian extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
           ],
         )),
       ),
