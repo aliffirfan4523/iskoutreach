@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.iskoutreach">
+    package="com.iskcompany.iskoutreach">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Isk Outreach"
+        android:label="ISK Outreach"
         android:name="${applicationName}"
         android:icon="@drawable/icon">
         <activity
@@ -32,4 +32,11 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
 </manifest>

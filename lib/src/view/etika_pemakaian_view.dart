@@ -6,7 +6,7 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import 'widget/custom_appbar.dart';
 
 class EtikaPemakaian extends StatelessWidget {
-  const EtikaPemakaian({super.key});
+  EtikaPemakaian({super.key});
 
   @override
   Widget build(BuildContext context) {

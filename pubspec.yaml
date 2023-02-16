@@ -114,6 +114,7 @@ flutter:
     - assets/images/pn_rohani.jpeg
     - assets/images/pn_rohaya.jpeg
     - assets/images/pn_solehah.jpeg
+    - assets/images/jpeg/carta.jpeg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

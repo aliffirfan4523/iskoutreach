@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   width: double.infinity,
-                  height: 300,
+                  height: 350,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(

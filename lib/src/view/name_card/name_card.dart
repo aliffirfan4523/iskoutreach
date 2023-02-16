@@ -11,6 +11,7 @@ class NameCard extends StatefulWidget {
 }
 
 class _NameCardState extends State<NameCard> {
+
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;

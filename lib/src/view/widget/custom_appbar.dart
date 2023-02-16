@@ -53,11 +53,22 @@ AppBar customAppBar({
 		actions: [
 			Hero(
 				tag: heroTag,
-				child: Padding(
-				  padding: const EdgeInsets.only(right:50.0),
-				  child: isIconTrue ? Icon(icon, color: Colors.white,) : Container(),
+				child: Builder(
+				  builder: (context) {
+				    return GestureDetector(
+				    	onTap: _openDrawer(context),
+				      child: Padding(
+				        padding: const EdgeInsets.only(right:50.0),
+				        child: isIconTrue ? Icon(icon, color: Colors.white,) : Container(),
+				      ),
+				    );
+				  }
 				)
 			),
 		],
 	);
+}
+
+_openDrawer(BuildContext context){
+	Scaffold.of(context).openEndDrawer();
 }

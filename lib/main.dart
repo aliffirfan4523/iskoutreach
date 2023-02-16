@@ -80,7 +80,7 @@ class _MainPageState extends State<MainPage> {
             },
             label: const Text('Pertanyaan Lanjut?'),
             icon: const Icon(FontAwesome5.whatsapp),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.indigo.shade600,
           ),
         );
         /*

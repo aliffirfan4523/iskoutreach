@@ -12,6 +12,7 @@ class SyaratPermohonan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
@@ -46,7 +47,7 @@ class SyaratPermohonan extends StatelessWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                "Syarat permohonan Diploma Vokasional Malaysia (DVM)",
+                "Syarat menyambung Diploma Vokasional Malaysia (DVM)",
               ),
             ),
             ListView.builder(

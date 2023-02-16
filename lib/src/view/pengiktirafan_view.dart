@@ -14,16 +14,17 @@ class Pengiktirafan extends StatefulWidget {
 }
 
 class _PengiktirafanState extends State<Pengiktirafan> {
+
   @override
   Widget build(BuildContext context) {
-    ScrollController _controller = ScrollController();
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
-            context: context,
-            title: "Pengiktirafan",
-            icon: FontAwesomeIcons.award,
-            heroTag: 'pengiktirafan'),
+          context: context,
+          title: "Pengiktirafan",
+          icon: FontAwesomeIcons.award,
+          heroTag: 'pengiktirafan'
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
