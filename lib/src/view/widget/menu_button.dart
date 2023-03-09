@@ -1,10 +1,12 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iskoutreach/src/view/kerjasama_ibm_view.dart';
 import 'package:iskoutreach/src/view/pengenalan_view.dart';
+import 'package:iskoutreach/src/view/pertanyaan_lanjut_view.dart';
 
-import '../etika_pemakaian_view.dart';
+import '../galeri_view.dart';
 import '../home_page.dart';
 import '../name_card/name_card.dart';
 import '../pengiktirafan_view.dart';
@@ -38,28 +40,33 @@ import '../tempoh_pengajian.dart';
       heroTag: 'pengiktirafan'),
     IconTextButton(
       icon: FontAwesomeIcons.handshake,
-      text: "Program IBM-PTech",
+      text: "Program \nIBM-PTech",
       location: KerjasamaIBM(),
       heroTag: 'kerjasama_ibm'),
     //senarai pensyarah
     IconTextButton(
       icon: Icons.person_rounded,
-      text: "Senarai Pensyarah",
+      text: "Senarai \nPensyarah",
       location: NameCard(),
       heroTag: 'senarai_pensyarah'),
     //kod pemakaian
     IconTextButton(
-      icon: FontAwesome5.tshirt,
-      text: "Etika Pemakaian",
-      location: EtikaPemakaian(),
-      heroTag: 'etika_pemakaian'),
+      icon: Icons.browse_gallery_rounded,
+      text: "Galeri",
+      location: GaleriGambar(),
+      heroTag: 'galeri'),
 
     IconTextButton(
       icon: FontAwesome5.question_circle,
-      text: "Syarat Permohonan",
+      text: "Syarat \nPermohonan",
       location: SyaratPermohonan(),
-      heroTag: 'syarat_permohonan')
-    ];
+      heroTag: 'syarat_permohonan'),
+    IconTextButton(
+      icon: FontAwesome5.phone,
+      text: "Pertanyaan \nLanjut",
+      location: PertanyaanLanjut(),
+      heroTag: 'pertanyaan_lanjut')
+  ];
 
 class MenuButton extends StatefulWidget {
   const MenuButton({
@@ -124,6 +131,7 @@ class _MenuButtonState extends State<MenuButton> {
             children: [
               buttonList[6],
               buttonList[7],
+              buttonList[8],
             ],
           )
         ],
@@ -159,22 +167,27 @@ class IconTextButton extends StatelessWidget {
     },
     child: Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Hero(
-              tag: heroTag,
-              child: Icon(
-                icon,
-                size: 20,
-                color: Colors.white,
-              )),
-          Text(
-            text,
-            style: const TextStyle(fontSize: 11, color: Colors.white),
-            softWrap: true,
-            textAlign: TextAlign.center,
-          ),
-        ],
+      child: FittedBox(
+        fit: BoxFit.scaleDown , 
+        child: Column(
+          children: [
+            Hero(
+                tag: heroTag,
+                child: Icon(
+                  icon,
+                  size: 15,
+                  color: Colors.white,
+                )),
+            AutoSizeText(
+              text,
+              maxFontSize: 11,
+              minFontSize: 9,
+              style: const TextStyle(fontSize: 11, color: Colors.white),
+              softWrap: true,
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     ),
   );

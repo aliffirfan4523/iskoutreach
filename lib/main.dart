@@ -4,6 +4,8 @@ import 'package:iskoutreach/src/controller/url_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:sizer/sizer.dart';
+import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
 import 'src/model/homepage_model.dart';
@@ -59,41 +61,18 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    ColorController.getColor();
     themeModeController.getThemeStatus();
   }
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => HomePageNotifier(currentPage: 0),
-      builder: (context, child) {
-        return Scaffold(
-          body: SafeArea(
-            child: SingleChildScrollView(
-              child: HomePage(),
-            ),
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: HomePage(),
           ),
-          floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {
-              print('test');
-              launchWhatsapp();
-            },
-            label: const Text('Pertanyaan Lanjut?'),
-            icon: const Icon(FontAwesome5.whatsapp),
-            backgroundColor: Colors.indigo.shade600,
-          ),
-        );
-        /*
-        return SideMenu(
-          key: sideMenuKey,
-          menu: SideMenuPages(),
-          type: SideMenuType.slideNRotate,
-          child: SafeArea(
-              child: current_pages[Provider.of<HomePageNotifier>(context).currentPage],
-            ),
-        )
-        */
-      },
-    );
+        ),
+      );
   }
 }

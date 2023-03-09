@@ -36,12 +36,39 @@ class KerjasamaIBM extends StatelessWidget {
 						  	),
 							),
 						),
+						Row(
+							crossAxisAlignment: CrossAxisAlignment.center,
+							mainAxisAlignment: MainAxisAlignment.spaceAround,
+							children: [
+								SizedBox(
+                  width: MediaQuery.of(context).size.width/3-50,
+                  child: Image.asset(
+                    'assets/images/logo_IBM.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width/3-90,
+                  child: Image.asset(
+                    'assets/images/logo_x.jpg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width/3-20,
+                  child: Image.asset(
+                    'assets/images/logo_kv.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+							],
+						),
 						const SizedBox(
 							height: 40,
 							),
 						Text(
 							'Sinopsis',
-							style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
+							style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400),
 							),
 						Padding(
 							padding: EdgeInsets.all(20),
@@ -55,14 +82,14 @@ class KerjasamaIBM extends StatelessWidget {
 						SizedBox(height: 20,),
 						Text(
 							'Carta Organisasi',
-							style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
+							style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400),
 						),
 		        Padding(
               padding: const EdgeInsets.all(10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width - 180,
+                  width: MediaQuery.of(context).size.width - 30,
                   child: Image.asset(
                     'assets/images/jpeg/carta.jpeg',
                     fit: BoxFit.fitWidth,

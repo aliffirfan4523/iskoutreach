@@ -8,12 +8,14 @@ class ThemeController extends GetxController {
   static bool get isDark => box.read('darkmode') ?? false;
   static ThemeMode get theme => isDark ? ThemeMode.dark : ThemeMode.light ;
   static bool changeThemeMode = true;
+  static Color currentIconColor = Colors.orange;
+
 
   void changeTheme() {
     Get.isDarkMode ? Get.changeThemeMode(ThemeMode.light) : Get.changeThemeMode(ThemeMode.dark);
+    currentIconColor = Get.isDarkMode ? Colors.white :  Colors.orange;
     box.write('darkmode', Get.isDarkMode);
   }
-
 }
 
 class Themes {

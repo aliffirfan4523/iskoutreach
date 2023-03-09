@@ -144,3 +144,56 @@
           ),
         )
         */
+        /*
+          Container(
+            height: 400,
+            width: double.infinity,
+            margin: const EdgeInsets.only(left: 10, right: 10),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5), //color of shadow
+                  spreadRadius: 5, //spread radius
+                  blurRadius: 7, // blur radius
+                  offset: const Offset(0, 2), // changes position of shadow
+                  //first paramerter of offset is left-right
+                  //second parameter is top to down
+                ),
+              ],
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.indigo.shade400,
+                    Colors.indigo.shade900,
+                  ]),
+              borderRadius: const BorderRadius.all(Radius.circular(30)),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, top: 5, bottom: 30),
+                  child: Text(
+                    introduction,
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 13,
+                    ),
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.clip,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        * 
+        * 
+        *        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+          Colors.indigo.shade400,
+          Colors.indigo.shade900,
+          Colors.indigo.shade400,
+          Colors.indigo.shade100,
+          ]),*/

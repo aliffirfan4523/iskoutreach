@@ -51,18 +51,11 @@ AppBar customAppBar({
 			icon: const Icon(FontAwesomeIcons.caretLeft, color: Colors.white),
 		),
 		actions: [
-			Hero(
-				tag: heroTag,
-				child: Builder(
-				  builder: (context) {
-				    return GestureDetector(
-				    	onTap: _openDrawer(context),
-				      child: Padding(
-				        padding: const EdgeInsets.only(right:50.0),
-				        child: isIconTrue ? Icon(icon, color: Colors.white,) : Container(),
-				      ),
-				    );
-				  }
+		Hero(
+			tag: heroTag,
+			child: Padding(
+				padding: const EdgeInsets.only(right:50.0),
+				child: isIconTrue ? Icon(icon, color: Colors.white,) : Container(),
 				)
 			),
 		],
