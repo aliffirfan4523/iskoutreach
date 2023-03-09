@@ -1,5 +1,6 @@
 
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 launchRegisterUrl() async {
   const url = 'https://spskt4.moe.gov.my/spat4_mohon/index.cfm';
@@ -22,8 +23,8 @@ launchWhatsapp() async{
 }
 makePhoneCall(int phonenumber) async {
   String launchUri = 'tel:+$phonenumber';
-  if (await canLaunch(launchUri)) {
-      await launch(launchUri);
+  if (await canLaunchUrlString(launchUri)) {
+      await launchUrlString(launchUri);
     } else {
       throw 'Could not launch $launchUri';
     }
@@ -32,8 +33,8 @@ makePhoneCall(int phonenumber) async {
 makeEmail(String email) async{
   String uri ='mailto:$email?subject=Pertanyaan%20Lanjut';
 
-  if (await canLaunch(uri)) {
-      await launch(uri);
+  if (await canLaunchUrlString(uri)) {
+      await launchUrlString(uri);
     } else {
       throw 'Could not launch $uri';
     }

@@ -33,6 +33,7 @@ class KerjasamaIBM extends StatelessWidget {
 							  padding: EdgeInsets.only(left:20.0,right:20.0),
 							  child: Text(
 							  	"Program kerjasama IBM-PTech antara IBM dan Kolej Vokasional Sungai Buloh",
+                  style: TextStyle(fontWeight: FontWeight.bold),
 						  	),
 							),
 						),
@@ -74,8 +75,10 @@ class KerjasamaIBM extends StatelessWidget {
 							padding: EdgeInsets.all(20),
 							child: Text(
 								ibm,
+                textAlign: TextAlign.justify,
 								style: TextStyle(
 									fontSize: 13,
+                  height: 1.5
 								),
 							),
 						),

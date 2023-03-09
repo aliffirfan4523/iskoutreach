@@ -49,13 +49,6 @@ import '../tempoh_pengajian.dart';
       text: "Senarai \nPensyarah",
       location: NameCard(),
       heroTag: 'senarai_pensyarah'),
-    //kod pemakaian
-    IconTextButton(
-      icon: Icons.browse_gallery_rounded,
-      text: "Galeri",
-      location: GaleriGambar(),
-      heroTag: 'galeri'),
-
     IconTextButton(
       icon: FontAwesome5.question_circle,
       text: "Syarat \nPermohonan",
@@ -65,7 +58,7 @@ import '../tempoh_pengajian.dart';
       icon: FontAwesome5.phone,
       text: "Pertanyaan \nLanjut",
       location: PertanyaanLanjut(),
-      heroTag: 'pertanyaan_lanjut')
+      heroTag: 'pertanyaan_lanjut'),
   ];
 
 class MenuButton extends StatefulWidget {

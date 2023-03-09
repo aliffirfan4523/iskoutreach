@@ -47,8 +47,8 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                 child: Text(
                   "Senarai subjek yang ditawarkan bagi Sijil Vokasional Malaysia",
                   style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w300
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
               ),
@@ -76,9 +76,10 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                 child: Text(
                   "Senarai subjek yang ditawarkan bagi Diploma Vokasional Malaysia",
                   style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w300
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold
                   ),
+                  textAlign: TextAlign.justify,
                 ),
               ),
               Padding(

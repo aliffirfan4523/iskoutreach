@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -7,8 +8,64 @@ import 'package:iskoutreach/src/view/widget/side_nav_bar.dart';
 import 'widget/Unordered_List.dart';
 import 'widget/custom_appbar.dart';
 
+final List<String> imgList = [
+  "assets/images/amali/amali_1.jpg",
+  "assets/images/amali/amali_2.jpg",
+  "assets/images/amali/amali_3.jpg",
+  "assets/images/amali/amali_4.jpg",
+  "assets/images/amali/amali_5.jpg",
+  'assets/images/amali/amali_6.jpg',
+  'assets/images/amali/amali_7.jpg',
+  'assets/images/amali/amali_8.jpg',
+  'assets/images/amali/amali_9.jpg',
+];
+
 class Pengenalan extends StatelessWidget {
   Pengenalan({super.key});
+
+
+
+final List<Widget> imageSliders = imgList
+.map((item) => Container(
+          child: Container(
+            margin: const EdgeInsets.all(5.0),
+            child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                child: Stack(
+                  children: <Widget>[
+                    Image.network(item, fit: BoxFit.cover, width: 1000.0),
+                    Positioned(
+                      bottom: 0.0,
+                      left: 0.0,
+                      right: 0.0,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color.fromARGB(200, 0, 0, 0),
+                              Color.fromARGB(0, 0, 0, 0)
+                            ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                          ),
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 20.0),
+                        child: Text(
+                          ' ',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
+          ),
+        ))
+    .toList();
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +80,32 @@ class Pengenalan extends StatelessWidget {
             child: Column(
           children: <Widget>[
             //penerangan program
+            SizedBox(height: 30,),
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.only(left:20.0,right:20.0),
+                child: Text(
+                  "Pengenalan",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+              ),
+            ),
             UnorderedListItem(
               bottom: 20,
               left: 20,
               right: 20,
               text:
                 "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
-              top: 40,
+              top: 20,
+            ),
+            UnorderedListItem(
+              bottom: 30,
+              left: 20,
+              right: 20,
+              text:
+                "Pelajar akan belajar cara memasang dan menyelenggara komputer, pelayan dan peranti rangkaian, bagaimana rangkaian komputer berfungsi, mengurus sistem pelayan, dan lain-lain",
+              top: 10,
             ),
             const Align(
               alignment: Alignment.center,
@@ -37,6 +113,7 @@ class Pengenalan extends StatelessWidget {
                 padding: EdgeInsets.only(left:20.0,right:20.0),
                 child: Text(
                   "Visi dan Misi",
+                  style: TextStyle(fontWeight: FontWeight.bold,  fontSize: 16),
                 ),
               ),
             ),
@@ -49,7 +126,7 @@ class Pengenalan extends StatelessWidget {
               top: 20,
             ),
             UnorderedListItem(
-              bottom: 20,
+              bottom: 30,
               left: 20,
               right: 20,
               text:
@@ -57,6 +134,16 @@ class Pengenalan extends StatelessWidget {
               top: 5,
             ),
             //penerangan bidang pengajian
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.only(left:20.0,right:20.0),
+                child: Text(
+                  "Peringkat bidang pengajian",
+                  style: TextStyle(fontWeight: FontWeight.bold,  fontSize: 16),
+                ),
+              ),
+            ),
             UnorderedListItem(
               bottom: 5,
               left: 20,
@@ -75,7 +162,7 @@ class Pengenalan extends StatelessWidget {
               number: 1,
             ),
             NumberedListItem(
-              bottom: 20,
+              bottom: 30,
               left: 20,
               right: 20,
               text:
@@ -83,64 +170,25 @@ class Pengenalan extends StatelessWidget {
               top: 5,
               number: 2,
             ),
-            UnorderedListItem(
-              bottom: 5,
-              left: 20,
-              right: 20,
-              text:
-                "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
-              top: 10,
-            ),
-            UnorderedListItem(
-              bottom: 5,
-              left: 20,
-              right: 20,
-              text:
-                "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
-              top: 10,
-            ),
-            NumberedListItem(
-              bottom: 5,
-              left: 20,
-              right: 20,
-              text:
-                " Sijil Vokasional Malaysia (SVM)",
-              top: 5,
-              number: 1,
-            ),
-            NumberedListItem(
-              bottom: 20,
-              left: 20,
-              right: 20,
-              text:
-                "layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
-              top: 5,
-              number: 2,
-            ),
-            UnorderedListItem(
-              bottom: 5,
-              left: 20,
-              right: 20,
-              text:
-                "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
-              top: 10,
-            ),
-            UnorderedListItem(
-              bottom: 5,
-              left: 20,
-              right: 20,
-              text:
-                "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia",
-              top: 10,
-            ),
+            
             //Peluang kerjaya
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.only(left:20.0,right:20.0),
+                child: Text(
+                  "Peluang Kerjaya",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+              ),
+            ),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
               text:
-                "Peluang Kerjaya:",
-              top: 30,
+                "Antara peluang kerjaya bagi pelajar program ini:",
+              top: 20,
             ),
             NumberedListItem(
               bottom: 5,
@@ -214,7 +262,31 @@ class Pengenalan extends StatelessWidget {
               top: 5,
               number: 8,
             ),
+            Column(
+            children: [
+              const Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(left:20.0,right:20.0, top: 10, bottom: 30),
+                  child: Text(
+                    "Aktiviti Pelajar",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                ),
+              ),
+              CarouselSlider(
+                options: CarouselOptions(
+                  aspectRatio: 1.5,
+                  enlargeCenterPage: true,
+                  scrollDirection: Axis.horizontal,
+                  autoPlay: true,
+                ),
+                items: imageSliders,
+              )
+            ],
+          )
           ],
+
         )),
       ),
     );

@@ -31,6 +31,7 @@ class SyaratPermohonan extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 "Syarat permohonan Sijil Vokasional Malaysia (SVM)",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             ListView.builder(
@@ -42,12 +43,13 @@ class SyaratPermohonan extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 40,
+              height: 10,
             ),
             const Align(
               alignment: Alignment.center,
               child: Text(
                 "Syarat menyambung Diploma Vokasional Malaysia (DVM)",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             ListView.builder(
@@ -58,6 +60,65 @@ class SyaratPermohonan extends StatelessWidget {
                 return syaratDvm[index];
               },
             ),
+            SizedBox(height: 20,),
+            const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "Maklumat Tambahan:-",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
+              top: 30,
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
+              top: 10,
+            ),
+            NumberedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                " Sijil Vokasional Malaysia (SVM)",
+              top: 5,
+              number: 1,
+            ),
+            NumberedListItem(
+              bottom: 10,
+              left: 20,
+              right: 20,
+              text:
+                "layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+              top: 5,
+              number: 2,
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
+              top: 10,
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia",
+              top: 10,
+            ),
+            SizedBox(height: 30)
           ],
         )),
       ),
@@ -135,11 +196,13 @@ List<UnorderedListItem> syaratDvm = [
     top: 5,
   ),
   UnorderedListItem(
-    bottom: 5,
+    bottom: 30,
     left: 20,
     right: 20,
     text:
         "Menduduki modul tambahan kursus Matematik yang telah ditetapkan bagi pelajar yang tidak mencapai setara Gred 2.0",
     top: 5,
   ),
+  
+  
 ];

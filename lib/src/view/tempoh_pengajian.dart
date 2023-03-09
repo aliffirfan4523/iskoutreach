@@ -25,9 +25,11 @@ class TempohPengajian extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             const Text(
               "Tempoh pengajian Sijil Vokasional Malaysia (SVM)",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
@@ -67,12 +69,13 @@ class TempohPengajian extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 30),
             const Text(
               "Tempoh pengajian Diploma vokasional Malaysia (DVM)",
+              style: TextStyle(fontWeight: FontWeight.bold,  fontSize: 16),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             UnorderedListItem(
               bottom: 5,
               left: 20,

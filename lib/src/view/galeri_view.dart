@@ -16,20 +16,9 @@ final List<String> imgList = [
   'assets/images/amali/amali_8.jpg',
   'assets/images/amali/amali_9.jpg',
 ];
-class GaleriGambar extends StatelessWidget {
-  GaleriGambar({super.key});
+class DaftarSekarang extends StatelessWidget {
+  DaftarSekarang({super.key});
 
-final List<Widget> imageSliders = imgList
-.map((item) => Container(
-  child: Container(
-    margin: EdgeInsets.all(5.0),
-    child: ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-      child: Image.asset(item, fit: BoxFit.fill, width: 1000.0, height: 1000,)
-      ),
-    ),
-  ))
-.toList();
 
   @override
   Widget build(BuildContext context) {
@@ -42,30 +31,8 @@ final List<Widget> imageSliders = imgList
       		heroTag: 'galeri'
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              const Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: EdgeInsets.only(left:20.0,right:20.0, top: 40, bottom: 30),
-                  child: Text(
-                    "Aktiviti Pelajar",
-                  ),
-                ),
-              ),
-              CarouselSlider(
-                options: CarouselOptions(
-                  aspectRatio: 1.0,
-                  enlargeCenterPage: true,
-                  scrollDirection: Axis.horizontal,
-                  autoPlay: true,
-                ),
-                items: imageSliders,
-              )
-            ],
           ),
         ),
-	  	),
     );
   }
 }

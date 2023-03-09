@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:iskoutreach/src/controller/url_controller.dart';
-import 'package:provider/provider.dart';
 import 'package:get/get.dart';
-import 'package:responsive_framework/responsive_framework.dart';
-import 'package:sizer/sizer.dart';
+import 'package:iskoutreach/src/controller/url_controller.dart';
 import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
-import 'src/model/homepage_model.dart';
-import 'src/provider/homepage_provider.dart';
-import 'src/view/CustomError.dart';
 import 'src/view/home_page.dart';
 
 void main() async {
@@ -73,6 +67,14 @@ class _MainPageState extends State<MainPage> {
           child: HomePage(),
           ),
         ),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed:() {
+            launchRegisterUrl();
+          },
+          label: Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
+          icon: Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
+          backgroundColor: Colors.indigo.shade600,
+        )
       );
   }
 }
