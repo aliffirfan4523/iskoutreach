@@ -51,21 +51,27 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                   ),
                 ),
               ),
-              const ExpansionTile(
+              ExpansionTile(
                 tilePadding: EdgeInsets.all(20),
                 title: Text(
                   'Apa itu MBOT ?',
                   style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
                 ),
                 children: [
-                  ListTile(
-                    title: Text(
-                      'Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal yang berkaitan. Berdasarkan Akta 768, MBOT memperluaskan fungsinya secara menegak dan mendatar di mana MBOT melihat kepada profesion berasaskan teknologi yang merentasi disiplin berdasarkan reka bentuk konsep kepada teknologi yang direalisasikan dan meliputi daripada Juruteknik (dengan MQF Tahap 3 hingga Diploma Lanjutan Tahap 5) sehingga Ahli Teknologi. (Ijazah Sarjana Muda dan ke atas). Secara keseluruhannya, profesional ini (Teknologi dan Juruteknik) telah menyepadukan peranan dari konsep kepada realiti.',
-                      style: TextStyle(
-                        fontSize: 13,
-                      ),
-                    ),
-                  )
+                  UnorderedListItem(
+                    bottom: 5,
+                    left: 20,
+                    right: 20,
+                    text:'Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal yang berkaitan.',
+                    top: 5,
+                  ),
+                  UnorderedListItem(
+                    bottom: 20,
+                    left: 20,
+                    right: 20,
+                    text: "Pengiktirafan MBOT diperlukan bagi membolehkan pelajar lepasan diploma menyambungkan pelajaran di peringkat lebih tinggi.",
+                    top: 10,
+                  ),
                 ],
               ),
               SizedBox(

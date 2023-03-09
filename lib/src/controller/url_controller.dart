@@ -20,3 +20,21 @@ launchWhatsapp() async{
     throw 'Could not launch $url';
   }
 }
+makePhoneCall(int phonenumber) async {
+  String launchUri = 'tel:+$phonenumber';
+  if (await canLaunch(launchUri)) {
+      await launch(launchUri);
+    } else {
+      throw 'Could not launch $launchUri';
+    }
+}
+
+makeEmail(String email) async{
+  String uri ='mailto:$email?subject=Pertanyaan%20Lanjut';
+
+  if (await canLaunch(uri)) {
+      await launch(uri);
+    } else {
+      throw 'Could not launch $uri';
+    }
+}

@@ -124,7 +124,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
         initiallyExpanded: index == currentInt,
         title: Text(
           tahun,
-          style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
+          style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w600),
         ),
         children: [
           Builder(
@@ -138,7 +138,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                     title: Text(
                       subjek[index],
                       style: const TextStyle(
-                        fontWeight: FontWeight.w200,
+                        fontWeight: FontWeight.w600,
                         fontSize: 13,
                       ),
                     ),

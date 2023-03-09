@@ -19,19 +19,42 @@ class Pengenalan extends StatelessWidget {
             title: "Pengenalan",
             icon: FontAwesome5.desktop,
             heroTag: 'syarat_permohonan'),
-        endDrawer: sideDrawer(),
-        floatingActionButton: FloatingActionButton(child: Icon(Icons.menu),onPressed: (){Scaffold.of(context).openEndDrawer();},),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
             //penerangan program
             UnorderedListItem(
-              bottom: 5,
+              bottom: 20,
               left: 20,
               right: 20,
               text:
                 "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
               top: 40,
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.only(left:20.0,right:20.0),
+                child: Text(
+                  "Visi dan Misi",
+                ),
+              ),
+            ),
+            UnorderedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Visi – Peneraju pendidikan teknikal dan vokasional yang unggul.",
+              top: 20,
+            ),
+            UnorderedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                "Misi – Memperkasakan pendidikan teknikal dan vokasional melalui pelaksanaan program yang berkualiti.",
+              top: 5,
             ),
             //penerangan bidang pengajian
             UnorderedListItem(
@@ -39,8 +62,26 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Program ini menawarkan 2 peringkat bidang pengajian iaitu Sijil Vokasional Malaysia (SVM) dan Diploma Vokasional Malaysia (DVM)",
+                "Program ini menawarkan 2 peringkat bidang pengajian iaitu:-",
               top: 30,
+            ),
+            NumberedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                "Sijil Vokasional Malaysia (SVM)",
+              top: 5,
+              number: 1,
+            ),
+            NumberedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                "Diploma Vokasional Malaysia (DVM)",
+              top: 5,
+              number: 2,
             ),
             UnorderedListItem(
               bottom: 5,
@@ -55,8 +96,26 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Murid yang berjaya di peringkat Sijil akan dianugerahkan Sijil Vokasional Malaysia (SVM) dan layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+                "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
               top: 10,
+            ),
+            NumberedListItem(
+              bottom: 5,
+              left: 20,
+              right: 20,
+              text:
+                " Sijil Vokasional Malaysia (SVM)",
+              top: 5,
+              number: 1,
+            ),
+            NumberedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                "layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+              top: 5,
+              number: 2,
             ),
             UnorderedListItem(
               bottom: 5,

@@ -58,7 +58,10 @@ dependencies:
   horizontal_card_pager: ^1.1.1
   card_swiper: ^2.0.4
   scroll_app_bar: ^2.0.0
+  auto_size_text: ^3.0.0
   flutter_markdown: ^0.6.14
+  sizer: ^2.0.15
+  carousel_slider: ^4.2.1
   
 dev_dependencies:
   flutter_test:
@@ -115,6 +118,18 @@ flutter:
     - assets/images/pn_rohaya.jpeg
     - assets/images/pn_solehah.jpeg
     - assets/images/jpeg/carta.jpeg
+    - assets/images/logo_IBM.png
+    - assets/images/logo_x.jpg
+    - assets/images/logo_kv.png
+    - assets/images/amali/amali_1.jpg
+    - assets/images/amali/amali_2.jpg
+    - assets/images/amali/amali_3.jpg
+    - assets/images/amali/amali_4.jpg
+    - assets/images/amali/amali_5.jpg
+    - assets/images/amali/amali_6.jpg
+    - assets/images/amali/amali_7.jpg
+    - assets/images/amali/amali_8.jpg
+    - assets/images/amali/amali_9.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

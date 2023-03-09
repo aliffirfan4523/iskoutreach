@@ -1,4 +1,4 @@
-package com.example.iskoutreach
+package com.iskcompany.iskoutreach
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -77,14 +77,14 @@ List<UnorderedListItem> syaratSvm = [
     bottom: 5,
     left: 20,
     right: 20,
-    text: "Bersekolah di SMK atau Sekolah Bnatuan Kerajaan",
+    text: "Bersekolah di SMK atau Sekolah Bantuan Kerajaan",
     top: 5,
   ),
   UnorderedListItem(
     bottom: 5,
     left: 20,
     right: 20,
-    text: "Memohon secara online dan menduduki PKSK",
+    text: "Memohon secara online dan menduduki PKSK (Pentaksiran Kemasukan Sekolah Khusus)",
     top: 5,
   ),
   UnorderedListItem(
