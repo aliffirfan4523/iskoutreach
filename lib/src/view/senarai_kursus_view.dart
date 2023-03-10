@@ -40,6 +40,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                     fontSize: 14,
                     fontWeight: FontWeight.w300
                   ),
+                  textAlign: TextAlign.justify,
                 ),
               ),
               const Padding(

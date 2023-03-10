@@ -30,7 +30,7 @@ class KerjasamaIBM extends StatelessWidget {
 						const Align(
 							alignment: Alignment.center,
 							child: Padding(
-							  padding: EdgeInsets.only(left:20.0,right:20.0),
+							  padding: EdgeInsets.only(left:20.0,right:20.0, bottom: 20.0),
 							  child: Text(
 							  	"Program kerjasama IBM-PTech antara IBM dan Kolej Vokasional Sungai Buloh",
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -74,7 +74,51 @@ class KerjasamaIBM extends StatelessWidget {
 						Padding(
 							padding: EdgeInsets.all(20),
 							child: Text(
-								ibm,
+								ibm1,
+                textAlign: TextAlign.justify,
+								style: TextStyle(
+									fontSize: 13,
+                  height: 1.5
+								),
+							),
+						),
+            Padding(
+							padding: EdgeInsets.only( top:5.0,left:20.0,right:20.0, bottom:5.0),
+							child: Text(
+								ibm2,
+                textAlign: TextAlign.justify,
+								style: TextStyle(
+									fontSize: 13,
+                  height: 1.5
+								),
+							),
+						),
+            Padding(
+							padding: EdgeInsets.only( top:5.0,left:20.0,right:20.0, bottom:5.0),
+							child: Text(
+								ibm3,
+                textAlign: TextAlign.justify,
+								style: TextStyle(
+									fontSize: 13,
+                  height: 1.5
+								),
+							),
+						),
+            Padding(
+							padding: EdgeInsets.only( top:5.0,left:20.0,right:20.0, bottom:5.0),
+							child: Text(
+								ibm4,
+                textAlign: TextAlign.justify,
+								style: TextStyle(
+									fontSize: 13,
+                  height: 1.5
+								),
+							),
+						),
+            Padding(
+							padding: EdgeInsets.only( top:5.0,left:20.0,right:20.0, bottom:5.0),
+							child: Text(
+								ibm5,
                 textAlign: TextAlign.justify,
 								style: TextStyle(
 									fontSize: 13,

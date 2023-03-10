@@ -59,10 +59,10 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                             color: Colors.indigo.shade600,
                             borderRadius: const BorderRadius.only(
-                              bottomLeft: Radius.circular(60),
+                              bottomLeft: Radius.circular(20),
                               bottomRight: Radius.circular(60),
                               topLeft: Radius.circular(60),
-                              topRight: Radius.circular(60),
+                              topRight: Radius.circular(20),
                             ),
                             
                           ),
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                           textAlign: TextAlign.center,
                           speed: const Duration(milliseconds: 50),
                           textStyle: GoogleFonts.montserrat(
-                            fontSize: 22,
+                            fontSize: 28,
                             fontWeight: FontWeight.w600,
                           ),
                         ),

@@ -100,7 +100,7 @@ List<CardList> cardlist = [
   CardList(
     imageLink: 'images/pn_solehah.jpeg',
     jawatan: 'Pensyarah ',
-    nama: 'Puan Siti Solehah Nurr Azmi Binti ',
+    nama: 'Pn Siti Solehah Binti Nurr Azmi  ',
     emel: '',
     jawatanLain: 'Penyelaras MBOT',
   ),
@@ -128,14 +128,14 @@ List<CardList> cardlist = [
   CardList(
     imageLink: 'images/pn_diyana.jpeg',
     jawatan: 'Pensyarah',
-    nama: 'Puan Nurdiyana Binti Mohammad Shukri',
+    nama: 'Pn Nurdiyana Binti Mohammad Shukri',
     emel: '',
     jawatanLain: 'Jurulatih KV skills',
   ),
   CardList(
     imageLink: 'images/pn_masyi.jpeg',
     jawatan: 'Pensyarah',
-    nama: 'Puan Masyiviranis Binti Mohd Zain',
+    nama: 'Pn Masyiviranis Binti Mohd Zain',
     emel: '',
     jawatanLain: 'Penyelaras Program IBM P-Tech',
   ),
@@ -180,7 +180,7 @@ List<CardWidget> cardlistpng = [
   CardWidget(
     imageLink: 'assets/images/png/pn_solehah.png',
     jawatan: 'Pensyarah ',
-    nama: 'Puan Siti Solehah Nurr Azmi Binti ',
+    nama: 'Pn Siti Solehah Binti Nurr Azmi',
     emel: '',
     jawatanLain: 'Penyelaras MBOT',
   ),
@@ -208,14 +208,14 @@ List<CardWidget> cardlistpng = [
   CardWidget(
     imageLink: 'assets/images/png/pn_diyana.png',
     jawatan: 'Pensyarah',
-    nama: 'Puan Nurdiyana Binti Mohammad Shukri',
+    nama: 'Pn Nurdiyana Binti Mohammad Shukri',
     emel: '',
     jawatanLain: 'Jurulatih KV skills',
   ),
   CardWidget(
     imageLink: 'assets/images/png/pn_masyi.png',
     jawatan: 'Pensyarah',
-    nama: 'Puan Masyiviranis Binti Mohd Zain',
+    nama: 'Pn Masyiviranis Binti Mohd Zain',
     emel: '',
     jawatanLain: 'Penyelaras Program IBM P-Tech',
   ),

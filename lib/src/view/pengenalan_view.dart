@@ -99,14 +99,6 @@ final List<Widget> imageSliders = imgList
                 "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
               top: 20,
             ),
-            UnorderedListItem(
-              bottom: 30,
-              left: 20,
-              right: 20,
-              text:
-                "Pelajar akan belajar cara memasang dan menyelenggara komputer, pelayan dan peranti rangkaian, bagaimana rangkaian komputer berfungsi, mengurus sistem pelayan, dan lain-lain",
-              top: 10,
-            ),
             const Align(
               alignment: Alignment.center,
               child: Padding(
@@ -274,6 +266,14 @@ final List<Widget> imageSliders = imgList
                   ),
                 ),
               ),
+              UnorderedListItem(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              text:
+                "Antara aktiviti pelajar seperti pemasangan kabel rangkaian, konfigurasi sistem pelayan, penyelenggaraan komputer dan lain-lain",
+              top: 10,
+            ),
               CarouselSlider(
                 options: CarouselOptions(
                   aspectRatio: 1.5,
@@ -282,7 +282,8 @@ final List<Widget> imageSliders = imgList
                   autoPlay: true,
                 ),
                 items: imageSliders,
-              )
+              ),
+              SizedBox(height: 30,)
             ],
           )
           ],

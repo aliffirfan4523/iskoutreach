@@ -30,7 +30,14 @@ class SyaratPermohonan extends StatelessWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                "Syarat permohonan Sijil Vokasional Malaysia (SVM)",
+                "Syarat permohonan",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "Sijil Vokasional Malaysia (SVM)",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
@@ -48,7 +55,14 @@ class SyaratPermohonan extends StatelessWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                "Syarat menyambung Diploma Vokasional Malaysia (DVM)",
+                "Syarat menyambung",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "Diploma Vokasional Malaysia (DVM)",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
