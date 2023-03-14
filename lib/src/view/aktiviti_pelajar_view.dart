@@ -40,7 +40,7 @@ class AktivitiPelajarView extends StatelessWidget {
                 ),
               ),
               UnorderedListItem(
-                bottom: 20,
+                bottom: 0,
                 left: 20,
                 right: 20,
                 text:
@@ -51,7 +51,7 @@ class AktivitiPelajarView extends StatelessWidget {
                 carouselController: _controller,
                 options: CarouselOptions(
                   autoPlayInterval: Duration(seconds: 2),
-                  aspectRatio: 0.6,
+                  aspectRatio: 0.8,
                   enlargeCenterPage: true,
                   scrollDirection: Axis.vertical,
                   autoPlay: true,

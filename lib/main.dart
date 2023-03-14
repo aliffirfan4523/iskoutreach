@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
 import 'package:iskoutreach/src/controller/url_controller.dart';
@@ -8,7 +9,11 @@ import 'src/controller/theme_mode_controller.dart';
 import 'src/view/home_page.dart';
 
 void main() async {
-  runApp(IskApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+    .then((_) {
+      runApp(new IskApp());
+    });
 }
 
 class IskApp extends StatelessWidget {
