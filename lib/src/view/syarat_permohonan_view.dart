@@ -12,7 +12,6 @@ class SyaratPermohonan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
@@ -74,7 +73,9 @@ class SyaratPermohonan extends StatelessWidget {
                 return syaratDvm[index];
               },
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 10,
+            ),
             const Align(
               alignment: Alignment.center,
               child: Text(
@@ -87,7 +88,7 @@ class SyaratPermohonan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
+                  "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
               top: 30,
             ),
             UnorderedListItem(
@@ -95,15 +96,14 @@ class SyaratPermohonan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
+                  "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
               top: 10,
             ),
             NumberedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                " Sijil Vokasional Malaysia (SVM)",
+              text: " Sijil Vokasional Malaysia (SVM)",
               top: 5,
               number: 1,
             ),
@@ -112,7 +112,7 @@ class SyaratPermohonan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+                  "Layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
               top: 5,
               number: 2,
             ),
@@ -121,7 +121,7 @@ class SyaratPermohonan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
+                  "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
               top: 10,
             ),
             UnorderedListItem(
@@ -129,7 +129,7 @@ class SyaratPermohonan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia",
+                  "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia",
               top: 10,
             ),
             SizedBox(height: 30)
@@ -159,7 +159,8 @@ List<UnorderedListItem> syaratSvm = [
     bottom: 5,
     left: 20,
     right: 20,
-    text: "Memohon secara online dan menduduki PKSK (Pentaksiran Kemasukan Sekolah Khusus)",
+    text:
+        "Memohon secara online dan menduduki PKSK (Pentaksiran Kemasukan Sekolah Khusus)",
     top: 5,
   ),
   UnorderedListItem(
@@ -217,6 +218,4 @@ List<UnorderedListItem> syaratDvm = [
         "Menduduki modul tambahan kursus Matematik yang telah ditetapkan bagi pelajar yang tidak mencapai setara Gred 2.0",
     top: 5,
   ),
-  
-  
 ];

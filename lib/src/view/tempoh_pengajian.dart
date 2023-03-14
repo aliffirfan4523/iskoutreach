@@ -13,7 +13,6 @@ class TempohPengajian extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final _controller = ScrollController();
     return SafeArea(
       child: Scaffold(
@@ -29,7 +28,6 @@ class TempohPengajian extends StatelessWidget {
             const Text(
               "Tempoh pengajian Sijil Vokasional Malaysia (SVM)",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
@@ -37,7 +35,7 @@ class TempohPengajian extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "selama 4 semester iaitu 2 tahun.",
+              text: "Selama 4 semester iaitu 2 tahun.",
               top: 5,
             ),
             UnorderedListItem(
@@ -53,7 +51,7 @@ class TempohPengajian extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                  "terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
+                  "Terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
               top: 5,
             ),
             Padding(
@@ -72,7 +70,7 @@ class TempohPengajian extends StatelessWidget {
             const SizedBox(height: 30),
             const Text(
               "Tempoh pengajian Diploma vokasional Malaysia (DVM)",
-              style: TextStyle(fontWeight: FontWeight.bold,  fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
@@ -80,7 +78,7 @@ class TempohPengajian extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "selama 5 semester iaitu 2 tahun dan 6 bulan.",
+              text: "Selama 5 semester iaitu 2 tahun dan 6 bulan.",
               top: 5,
             ),
             UnorderedListItem(

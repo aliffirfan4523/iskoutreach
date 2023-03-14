@@ -14,22 +14,20 @@ class Pengiktirafan extends StatefulWidget {
 }
 
 class _PengiktirafanState extends State<Pengiktirafan> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(
-          context: context,
-          title: "Pengiktirafan",
-          icon: FontAwesomeIcons.award,
-          heroTag: 'pengiktirafan'
-        ),
+            context: context,
+            title: "Pengiktirafan",
+            icon: FontAwesomeIcons.award,
+            heroTag: 'pengiktirafan'),
         body: SingleChildScrollView(
           child: Column(
             children: [
               const SizedBox(
-                height: 20,
+                height: 70,
               ),
               UnorderedListItem(
                 bottom: 15,
@@ -40,8 +38,13 @@ class _PengiktirafanState extends State<Pengiktirafan> {
               ),
               Padding(
                 padding: const EdgeInsets.all(10),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 5.0,
+                    ),
+                  ),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width - 120,
                     child: Image.asset(
@@ -62,14 +65,16 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                     bottom: 5,
                     left: 20,
                     right: 20,
-                    text:'Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal yang berkaitan.',
+                    text:
+                        'Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal yang berkaitan.',
                     top: 5,
                   ),
                   UnorderedListItem(
                     bottom: 20,
                     left: 20,
                     right: 20,
-                    text: "Pengiktirafan MBOT diperlukan bagi membolehkan pelajar lepasan diploma menyambungkan pelajaran di peringkat lebih tinggi.",
+                    text:
+                        "Pengiktirafan MBOT diperlukan bagi membolehkan pelajar lepasan diploma menyambungkan pelajaran di peringkat lebih tinggi.",
                     top: 10,
                   ),
                 ],

@@ -11,7 +11,6 @@ class NameCard extends StatefulWidget {
 }
 
 class _NameCardState extends State<NameCard> {
-
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
@@ -25,6 +24,9 @@ class _NameCardState extends State<NameCard> {
           heroTag: 'senarai_pensyarah'),
       body: Column(
         children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 6,
+          ),
           UnorderedListItem(
             bottom: 20,
             left: 20,

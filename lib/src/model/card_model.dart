@@ -251,74 +251,82 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: MediaQuery.of(context).size.width - 120,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color.fromRGBO(70, 99, 204, 1),
-                Color.fromRGBO(3, 23, 96, 1)
-              ]),
-        ),
-        child: Stack(children: <Widget>[
-          Positioned(
-              bottom: 0,
-              right: 10,
-              child: Container(
-                  width: 160,
-                  height: 227,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(imageLink), fit: BoxFit.fitWidth),
-                  ))),
-          Positioned(
-              top: 30,
-              left: 28,
-              child: Text(
-                nama,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontFamily: 'Inter',
-                    fontSize: 14,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              )),
-          Positioned(
-              top: 60,
-              left: 28,
-              child: Text(
-                jawatan,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontFamily: 'Inter',
-                    fontSize: 12,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              )),
-          Positioned(
-              top: 90,
-              left: 28,
-              child: Text(
-                jawatanLain,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontFamily: 'Inter',
-                    fontSize: 12,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              )),
-        ]));
+    return ClipRRect(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(30.0),
+        topRight: Radius.circular(90.0),
+        bottomLeft: Radius.circular(90.0),
+        bottomRight: Radius.circular(90.0),
+      ),
+      child: Container(
+          width: MediaQuery.of(context).size.width - 120,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color.fromRGBO(70, 99, 204, 1),
+                  Color.fromRGBO(3, 23, 96, 1)
+                ]),
+          ),
+          child: Stack(children: <Widget>[
+            Positioned(
+                bottom: 0,
+                right: 10,
+                child: Container(
+                    width: 160,
+                    height: 227,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(imageLink), fit: BoxFit.fitWidth),
+                    ))),
+            Positioned(
+                top: 30,
+                left: 28,
+                child: Text(
+                  nama,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      fontFamily: 'Inter',
+                      fontSize: 14,
+                      letterSpacing:
+                          0 /*percentages not used in flutter. defaulting to zero*/,
+                      fontWeight: FontWeight.normal,
+                      height: 1),
+                )),
+            Positioned(
+                top: 60,
+                left: 28,
+                child: Text(
+                  jawatan,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      fontFamily: 'Inter',
+                      fontSize: 12,
+                      letterSpacing:
+                          0 /*percentages not used in flutter. defaulting to zero*/,
+                      fontWeight: FontWeight.normal,
+                      height: 1),
+                )),
+            Positioned(
+                top: 90,
+                left: 28,
+                child: Text(
+                  jawatanLain,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      fontFamily: 'Inter',
+                      fontSize: 12,
+                      letterSpacing:
+                          0 /*percentages not used in flutter. defaulting to zero*/,
+                      fontWeight: FontWeight.normal,
+                      height: 1),
+                )),
+          ])),
+    );
   }
 }

@@ -1,14 +1,15 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iskoutreach/src/view/widget/rounded_image.dart';
 
 import '../controller/color_controller.dart';
 import '../controller/theme_controller.dart';
 import '../controller/theme_mode_controller.dart';
 import '../model/text_model.dart';
 import 'widget/menu_button.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,12 +26,11 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-    IconData thememodeIcon =
-        _isLightTheme.value ? Icons.dark_mode_rounded : Icons.light_mode_rounded;
+    IconData thememodeIcon = _isLightTheme.value
+        ? Icons.dark_mode_rounded
+        : Icons.light_mode_rounded;
     double height = MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -40,9 +40,8 @@ class _HomePageState extends State<HomePage> {
           children: [
             Container(
               width: double.infinity,
-              height: height -40,
-              decoration: BoxDecoration(
-              ),
+              height: height - 50,
+              decoration: BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -64,12 +63,11 @@ class _HomePageState extends State<HomePage> {
                               topLeft: Radius.circular(60),
                               topRight: Radius.circular(20),
                             ),
-                            
                           ),
                           child: Image.asset(
-                          "assets/images/logo.png",
-                          width: 130,
-                          height: 60,
+                            "assets/images/logo.png",
+                            width: 130,
+                            height: 60,
                           ),
                         ),
                         //theme button
@@ -80,8 +78,8 @@ class _HomePageState extends State<HomePage> {
                               width: 40,
                             ),
                             IconButton(
-                              icon:
-                                  Icon(thememodeIcon, color: ColorController.getIconColor()),
+                              icon: Icon(thememodeIcon,
+                                  color: ColorController.getIconColor()),
                               onPressed: () => toggleTheme(),
                             ),
                           ],
@@ -90,10 +88,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: AnimatedTextKit(
                       isRepeatingAnimation: false,
                       pause: const Duration(seconds: 5),
@@ -130,6 +128,18 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                  CarouselSlider(
+                    options: CarouselOptions(
+                      aspectRatio: 2,
+                      enlargeCenterPage: true,
+                      scrollDirection: Axis.horizontal,
+                      autoPlay: true,
+                    ),
+                    items: homepageimageslider,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  )
                 ],
               ),
             ),
@@ -157,7 +167,7 @@ class _HomePageState extends State<HomePage> {
             ),
             */
             const Positioned(
-              bottom: 60,
+              bottom: 10,
               right: 15,
               left: 15,
               child: MenuButton(),

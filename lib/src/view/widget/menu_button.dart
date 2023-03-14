@@ -5,8 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iskoutreach/src/view/kerjasama_ibm_view.dart';
 import 'package:iskoutreach/src/view/pengenalan_view.dart';
 import 'package:iskoutreach/src/view/pertanyaan_lanjut_view.dart';
-
-import '../galeri_view.dart';
+import '../aktiviti_pelajar_view.dart';
 import '../home_page.dart';
 import '../name_card/name_card.dart';
 import '../pengiktirafan_view.dart';
@@ -14,52 +13,57 @@ import '../senarai_kursus_view.dart';
 import '../syarat_permohonan_view.dart';
 import '../tempoh_pengajian.dart';
 
-  List<IconTextButton> buttonList = [
-    IconTextButton(
+List<IconTextButton> buttonList = [
+  IconTextButton(
       icon: FontAwesome5.desktop,
       text: "Pengenalan",
       location: Pengenalan(),
-      heroTag: 'pengenalan'),   
-    //tempoh pengajian
-    IconTextButton(
+      heroTag: 'pengenalan'),
+  //tempoh pengajian
+  IconTextButton(
       icon: Icons.calendar_view_month_rounded,
       text: "Tempoh \nPengajian",
       location: const TempohPengajian(),
       heroTag: 'tempoh_pengajian'),
-    //senarai kursus yang ditawarkan
-    IconTextButton(
+  //senarai kursus yang ditawarkan
+  IconTextButton(
       icon: Icons.subject_rounded,
       text: "Senarai Kursus \nDitawarkan",
       location: const SenaraiKursus(),
       heroTag: 'senarai_kursus_ditawarkan'),
-    //pengiktirafan
-    IconTextButton(
+  //pengiktirafan
+  IconTextButton(
       icon: FontAwesomeIcons.award,
       text: "Pengiktirafan",
       location: const Pengiktirafan(),
       heroTag: 'pengiktirafan'),
-    IconTextButton(
+  IconTextButton(
       icon: FontAwesomeIcons.handshake,
       text: "Program \nIBM-PTech",
       location: KerjasamaIBM(),
       heroTag: 'kerjasama_ibm'),
-    //senarai pensyarah
-    IconTextButton(
+  //senarai pensyarah
+  IconTextButton(
       icon: Icons.person_rounded,
       text: "Senarai \nPensyarah",
       location: NameCard(),
       heroTag: 'senarai_pensyarah'),
-    IconTextButton(
+  IconTextButton(
       icon: FontAwesome5.question_circle,
       text: "Syarat \nPermohonan",
       location: SyaratPermohonan(),
       heroTag: 'syarat_permohonan'),
-    IconTextButton(
+  IconTextButton(
+      icon: FontAwesome5.running,
+      text: "Aktiviti\nPelajar",
+      location: AktivitiPelajarView(),
+      heroTag: 'Aktiviti_Pelajar'),
+  IconTextButton(
       icon: FontAwesome5.phone,
       text: "Pertanyaan \nLanjut",
       location: PertanyaanLanjut(),
       heroTag: 'pertanyaan_lanjut'),
-  ];
+];
 
 class MenuButton extends StatefulWidget {
   const MenuButton({
@@ -73,7 +77,6 @@ class MenuButton extends StatefulWidget {
 class _MenuButtonState extends State<MenuButton> {
   @override
   Widget build(BuildContext context) {
-
     return Container(
       margin: const EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
@@ -108,7 +111,6 @@ class _MenuButtonState extends State<MenuButton> {
               buttonList[0],
               buttonList[1],
               buttonList[2],
-             
             ],
           ),
           Row(
@@ -124,65 +126,62 @@ class _MenuButtonState extends State<MenuButton> {
             children: [
               buttonList[6],
               buttonList[7],
-             // buttonList[8],
+              buttonList[8],
             ],
           )
         ],
       ),
     );
-
   }
 }
 
-
 class IconTextButton extends StatelessWidget {
-  IconTextButton({  
-  required this.icon,
-  required this.text,
-  required this.location,
-  required this.heroTag,
-  super.key});
-
+  IconTextButton(
+      {required this.icon,
+      required this.text,
+      required this.location,
+      required this.heroTag,
+      super.key});
 
   IconData icon;
   String text;
   Widget location;
-  String heroTag; 
+  String heroTag;
 
   @override
   Widget build(BuildContext context) {
-      return InkWell(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => location),
-      );
-    },
-    child: Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: FittedBox(
-        fit: BoxFit.scaleDown , 
-        child: Column(
-          children: [
-            Hero(
-                tag: heroTag,
-                child: Icon(
-                  icon,
-                  size: 15,
-                  color: Colors.white,
-                )),
-            AutoSizeText(
-              text,
-              maxFontSize: 11,
-              minFontSize: 9,
-              style: const TextStyle(fontSize: 11, color: Colors.white),
-              softWrap: true,
-              textAlign: TextAlign.center,
-            ),
-          ],
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => location),
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(
+            children: [
+              Hero(
+                  tag: heroTag,
+                  child: Icon(
+                    icon,
+                    size: 15,
+                    color: Colors.white,
+                  )),
+              AutoSizeText(
+                text,
+                maxFontSize: 11,
+                minFontSize: 9,
+                style: const TextStyle(fontSize: 11, color: Colors.white),
+                softWrap: true,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
   }
 }
