@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
             ),
             */
             const Positioned(
-              bottom: 10,
+              bottom: 50,
               right: 15,
               left: 15,
               child: MenuButton(),
