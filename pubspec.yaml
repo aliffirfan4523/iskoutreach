@@ -65,6 +65,8 @@ dependencies:
   another_flutter_splash_screen: ^1.1.4
   animated_splash_screen: ^1.3.0
   easy_localization: ^3.0.1
+  adaptive_action_sheet: ^2.0.2
+  easy_localization_loader: ^1.0.1+1
   
 dev_dependencies:
   flutter_test:
@@ -94,6 +96,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+    - assets/locales/
     - assets/images/png/pn_azira.png
     - assets/images/png/pn_diyana.png
     - assets/images/png/pn_elyani.png

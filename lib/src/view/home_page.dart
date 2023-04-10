@@ -1,5 +1,7 @@
+import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,6 +11,7 @@ import '../controller/color_controller.dart';
 import '../controller/theme_controller.dart';
 import '../controller/theme_mode_controller.dart';
 import '../model/text_model.dart';
+import 'widget/bottom_sheet.dart';
 import 'widget/menu_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +35,7 @@ class _HomePageState extends State<HomePage> {
         ? Icons.dark_mode_rounded
         : Icons.light_mode_rounded;
     double height = MediaQuery.of(context).size.height;
+    var welcome = tr('welcome-mainpage');
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                       repeatForever: false,
                       animatedTexts: [
                         TypewriterAnimatedText(
-                          'Selamat Datang Ke \nISK Outreach',
+                          welcome,
                           textAlign: TextAlign.center,
                           speed: const Duration(milliseconds: 50),
                           textStyle: GoogleFonts.montserrat(
@@ -182,16 +186,73 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       //theme button
-                      Stack(
+                      Row(
                         children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                          ),
-                          IconButton(
-                            icon: Icon(thememodeIcon,
-                                color: ColorController.getIconColor()),
-                            onPressed: () => toggleTheme(),
+                          PopupMenuButton<int>(
+                            itemBuilder: (context) => [
+                              // PopupMenuItem 1
+                              PopupMenuItem( 
+                                value: 1,
+                                // row with 2 children
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.language_rounded, color: Colors.white),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text("Tukar Bahasa", style: TextStyle(color: Colors.white),)
+                                  ],
+                                ),
+                              ),
+                              // PopupMenuItem 2
+                              PopupMenuItem(
+                                value: 2,
+                                // row with two children
+                                child: Row(  
+                                  children: [
+                                    Icon(thememodeIcon, color: Colors.white),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text("Change Theme", style: TextStyle(color: Colors.white))
+                                  ],
+                                ),
+                              ),
+                            ],
+                            offset: Offset(0, 100),
+                            color: Colors.indigo.shade600,
+                            elevation: 2,
+                            // on selected we show the dialog box
+                            onSelected: (value) {
+                              // if value 1 show dialog
+                              if (value == 1) {
+                                showAdaptiveActionSheet(
+                                  barrierColor: Colors.black.withOpacity(0.5),
+                                  bottomSheetColor: Colors.indigo.shade600,
+                                 context: context,
+                                 actions: <BottomSheetAction>[
+                                    BottomSheetAction(title: Text("Bahasa Melayu", style: TextStyle(color: Colors.white)), onPressed: (context) {
+                                      
+                                      setState(() {
+                                        EasyLocalization.of(context)!.setLocale(Locale('ms'));
+                                        });
+                                      Navigator.pop(context);
+                                    }),
+                                    BottomSheetAction(title: Text("English", style: TextStyle(color: Colors.white)), onPressed: (context) {
+                                      
+                                      setState(() {
+                                        EasyLocalization.of(context)!.setLocale(Locale('en'));
+                                        });
+                                      Navigator.pop(context);
+                                      }),
+                                 ],
+                                 cancelAction: CancelAction(title: Text("Cancel", style: TextStyle(color: Colors.red.shade400))),// onPressed parameter is optional by default will dismiss the ActionSheet
+                                );
+                                // if value 2 show dialog
+                              } else if (value == 2) {
+                                toggleTheme();
+                              }
+                            },
                           ),
                         ],
                       ),

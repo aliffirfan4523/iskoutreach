@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
@@ -8,13 +10,26 @@ import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
 import 'src/view/home_page.dart';
 import 'src/view/splash_screen.dart';
+import 'src/view/widget/bottom_sheet.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
     .then((_) {
-      runApp(new IskApp());
-    });
+      runApp(
+        EasyLocalization(
+          supportedLocales: [Locale('en'), Locale('ms')],
+          path: 'assets/locales',
+          fallbackLocale: Locale('en'),
+          assetLoader: JsonAssetLoader(),
+          saveLocale: false,
+          useOnlyLangCode: true,
+          child: IskApp(),
+        )
+      );
+    }
+  );
 }
 
 class IskApp extends StatelessWidget {
@@ -25,20 +40,9 @@ class IskApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      // builder: (context, child) => ResponsiveWrapper.builder(
-      //   BouncingScrollWrapper.builder(context, child!),
-      //   maxWidth: 1200,
-      //   minWidth: 450,
-      //   defaultScale: true,
-      //   breakpoints: [
-      //     const ResponsiveBreakpoint.resize(450, name: MOBILE),
-      //     const ResponsiveBreakpoint.autoScale(800, name: TABLET),
-      //     const ResponsiveBreakpoint.autoScale(1000, name: TABLET),
-      //     const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
-      //     const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
-      //   ],
-
-      // ),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       home: SplashScreen(),
       routes: {
         '/MainPage': (context) => MainPage(),
@@ -47,6 +51,7 @@ class IskApp extends StatelessWidget {
       darkTheme: Themes.datkTheme,
       themeMode: ThemeController.theme,
       debugShowCheckedModeBanner: false,
+
     );
   }
 }
@@ -83,7 +88,7 @@ class _MainPageState extends State<MainPage> {
           label: Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
           icon: Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
           backgroundColor: Colors.indigo.shade600,
-        )
+        ),
       );
   }
 }
