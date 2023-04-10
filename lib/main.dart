@@ -7,6 +7,7 @@ import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
 import 'src/view/home_page.dart';
+import 'src/view/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +39,10 @@ class IskApp extends StatelessWidget {
       //   ],
 
       // ),
-      home: MainPage(),
+      home: SplashScreen(),
+      routes: {
+        '/MainPage': (context) => MainPage(),
+      },
       theme: Themes.lightTheme,
       darkTheme: Themes.datkTheme,
       themeMode: ThemeController.theme,

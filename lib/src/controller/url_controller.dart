@@ -33,9 +33,10 @@ makePhoneCall(int phonenumber) async {
 makeEmail(String email) async{
   String uri ='mailto:$email?subject=Pertanyaan%20Lanjut';
 
-  if (await canLaunchUrlString(uri)) {
-      await launchUrlString(uri);
-    } else {
-      throw 'Could not launch $uri';
-    }
+  var urllaunchable = await canLaunch(uri); //canLaunch is from url_launcher package
+  if(urllaunchable){
+      await launch(uri); //launch is from url_launcher package to launch URL
+  }else{
+      print("URL can't be launched.");
+  }
 }

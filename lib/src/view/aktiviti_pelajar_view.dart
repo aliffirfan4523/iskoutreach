@@ -50,10 +50,10 @@ class AktivitiPelajarView extends StatelessWidget {
               CarouselSlider(
                 carouselController: _controller,
                 options: CarouselOptions(
-                  autoPlayInterval: Duration(seconds: 2),
+                  autoPlayInterval: Duration(milliseconds: 1000),
                   aspectRatio: 0.8,
                   enlargeCenterPage: true,
-                  scrollDirection: Axis.vertical,
+                  scrollDirection: Axis.horizontal,
                   autoPlay: true,
                 ),
                 items: imageSliders,

@@ -41,55 +41,17 @@ class _HomePageState extends State<HomePage> {
             Container(
               width: double.infinity,
               height: height - 50,
-              decoration: BoxDecoration(),
+
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //image logo
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.indigo.shade600,
-                            borderRadius: const BorderRadius.only(
-                              bottomLeft: Radius.circular(20),
-                              bottomRight: Radius.circular(60),
-                              topLeft: Radius.circular(60),
-                              topRight: Radius.circular(20),
-                            ),
-                          ),
-                          child: Image.asset(
-                            "assets/images/logo.png",
-                            width: 130,
-                            height: 60,
-                          ),
-                        ),
-                        //theme button
-                        Stack(
-                          children: [
-                            Container(
-                              height: 40,
-                              width: 40,
-                            ),
-                            IconButton(
-                              icon: Icon(thememodeIcon,
-                                  color: ColorController.getIconColor()),
-                              onPressed: () => toggleTheme(),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  TopNavBar(thememodeIcon),
                   const SizedBox(
                     height: 10,
                   ),
+
+                  //Welcome to ISK Outreach
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: AnimatedTextKit(
@@ -109,6 +71,8 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+
+                  //ISK Outreach app Desc
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: AnimatedTextKit(
@@ -128,6 +92,8 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+
+                  //Image slider
                   CarouselSlider(
                     options: CarouselOptions(
                       aspectRatio: 2,
@@ -137,6 +103,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     items: homepageimageslider,
                   ),
+
+                  //Spacing
                   SizedBox(
                     height: 30,
                   )
@@ -166,6 +134,7 @@ class _HomePageState extends State<HomePage> {
               size: 200,
             ),
             */
+            //Menu button section
             const Positioned(
               bottom: 50,
               right: 15,
@@ -176,6 +145,59 @@ class _HomePageState extends State<HomePage> {
         ),
       ],
     );
+  }
+
+  Padding TopNavBar(IconData thememodeIcon) {
+    return Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //image logo
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.indigo.shade600,
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(60),
+                            topLeft: Radius.circular(60),
+                            topRight: Radius.circular(20),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/images/logo.png",
+                              width: 40,
+                              height: 40,
+                            ),
+                            Image.asset(
+                              "assets/images/sec_logo.png",
+                              width: 130,
+                              height: 60,
+                            ),
+                          ],
+                        ),
+                      ),
+                      //theme button
+                      Stack(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                          ),
+                          IconButton(
+                            icon: Icon(thememodeIcon,
+                                color: ColorController.getIconColor()),
+                            onPressed: () => toggleTheme(),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
   }
 
   void toggleTheme() {

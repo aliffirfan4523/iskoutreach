@@ -48,7 +48,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width - 120,
                     child: Image.asset(
-                      "assets/images/MBOT.jpg",
+                      "assets/images/MBOT.png",
                       fit: BoxFit.fitWidth,
                     ),
                   ),
