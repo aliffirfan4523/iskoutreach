@@ -1,0 +1,36 @@
+{
+  "welcome-mainpage": "Welcome to \nISK Outreach",
+  "description": "This is an application that provides information about the Computer System and Network Technology course at Sungai Buloh Vocational College",
+
+  "pengenalan": {
+    "title": "Introduction",
+    "vision_mission": "Vision and Mission",
+    "level_of_study": "Level of Study",
+    "career_opportunities": "Career Opportunities",
+
+    "title_description": "The Computer & Network Systems Technology program provides students with the basics of business, maintenance, operation and configuration of computers as well as networks and data storage in addition to administrative management and information integration.",
+
+    "vision_mission_details": {
+      "vision": "Vision – Leader of superior technical and vocational education.",
+      "mission": "Mission – Empowering technical and vocational education through the implementation of quality programs."
+    },
+
+    "level_of_study_details": {
+      "description": "This program offers 2 levels of study, namely:-",
+      "svm": "Malaysian Vocational Certificate (SVM)",
+      "dvm": "Malaysian Vocational Diploma (DVM)"
+    },
+
+    "career_opportunities_details": {
+      "description": "Among the career opportunities for students of this program:",
+      "1": "Assistant Computer Engineer",
+      "2": "Assistant Network Engineer",
+      "3": "Network System Administrator",
+      "4": "Network Systems Analyst",
+      "5": "Network Technician",
+      "6": "Computer Technician",
+      "7": "Network System Services",
+      "8": "Computer / Network Store Entrepreneur"
+    }
+  }
+}

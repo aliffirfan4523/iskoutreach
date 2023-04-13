@@ -5,12 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
 import 'package:iskoutreach/src/controller/url_controller.dart';
+import 'package:iskoutreach/src/view/Homepage/home_page.dart';
+import 'src/Splash Screen/splash_screen.dart';
 import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
-import 'src/view/home_page.dart';
-import 'src/view/splash_screen.dart';
-import 'src/view/widget/bottom_sheet.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,12 +19,13 @@ void main() async {
     .then((_) {
       runApp(
         EasyLocalization(
-          supportedLocales: [Locale('en'), Locale('ms')],
+          supportedLocales: [Locale('en', 'US'), Locale('ms', 'MY')],
           path: 'assets/locales',
-          fallbackLocale: Locale('en'),
+          fallbackLocale: Locale('ms', 'MY'),
+          startLocale: Locale('en', 'US'),
           assetLoader: JsonAssetLoader(),
-          saveLocale: false,
-          useOnlyLangCode: true,
+          saveLocale: true,
+
           child: IskApp(),
         )
       );
@@ -40,6 +41,7 @@ class IskApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      key: UniqueKey(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

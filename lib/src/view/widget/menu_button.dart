@@ -1,22 +1,23 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:iskoutreach/src/view/kerjasama_ibm_view.dart';
-import 'package:iskoutreach/src/view/pengenalan_view.dart';
-import 'package:iskoutreach/src/view/pertanyaan_lanjut_view.dart';
-import '../aktiviti_pelajar_view.dart';
-import '../home_page.dart';
-import '../name_card/name_card.dart';
-import '../pengiktirafan_view.dart';
-import '../senarai_kursus_view.dart';
-import '../syarat_permohonan_view.dart';
-import '../tempoh_pengajian.dart';
+import '../Aktiviti Pelajar/aktiviti_pelajar_view.dart';
+import '../Pengenalan/pengenalan_view.dart';
+import '../Pengiktirafan/pengiktirafan_view.dart';
+import '../Pertanyaan Lanjut/pertanyaan_lanjut_view.dart';
+import '../Program IBM/kerjasama_ibm_view.dart';
+import '../Senarai Kursus Ditawarkan/senarai_kursus_view.dart';
+import '../Senarai Pensyarah/senarai_pensyarah.dart';
+import '../Syarat Permohonan/syarat_permohonan_view.dart';
+import '../Tempoh Pengajian/tempoh_pengajian.dart';
+
 
 List<IconTextButton> buttonList = [
   IconTextButton(
       icon: FontAwesome5.desktop,
-      text: "Pengenalan",
+      text: tr("pengenalan.title"),
       location: Pengenalan(),
       heroTag: 'pengenalan'),
   //tempoh pengajian
@@ -46,7 +47,7 @@ List<IconTextButton> buttonList = [
   IconTextButton(
       icon: Icons.person_rounded,
       text: "Senarai \nPensyarah",
-      location: NameCard(),
+      location: SenaraiPensyarah(),
       heroTag: 'senarai_pensyarah'),
   IconTextButton(
       icon: FontAwesome5.question_circle,

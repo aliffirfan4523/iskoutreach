@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../model/senarai_subjek_model.dart';
-import 'widget/custom_appbar.dart';
+import '../../model/senarai_subjek_model.dart';
+import '../widget/custom_appbar.dart';
+
 
 class SenaraiKursus extends StatefulWidget {
   const SenaraiKursus({super.key});

@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
-import '../model/text_model.dart';
-import 'widget/custom_appbar.dart';
+import '../../model/text_model.dart';
+import '../widget/custom_appbar.dart';
 
 class Pengiktirafan extends StatefulWidget {
   const Pengiktirafan({super.key});
