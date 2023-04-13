@@ -5,7 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
-import 'widget/custom_appbar.dart';
+import '../widget/custom_appbar.dart';
+
 
 class SyaratPermohonan extends StatelessWidget {
   const SyaratPermohonan({super.key});

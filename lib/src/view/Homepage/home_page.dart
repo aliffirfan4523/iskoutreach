@@ -7,12 +7,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iskoutreach/src/view/widget/rounded_image.dart';
 
-import '../controller/color_controller.dart';
-import '../controller/theme_controller.dart';
-import '../controller/theme_mode_controller.dart';
-import '../model/text_model.dart';
-import 'widget/bottom_sheet.dart';
-import 'widget/menu_button.dart';
+import '../../controller/theme_controller.dart';
+import '../../controller/theme_mode_controller.dart';
+import '../widget/menu_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,7 +32,7 @@ class _HomePageState extends State<HomePage> {
         ? Icons.dark_mode_rounded
         : Icons.light_mode_rounded;
     double height = MediaQuery.of(context).size.height;
-    var welcome = tr('welcome-mainpage');
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                       repeatForever: false,
                       animatedTexts: [
                         TypewriterAnimatedText(
-                          welcome,
+                          tr('welcome-mainpage'),
                           textAlign: TextAlign.center,
                           speed: const Duration(milliseconds: 50),
                           textStyle: GoogleFonts.montserrat(
@@ -85,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                       repeatForever: false,
                       animatedTexts: [
                         TypewriterAnimatedText(
-                          introduction,
+                          tr('description'),
                           textAlign: TextAlign.center,
                           speed: const Duration(milliseconds: 50),
                           textStyle: GoogleFonts.montserrat(
@@ -231,20 +228,20 @@ class _HomePageState extends State<HomePage> {
                                   bottomSheetColor: Colors.indigo.shade600,
                                  context: context,
                                  actions: <BottomSheetAction>[
-                                    BottomSheetAction(title: Text("Bahasa Melayu", style: TextStyle(color: Colors.white)), onPressed: (context) {
-                                      
-                                      setState(() {
-                                        EasyLocalization.of(context)!.setLocale(Locale('ms'));
-                                        });
+                                    BottomSheetAction(title: Text("Bahasa Melayu", style: TextStyle(color: Colors.white)), onPressed: (context) async{
+                                      final _newLocale = Locale('ms', 'MY');
+                                      await context.setLocale(_newLocale); // change `easy_localization` locale
+                                      Get.updateLocale(_newLocale); // change `Get` locale direction
+                                      setState(() {});
                                       Navigator.pop(context);
                                     }),
-                                    BottomSheetAction(title: Text("English", style: TextStyle(color: Colors.white)), onPressed: (context) {
-                                      
-                                      setState(() {
-                                        EasyLocalization.of(context)!.setLocale(Locale('en'));
-                                        });
+                                    BottomSheetAction(title: Text("English", style: TextStyle(color: Colors.white)), onPressed: (context) async {
+                                      final _newLocale = Locale('en', 'US');
+                                      await context.setLocale(_newLocale); // change `easy_localization` locale
+                                      Get.updateLocale(_newLocale); // change `Get` locale direction
+                                      setState(() {});
                                       Navigator.pop(context);
-                                      }),
+                                    }),
                                  ],
                                  cancelAction: CancelAction(title: Text("Cancel", style: TextStyle(color: Colors.red.shade400))),// onPressed parameter is optional by default will dismiss the ActionSheet
                                 );
@@ -275,4 +272,5 @@ class _HomePageState extends State<HomePage> {
     );
     themeModeController.saveThemeStatus();
   }
+
 }

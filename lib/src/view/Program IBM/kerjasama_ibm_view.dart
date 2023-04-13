@@ -4,9 +4,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../model/text_model.dart';
-import 'widget/Unordered_List.dart';
-import 'widget/custom_appbar.dart';
+import '../../model/text_model.dart';
+import '../widget/custom_appbar.dart';
+
 
 class KerjasamaIBM extends StatelessWidget {
   KerjasamaIBM({super.key});

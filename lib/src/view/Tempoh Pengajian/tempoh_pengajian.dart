@@ -4,9 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
-import 'image_hero_animation.dart';
-import 'widget/custom_appbar.dart';
-import 'widget/image_preview_widget.dart';
+import '../widget/custom_appbar.dart';
 
 class TempohPengajian extends StatelessWidget {
   const TempohPengajian({super.key});

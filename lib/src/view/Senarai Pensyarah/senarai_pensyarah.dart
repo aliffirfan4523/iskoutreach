@@ -5,12 +5,12 @@ import '../../model/card_model.dart';
 import '../widget/Unordered_List.dart';
 import '../widget/custom_appbar.dart';
 
-class NameCard extends StatefulWidget {
+class SenaraiPensyarah extends StatefulWidget {
   @override
-  State<NameCard> createState() => _NameCardState();
+  State<SenaraiPensyarah> createState() => _SenaraiPensyarahState();
 }
 
-class _NameCardState extends State<NameCard> {
+class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;

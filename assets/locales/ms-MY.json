@@ -1,0 +1,36 @@
+{
+  "welcome-mainpage": "Selamat Datang ke \nISK Outreach",
+  "description": "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus Teknologi Sistem Komputer Dan Rangkaian di Kolej Vokasional Sungai Buloh",
+  
+  "pengenalan": {
+    "title": "Pengenalan",
+    "vision_mission": "Visi dan Misi",
+    "level_of_study": "Peringkat Bidang Pengajian",
+    "career_opportunities": "Peluang Kerjaya",
+    
+    "title_description": "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
+    
+    "vision_mission_details": {
+      "vision": "Visi – Peneraju pendidikan teknikal dan vokasional yang unggul.",
+      "mission": "Misi – Memperkasakan pendidikan teknikal dan vokasional melalui pelaksanaan program yang berkualiti."
+    },
+
+    "level_of_study_details": {
+      "description": "Program ini menawarkan 2 peringkat bidang pengajian iaitu:-",
+      "svm": "Sijil Vokasional Malaysia (SVM)",
+      "dvm": "Diploma Vokasional Malaysia (DVM)"
+    },
+
+    "career_opportunities_details": {
+      "description": "Antara peluang kerjaya bagi pelajar program ini:",
+      "1": "Penolong Jurutera Komputer",
+      "2": "Penolong Jurutera Rangkaian",
+      "3": "Pentadbir Sistem Rangkaian",
+      "4": "Penganalisis Sistem Rangkaian",
+      "5": "Juruteknik Rangkaian",
+      "6": "Juruteknik Komputer",
+      "7": "Perkhidmatan Sistem Rangkaian",
+      "8": "Usahawan Kedai Komputer / Rangkaian"
+    }
+  }
+}

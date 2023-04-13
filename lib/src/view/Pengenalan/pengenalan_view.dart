@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -6,8 +7,9 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/view/widget/rounded_image.dart';
 import 'package:iskoutreach/src/view/widget/side_nav_bar.dart';
 
-import 'widget/Unordered_List.dart';
-import 'widget/custom_appbar.dart';
+import '../widget/Unordered_List.dart';
+import '../widget/custom_appbar.dart';
+
 
 final List<String> imgList = [
   "assets/images/amali/amali_1.jpg",
@@ -35,7 +37,7 @@ class Pengenalan extends StatelessWidget {
             context: context,
             title: "Pengenalan",
             icon: FontAwesome5.desktop,
-            heroTag: 'syarat_permohonan'),
+            heroTag: 'pengenalan'),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
@@ -43,12 +45,12 @@ class Pengenalan extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
-                  "Pengenalan",
+                  tr("pengenalan.title"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
@@ -58,15 +60,15 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                  "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
+                tr("pengenalan.title_description"),
               top: 20,
             ),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
-                  "Visi dan Misi",
+                  tr("pengenalan.vision_mission"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
@@ -76,7 +78,7 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                  "Visi – Peneraju pendidikan teknikal dan vokasional yang unggul.",
+                tr("pengenalan.vision_mission_details.vision"),
               top: 20,
             ),
             UnorderedListItem(
@@ -84,16 +86,16 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                  "Misi – Memperkasakan pendidikan teknikal dan vokasional melalui pelaksanaan program yang berkualiti.",
+                tr("pengenalan.vision_mission_details.mission"),
               top: 5,
             ),
             //penerangan bidang pengajian
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
-                  "Peringkat bidang pengajian",
+                  tr("pengenalan.level_of_study"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
@@ -103,14 +105,14 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                  "Program ini menawarkan 2 peringkat bidang pengajian iaitu:-",
+                tr("pengenalan.level_of_study_details.description"),
               top: 30,
             ),
             NumberedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Sijil Vokasional Malaysia (SVM)",
+              text: tr("pengenalan.level_of_study_details.svm"),
               top: 5,
               number: 1,
             ),
@@ -118,18 +120,18 @@ class Pengenalan extends StatelessWidget {
               bottom: 30,
               left: 20,
               right: 20,
-              text: "Diploma Vokasional Malaysia (DVM)",
+              text: tr("pengenalan.level_of_study_details.dvm"),
               top: 5,
               number: 2,
             ),
 
             //Peluang kerjaya
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
-                  "Peluang Kerjaya",
+                  tr("pengenalan.career_opportunities"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
@@ -138,14 +140,14 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Antara peluang kerjaya bagi pelajar program ini:",
+              text: tr("pengenalan.career_opportunities_details.description"),
               top: 20,
             ),
             NumberedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Penolong Jurutera Komputer",
+              text: tr("pengenalan.career_opportunities_details.1"),
               top: 5,
               number: 1,
             ),
@@ -153,7 +155,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Penolong Jurutera Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.2"),
               top: 5,
               number: 2,
             ),
@@ -161,7 +163,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Pentadbir Sistem Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.3"),
               top: 5,
               number: 3,
             ),
@@ -169,7 +171,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Penganalisis Sistem Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.4"),
               top: 5,
               number: 4,
             ),
@@ -177,7 +179,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Juruteknik Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.5"),
               top: 5,
               number: 5,
             ),
@@ -185,7 +187,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Juruteknik Komputer",
+              text: tr("pengenalan.career_opportunities_details.6"),
               top: 5,
               number: 6,
             ),
@@ -193,7 +195,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Perkhidmatan Sistem Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.7"),
               top: 5,
               number: 7,
             ),
@@ -201,7 +203,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 30,
               left: 20,
               right: 20,
-              text: "Usahawan Kedai Komputer / Rangkaian",
+              text: tr("pengenalan.career_opportunities_details.8"),
               top: 5,
               number: 8,
             ),
