@@ -4,12 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
+import 'package:introduction_screen/introduction_screen.dart';
+import 'package:iskoutreach/src/Splash%20Screen/splash_screen_animation.dart';
 import 'package:iskoutreach/src/controller/url_controller.dart';
 import 'package:iskoutreach/src/view/Homepage/home_page.dart';
+import 'package:iskoutreach/src/view/widget/introduction_Screen.dart';
 import 'src/Splash Screen/splash_screen.dart';
 import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/controller/theme_mode_controller.dart';
+import 'src/view/widget/side_drawer.dart';
 
 
 void main() async {
@@ -19,6 +23,7 @@ void main() async {
     .then((_) {
       runApp(
         EasyLocalization(
+          key: UniqueKey(),
           supportedLocales: [Locale('en', 'US'), Locale('ms', 'MY')],
           path: 'assets/locales',
           fallbackLocale: Locale('ms', 'MY'),
@@ -34,9 +39,10 @@ void main() async {
 }
 
 class IskApp extends StatelessWidget {
-  const IskApp({
+  IskApp({
     Key? key,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +53,9 @@ class IskApp extends StatelessWidget {
       locale: context.locale,
       home: SplashScreen(),
       routes: {
-        '/MainPage': (context) => MainPage(),
+        '/HomePage': (context) => HomePage(),
+        '/SplashScreenAnimation': (context) => SplashScreenAnimation(),
+
       },
       theme: Themes.lightTheme,
       darkTheme: Themes.datkTheme,
@@ -58,39 +66,3 @@ class IskApp extends StatelessWidget {
   }
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
-
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  Color mainColor = const Color.fromARGB(255, 123, 0, 245);
-
-  @override
-  void initState() {
-    super.initState();
-    ColorController.getColor();
-    themeModeController.getThemeStatus();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: HomePage(),
-          ),
-        ),
-        floatingActionButton: FloatingActionButton.extended(
-          onPressed:() {
-            launchRegisterUrl();
-          },
-          label: Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
-          icon: Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
-          backgroundColor: Colors.indigo.shade600,
-        ),
-      );
-  }
-}

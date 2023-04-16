@@ -7,22 +7,25 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import '../widget/Unordered_List.dart';
 import '../widget/custom_appbar.dart';
 import '../widget/rounded_image.dart';
+import '../widget/side_drawer.dart';
 
 class AktivitiPelajarView extends StatelessWidget {
   AktivitiPelajarView({super.key});
 
   int _current = 0;
   final CarouselController _controller = CarouselController();
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
             title: "Aktiviti Pelajar",
             icon: Icons.browse_gallery_rounded,
-            heroTag: 'pertanyaan_lanjut'),
+            heroTag: 'pertanyaan_lanjut', ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

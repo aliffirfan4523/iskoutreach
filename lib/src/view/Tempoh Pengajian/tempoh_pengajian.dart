@@ -1,100 +1,127 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:iskoutreach/src/model/senarai_subjek_model.dart';
+import 'package:iskoutreach/src/view/Senarai%20Kursus%20Ditawarkan/senarai_kursus_view.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
+import '../Pengenalan/pengenalan_view.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
+import '../widget/side_drawer.dart';
 
 class TempohPengajian extends StatelessWidget {
-  const TempohPengajian({super.key});
+  TempohPengajian({super.key});
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     final _controller = ScrollController();
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
-            title: "Tempoh Pengajian",
-            icon: Icons.calendar_view_month_rounded,
-            heroTag: 'tempoh_pengajian'),
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
+          title: tr("tempoh_pengajian.tempoh_pengajian_title"),
+          icon: Icons.calendar_view_month_rounded,
+          heroTag: 'tempoh_pengajian',
+        ),
+        bottomNavigationBar: BottomBar(
+          currentPage: 1, 
+          nextPage: SenaraiKursus(), 
+          previousPage: Pengenalan(), 
+          totalPages: 9,
+          isNextPageExist: true,
+          isPrevPageExist: true,
+        ),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
             const SizedBox(height: 40),
-            const Text(
-              "Tempoh pengajian Sijil Vokasional Malaysia (SVM)",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.only(left:20.0, right: 20.0),
+              child: Text(
+                tr("tempoh_pengajian.svm.svm_period"),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                textAlign: TextAlign.left,
+              ),
             ),
             const SizedBox(height: 10),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Selama 4 semester iaitu 2 tahun.",
+              text: tr("tempoh_pengajian.svm.svm_1"),
               top: 5,
             ),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                  "Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu.",
+              text: tr("tempoh_pengajian.svm.svm_2"),
               top: 5,
             ),
             UnorderedListItem(
               bottom: 20,
               left: 20,
               right: 20,
-              text:
-                  "Terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
+              text: tr("tempoh_pengajian.svm.svm_3"),
               top: 5,
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width - 180,
+                child: Container(
+                  constraints: BoxConstraints(
+                    maxWidth: 300
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.8,
                   child: Image.asset(
-                    'assets/images/tempoh_pengajian/SVM.jpg',
+                    tr("tempoh_pengajian.svm.svm_image_link"),
                     fit: BoxFit.fitWidth,
                   ),
                 ),
               ),
             ),
             const SizedBox(height: 30),
-            const Text(
-              "Tempoh pengajian Diploma vokasional Malaysia (DVM)",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.only(left:20.0, right: 20.0),
+              child: Text(
+                tr("tempoh_pengajian.dvm.dvm_period"),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                textAlign: TextAlign.left,
+              ),
             ),
             const SizedBox(height: 20),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: "Selama 5 semester iaitu 2 tahun dan 6 bulan.",
+              text: tr("tempoh_pengajian.dvm.dvm_1"),
               top: 5,
             ),
             UnorderedListItem(
               bottom: 20,
               left: 20,
               right: 20,
-              text:
-                  "Setiap pelajar yang melepasi syarat kemasukan ke Diploma Vokasional Malaysia akan menyambungkan pembelajaran selama 4 semester dan akan menjalani On-Job-Training (OJT) selama 6 bulan pada semester ke-5",
+              text: tr("tempoh_pengajian.dvm.dvm_2"),
               top: 5,
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width - 180,
+                child: Container(
+                  constraints: BoxConstraints(
+                    maxWidth: 300
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.8,
                   child: Image.asset(
-                    'assets/images/tempoh_pengajian/DVM.jpg',
+                    tr("tempoh_pengajian.dvm.dvm_image_link"),
                     fit: BoxFit.fitWidth,
                   ),
                 ),

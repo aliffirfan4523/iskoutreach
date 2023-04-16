@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iskoutreach/src/view/widget/menu_button.dart';
-
+/*
 Drawer sideDrawer(){
 	return Drawer(
 		child: ListView.builder(
@@ -14,4 +14,4 @@ Drawer sideDrawer(){
       }
     )
 	);
-}
+}*/

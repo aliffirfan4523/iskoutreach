@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/view/widget/custom_appbar.dart';
 
+/*
 void showSecondPage({
 	required BuildContext context,
 	required String imageLink,
@@ -14,9 +15,9 @@ void showSecondPage({
 			appBar: customAppBar(
 				heroTag: heroTag,
 				title: '', 
-				context: context, 
 				icon: FontAwesome5.certificate,
-				isIconTrue: false
+				isIconTrue: false,
+				scaffoldState: _scaffoldKey.currentState!,
 			),
 			body: Center(
 				child: Hero(
@@ -34,4 +35,4 @@ void showSecondPage({
 			)
 		),
 	));
-}
+}*/

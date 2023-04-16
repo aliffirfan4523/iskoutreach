@@ -5,20 +5,24 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 
 import '../../controller/url_controller.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/side_drawer.dart';
 
 
 class PertanyaanLanjut extends StatelessWidget {
   PertanyaanLanjut({super.key});
 
+    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
 			child: Scaffold(
-      	appBar: customAppBar(
-      		context: context,
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+      	appBar: CustomAppBar(
       		title: "Pertanyaan Lanjut",
           icon: FontAwesome5.phone,
-      		heroTag: 'pertanyaan_lanjut'
+      		heroTag: 'pertanyaan_lanjut',
         ),
         body: SingleChildScrollView(
           child: Column(

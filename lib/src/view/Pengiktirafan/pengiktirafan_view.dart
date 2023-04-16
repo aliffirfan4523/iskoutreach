@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,6 +6,7 @@ import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
 import '../../model/text_model.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/side_drawer.dart';
 
 class Pengiktirafan extends StatefulWidget {
   const Pengiktirafan({super.key});
@@ -14,15 +16,20 @@ class Pengiktirafan extends StatefulWidget {
 }
 
 class _PengiktirafanState extends State<Pengiktirafan> {
+  
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
-            title: "Pengiktirafan",
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
+            title: tr("pengiktirafan.pengiktirafan_title"),
             icon: FontAwesomeIcons.award,
-            heroTag: 'pengiktirafan'),
+            heroTag: 'pengiktirafan',
+            ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -33,7 +40,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                 bottom: 15,
                 left: 20,
                 right: 20,
-                text: pengiktirafan,
+                text: tr("pengiktirafan.pengiktirafan_description"),
                 top: 25,
               ),
               Padding(
@@ -48,7 +55,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width - 120,
                     child: Image.asset(
-                      "assets/images/MBOT.png",
+                      tr("pengiktirafan.pengiktirafan_image_link"),
                       fit: BoxFit.fitWidth,
                     ),
                   ),
@@ -57,7 +64,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
               ExpansionTile(
                 tilePadding: EdgeInsets.all(20),
                 title: Text(
-                  'Apa itu MBOT ?',
+                  tr("pengiktirafan.mbot.what_is_mbot"),
                   style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
                 ),
                 children: [
@@ -66,7 +73,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                     left: 20,
                     right: 20,
                     text:
-                        'Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal yang berkaitan.',
+                      tr("pengiktirafan.mbot.mbot_description_1"),
                     top: 5,
                   ),
                   UnorderedListItem(
@@ -74,7 +81,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                     left: 20,
                     right: 20,
                     text:
-                        "Pengiktirafan MBOT diperlukan bagi membolehkan pelajar lepasan diploma menyambungkan pelajaran di peringkat lebih tinggi.",
+                      tr("pengiktirafan.mbot.mbot_description_2"),
                     top: 10,
                   ),
                 ],

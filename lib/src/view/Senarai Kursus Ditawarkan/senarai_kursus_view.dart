@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../model/senarai_subjek_model.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/side_drawer.dart';
 
 
 class SenaraiKursus extends StatefulWidget {
@@ -17,18 +18,21 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
   int selectedTileSvm = -1;
   int selectedTileDvm = -1;
 
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  
   @override
   Widget build(BuildContext context) {
     ScrollController controller = ScrollController();
 
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
             title: "Senarai Kursus",
             icon: Icons.subject_rounded,
-            heroTag: 'senarai_kursus_ditawarkan'),
+            heroTag: 'senarai_kursus_ditawarkan',
+            ),
         body: SingleChildScrollView(
           child: Column(
             children: [
