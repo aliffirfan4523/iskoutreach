@@ -61,87 +61,87 @@ List<CardItem> items = [
           child: Image.asset('images/pn_masyi.jpeg', fit: BoxFit.fill))),
 ];
 
-List<CardList> cardlist = [
-  CardList(
-    imageLink: 'images/pn_rohani.jpeg',
-    jawatan: 'Ketua Jabatan',
-    nama: 'Pn Rohani Binti Karim',
+List<CardWidget> cardlisten = [
+  CardWidget(
+    imageLink: 'assets/images/png/pn_rohani.png',
+    jawatan: 'Department Head',
+    nama: 'Ms Rohani Binti Karim',
     emel: '',
     jawatanLain: '',
   ),
-  CardList(
-    imageLink: 'images/pn_norshidah.jpeg',
-    jawatan: 'Ketua Program',
-    nama: 'Ts Norshidah Binti Hashim',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_norshidah.png',
+    jawatan: 'Programme Head',
+    nama: 'Ms Norshidah Binti Hashim',
     emel: '',
     jawatanLain: '',
   ),
-  CardList(
-    imageLink: 'images/pn_rohaya.jpeg',
-    jawatan: 'Penolong Ketua Program',
-    nama: 'Pn Rohaya Binti Abu Samah',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_rohaya.png',
+    jawatan: 'Assistant Programme Head',
+    nama: 'Ms Rohaya Binti Abu Samah',
     emel: '',
     jawatanLain: '',
   ),
-  CardList(
-    imageLink: 'images/pn_intan.jpeg',
-    jawatan: 'Setiausaha Program',
-    nama: 'Pn Intan Keristina Binti Mohd Yusop',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_intan.png',
+    jawatan: 'Program Secretary',
+    nama: 'Ms Intan Keristina Binti Mohd Yusop',
     emel: '',
-    jawatanLain: 'Penyelaras PTA',
+    jawatanLain: 'PTA Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_azira.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Siti Azira Binti Mohd Zain',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_azira.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Siti Azira Binti Mohd Zain',
     emel: '',
-    jawatanLain: 'Penyelaras OJT',
+    jawatanLain: 'OJT Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_solehah.jpeg',
-    jawatan: 'Pensyarah ',
-    nama: 'Pn Siti Solehah Binti Nurr Azmi  ',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_solehah.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Siti Solehah Binti Nurr Azmi',
     emel: '',
-    jawatanLain: 'Penyelaras MBOT',
+    jawatanLain: 'MBOT Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_elyani.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Nurelyani Binti Azmi',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_elyani.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Nurelyani Binti Azmi',
     emel: '',
-    jawatanLain: 'Penyelaras Svm/Jpk',
+    jawatanLain: 'SVM/JPK Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_ilham.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Ilham Karim Binti Mat Rof',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_ilham.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Ilham Karim Binti Mat Rof',
     emel: '',
-    jawatanLain: 'Penyelaras Program IBM P-Tech',
+    jawatanLain: 'IBM P-Tech Program Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_farah.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Farah Afiqah Binti Borhannudin',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_farah.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Farah Afiqah Binti Borhannudin',
     emel: '',
-    jawatanLain: 'Penyelaras School Enterprise',
+    jawatanLain: 'School Enterprise Coordinator',
   ),
-  CardList(
-    imageLink: 'images/pn_diyana.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Nurdiyana Binti Mohammad Shukri',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_diyana.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Nurdiyana Binti Mohammad Shukri',
     emel: '',
-    jawatanLain: 'Jurulatih KV skills',
+    jawatanLain: 'KV Skills Trainer',
   ),
-  CardList(
-    imageLink: 'images/pn_masyi.jpeg',
-    jawatan: 'Pensyarah',
-    nama: 'Pn Masyiviranis Binti Mohd Zain',
+  CardWidget(
+    imageLink: 'assets/images/png/pn_masyi.png',
+    jawatan: 'Lecturer',
+    nama: 'Ms Masyiviranis Binti Mohd Zain',
     emel: '',
-    jawatanLain: 'Penyelaras Program IBM P-Tech',
+    jawatanLain: 'IBM P-Tech Program Coordinator',
   ),
 ];
 
-List<CardWidget> cardlistpng = [
+List<CardWidget> cardlistms = [
   CardWidget(
     imageLink: 'assets/images/png/pn_rohani.png',
     jawatan: 'Ketua Jabatan',

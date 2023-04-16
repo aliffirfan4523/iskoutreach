@@ -19,6 +19,7 @@ class ThemeController extends GetxController {
 }
 
 class Themes {
+
   static final lightTheme = ThemeData(
     colorScheme: ColorScheme.light(
       primary: mainColor,
@@ -35,14 +36,9 @@ class Themes {
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
-    textTheme: TextTheme(
-      bodyText1: TextStyle(),
-      bodyText2: TextStyle(),
-    ).apply(
-      bodyColor:  Color(0xFF0C0C0F), 
-      displayColor: Colors.blue, 
-    ),
+    textTheme: getTextTheme()
   );
+  
   static final datkTheme = ThemeData(
     brightness: Brightness.dark,
     iconTheme: IconThemeData(
@@ -55,14 +51,56 @@ class Themes {
         color: Color(0xFFF5F0F0),
       ),
     ),
-    textTheme: TextTheme(
-      bodyText1: TextStyle(),
-      bodyText2: TextStyle(),
-    ).apply(
-      bodyColor: Color(0xFFF5F0F0), 
-      displayColor: Colors.blue, 
-    ),  
+    textTheme: getTextTheme()
   );
+
+  static TextTheme getTextTheme() {
+
+    return TextTheme(
+      displayLarge: TextStyle(
+        fontSize: 24,
+      ),
+      displayMedium: TextStyle(
+        fontSize: 36,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 32,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 38,
+      ),
+      headlineSmall: TextStyle(
+        fontSize: 24,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 22,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 16,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 14,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 16,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 12,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 14,
+      ),
+      labelMedium: TextStyle(
+        fontSize: 12,
+      ),
+      labelSmall: TextStyle(
+        fontSize: 11,
+      ),
+    );
+  }
 }
 
 

@@ -1,25 +1,30 @@
-import 'package:flutter/cupertino.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
 import '../widget/custom_appbar.dart';
+import '../widget/side_drawer.dart';
 
 
 class SyaratPermohonan extends StatelessWidget {
-  const SyaratPermohonan({super.key});
+  SyaratPermohonan({super.key});
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
-            title: "Syarat Permohonan",
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
+            title: tr("syarat_permohonan.syarat_permohonan_title"),
             icon: FontAwesome5.question_circle,
-            heroTag: 'syarat_permohonan'),
+            heroTag: 'syarat_permohonan',
+            
+            ),
         body: SingleChildScrollView(
             child: Column(
           // ignore: prefer_const_literals_to_create_immutables
@@ -27,60 +32,78 @@ class SyaratPermohonan extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Text(
-                "Syarat permohonan",
+                tr("syarat_permohonan.syaratSvm.syaratSvm_title_1"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Text(
-                "Sijil Vokasional Malaysia (SVM)",
+                tr("syarat_permohonan.syaratSvm.syaratSvm_title_2"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-            ),
-            ListView.builder(
-              itemCount: syaratSvm.length,
-              shrinkWrap: true,
-              physics: const BouncingScrollPhysics(),
-              itemBuilder: (BuildContext context, int index) {
-                return syaratSvm[index];
-              },
             ),
             const SizedBox(
               height: 10,
             ),
-            const Align(
-              alignment: Alignment.center,
-              child: Text(
-                "Syarat menyambung",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-            ),
-            const Align(
-              alignment: Alignment.center,
-              child: Text(
-                "Diploma Vokasional Malaysia (DVM)",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-            ),
             ListView.builder(
-              itemCount: syaratDvm.length,
+              itemCount: 7,
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
-                return syaratDvm[index];
+                return UnorderedListItem(
+                  bottom: 5,
+                  left: 20,
+                  right: 20,
+                  text: tr('syarat_permohonan.syaratSvm.syaratSvm_$index'),
+                  top: 5,
+                );
+              },
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                tr("syarat_permohonan.syaratDvm.syaratDvm_title_1"),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                tr("syarat_permohonan.syaratDvm.syaratDvm_title_2"),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListView.builder(
+              itemCount: 3,
+              shrinkWrap: true,
+              physics: const BouncingScrollPhysics(),
+              itemBuilder: (BuildContext context, int index) {
+                return UnorderedListItem(
+                  bottom: 5,
+                  left: 20,
+                  right: 20,
+                  text: tr('syarat_permohonan.syaratDvm.syaratDvm_$index'),
+                  top: 5,
+                );
               },
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Text(
-                "Maklumat Tambahan:-",
+                tr("syarat_permohonan.syaratTambahan.syaratTambahan_title"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
@@ -88,23 +111,21 @@ class SyaratPermohonan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                  "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
-              top: 30,
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_1"),
+              top: 20,
             ),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                  "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_2"),
               top: 10,
             ),
             NumberedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: " Sijil Vokasional Malaysia (SVM)",
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_3"),
               top: 5,
               number: 1,
             ),
@@ -112,8 +133,7 @@ class SyaratPermohonan extends StatelessWidget {
               bottom: 10,
               left: 20,
               right: 20,
-              text:
-                  "Layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_4"),
               top: 5,
               number: 2,
             ),
@@ -121,16 +141,14 @@ class SyaratPermohonan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                  "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_5"),
               top: 10,
             ),
             UnorderedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                  "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia",
+              text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_6"),
               top: 10,
             ),
             SizedBox(height: 30)
@@ -140,83 +158,3 @@ class SyaratPermohonan extends StatelessWidget {
     );
   }
 }
-
-List<UnorderedListItem> syaratSvm = [
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text: "Warganegara Malaysia",
-    top: 20,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text: "Bersekolah di SMK atau Sekolah Bantuan Kerajaan",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text:
-        "Memohon secara online dan menduduki PKSK (Pentaksiran Kemasukan Sekolah Khusus)",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text: "Memperoleh markah PBD, PAJSK dan Pentaksiran Psikometrik",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text: "Tidak rabun / buta warna",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text: "Bebas sakit kronik",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 20,
-    left: 20,
-    right: 20,
-    text: "Berminat dengan program dipohon",
-    top: 5,
-  ),
-];
-
-List<UnorderedListItem> syaratDvm = [
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text:
-        "Lulus Sijil Vokasional Malaysia dan mendapat sekurang-kurangnya 3 kepujian termasuk Kepujian Bahasa Melayu 1104",
-    top: 20,
-  ),
-  UnorderedListItem(
-    bottom: 5,
-    left: 20,
-    right: 20,
-    text:
-        "Mencapai kepujian kursus Matematik setara Gred 2.0 di peringkat Sijil Vokasional Malaysia",
-    top: 5,
-  ),
-  UnorderedListItem(
-    bottom: 30,
-    left: 20,
-    right: 20,
-    text:
-        "Menduduki modul tambahan kursus Matematik yang telah ditetapkan bagi pelajar yang tidak mencapai setara Gred 2.0",
-    top: 5,
-  ),
-];

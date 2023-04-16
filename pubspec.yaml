@@ -67,6 +67,9 @@ dependencies:
   easy_localization: ^3.0.0
   adaptive_action_sheet: ^2.0.2
   easy_localization_loader: ^1.0.1+1
+  video_player: ^2.6.1
+  introduction_screen: ^3.1.7
+  flutter_swiper_null_safety: ^1.0.2
   
 dev_dependencies:
   flutter_test:
@@ -108,8 +111,10 @@ flutter:
     - assets/images/png/pn_rohani.png
     - assets/images/png/pn_rohaya.png
     - assets/images/png/pn_solehah.png
-    - assets/images/tempoh_pengajian/DVM.jpg
-    - assets/images/tempoh_pengajian/SVM.jpg
+    - assets/images/tempoh_pengajian/svm_en.png
+    - assets/images/tempoh_pengajian/dvm_en.png
+    - assets/images/tempoh_pengajian/svm_ms.png
+    - assets/images/tempoh_pengajian/dvm_ms.png
     - assets/images/logo.png
     - assets/images/sec_logo.png
     - assets/images/MBOT.png

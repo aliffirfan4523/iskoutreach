@@ -1,36 +1,125 @@
 {
-  "welcome-mainpage": "Selamat Datang ke \nISK Outreach",
+  "welcome-mainpage": "Selamat Datang ke \nI S K  O U T R E A C H",
   "description": "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus Teknologi Sistem Komputer Dan Rangkaian di Kolej Vokasional Sungai Buloh",
-  
+
   "pengenalan": {
     "title": "Pengenalan",
     "vision_mission": "Visi dan Misi",
     "level_of_study": "Peringkat Bidang Pengajian",
     "career_opportunities": "Peluang Kerjaya",
-    
+
     "title_description": "Program Teknologi Sistem Komputer & Rangkaian menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi komputer serta rangkaian dan penyimpanan data disamping pengurusan pentadbiran dan integrasi maklumat.",
-    
+
     "vision_mission_details": {
       "vision": "Visi – Peneraju pendidikan teknikal dan vokasional yang unggul.",
       "mission": "Misi – Memperkasakan pendidikan teknikal dan vokasional melalui pelaksanaan program yang berkualiti."
     },
 
     "level_of_study_details": {
-      "description": "Program ini menawarkan 2 peringkat bidang pengajian iaitu:-",
+      "level_of_study_description": "Program ini menawarkan 2 peringkat bidang pengajian iaitu:-",
       "svm": "Sijil Vokasional Malaysia (SVM)",
       "dvm": "Diploma Vokasional Malaysia (DVM)"
     },
 
     "career_opportunities_details": {
-      "description": "Antara peluang kerjaya bagi pelajar program ini:",
-      "1": "Penolong Jurutera Komputer",
-      "2": "Penolong Jurutera Rangkaian",
-      "3": "Pentadbir Sistem Rangkaian",
-      "4": "Penganalisis Sistem Rangkaian",
-      "5": "Juruteknik Rangkaian",
-      "6": "Juruteknik Komputer",
-      "7": "Perkhidmatan Sistem Rangkaian",
-      "8": "Usahawan Kedai Komputer / Rangkaian"
+      "career_opportunities_description": "Antara peluang kerjaya bagi pelajar program ini:",
+      "details_1": "Penolong Jurutera Komputer",
+      "details_2": "Penolong Jurutera Rangkaian",
+      "details_3": "Pentadbir Sistem Rangkaian",
+      "details_4": "Penganalisis Sistem Rangkaian",
+      "details_5": "Juruteknik Rangkaian",
+      "details_6": "Juruteknik Komputer",
+      "details_7": "Perkhidmatan Sistem Rangkaian",
+      "details_8": "Usahawan Kedai Komputer / Rangkaian"
+    }
+  },
+
+  "tempoh_pengajian": {
+    "tempoh_pengajian_title": "Tempoh Pengajian",
+    "tempoh_pengajian_mb_title": "Tempoh \nPengajian",
+    "svm": {
+      "svm_period": "Tempoh Pengajian Sijil Vokasional Malaysia (SVM)",
+      "svm_1": "Dijalankan selama 4 semester iaitu 2 tahun.",
+      "svm_2": "Setiap kursus yang dilaksanakan dalam satu semester SVM mengambil masa selama 20 minggu.",
+      "svm_3": "Terdiri daripada 17 minggu pengajaran dan pembelajaran diikuti dengan 3 minggu penilaian akhir.",
+      "svm_image_link": "assets/images/tempoh_pengajian/svm_ms.png"
+    },
+    "dvm": {
+      "dvm_period": "Tempoh Pengajian Diploma vokasional Malaysia (DVM)",
+      "dvm_1": "Dijalankan selama 5 semester iaitu 2 tahun dan 6 bulan.",
+      "dvm_2": "Setiap pelajar yang melepasi syarat kemasukan ke Diploma Vokasional Malaysia akan menyambungkan pembelajaran selama 4 semester dan akan menjalani On-Job-Training (OJT) selama 6 bulan pada semester ke-5",
+      "dvm_image_link": "assets/images/tempoh_pengajian/dvm_ms.png"
+    }
+  },
+
+  "pengiktirafan": {
+    "pengiktirafan_title": "Pengiktirafan",
+    "pengiktirafan_mb_title": "Pengiktirafan",
+    "pengiktirafan_description": "Program Teknologi Sistem Komputer dan Rangkaian telah disahkan bahawa kelayakan akademik yang diberikan adalah selaras dengan piawaian dan kualiti yang ditetapkan oleh Lembaga Teknologis Malaysia (MBOT)",
+    "pengiktirafan_image_link": "assets/images/MBOT.png",
+    "mbot": {
+      "what_is_mbot": "Apa itu MBOT?",
+      "mbot_description_1": "Lembaga Juruteknologi Malaysia (MBOT) ialah badan profesional yang memberi Pengiktirafan Profesional kepada Juruteknologi dan Juruteknik dalam bidang teknologi dan teknikal berkaitan yang diiktiraf oleh Lembaga.",
+      "mbot_description_2": "Pengiktirafan MBOT diperlukan untuk membolehkan graduan diploma menyambung pengajian ke peringkat yang lebih tinggi."
+    }
+  },
+
+  "program_ibm": {
+    "program_ibm_title": "Program IBM-PTech",
+    "program_ibm_mb_title": "Program \nIBM-PTech",
+    "program_ibm_main_title": "Program Kerjasama IBM-PTech Antara IBM dan Kolej Vokasional Sungai Buloh",
+    "ibm_logo": "assets/images/logo_IBM.png",
+    "x_logo": "assets/images/logo_x.jpg",
+    "kv_logo": "assets/images/logo_kv.png",
+    "synopsis": {
+      "synopsis_title": "Sinopsis",
+      "synopsis_description_1": "Program Pathways in Technology Early College High Schools (P-TECH) merupakan salah satu program kerjasama antara Kementerian Pendidikan Malaysia dan  Perbadanan Kemajuan Multimedia (MDEC) bersama-sama dengan IBM bagi menyediakan belia Malaysia untuk kerjaya berkaitan teknologi.",
+      "synopsis_description_2": "Program P-TECH mula dilaksanakan pada tahun 2020 bersama-sama dengan pelajar Kolej Vokasional Sungai Buloh.",
+      "synopsis_description_3": "Program ini akan dilaksanakan selama 4 tahun bermula ketika pelajar berada di tahun 1 SVM sehingga tahun 2 DVM.",
+      "synopsis_description_4": "Para pelajar akan didedahkan dengan 6 modul pembelajaran bersama dengan mentor-mentor yang akan dikendalikan oleh pihak IBM, Malaysia.",
+      "synopsis_description_5": "Hasrat IBM adalah untuk melahirkan “new collars” dalam kalangan pelajar bagi meningkatkan nilai diri mereka dengan cara mendapatkan kemahiran, meningkatkan kemahiran, mendapatkan kemahiran baharu serta menguasai kemahiran merentasi bidang"
+    },
+    "organisation_chart": {
+      "organisation_chart_title": "Carta Organisasi",
+      "organisation_chart_image_link": "assets/images/jpeg/carta.jpeg"
+    }
+  },
+
+  "senarai_pensyarah": {
+    "senarai_pensyarah_title": "Senarai Pensyarah",
+    "senarai_pensyarah_mb_title": "Senarai \nPensyarah",
+    "senarai_pensyarah_description": "Terdapat 11 orang tenaga pengajar yang berpengalaman dan berdedikasi yang akan membantu pelajar dalam proses pembelajaran. "
+  },
+
+  "syarat_permohonan":{
+    "syarat_permohonan_title": "Syarat Permohonan",
+    "syarat_permohonan_mb_title": "Syarat \nPermohonan",
+    "syaratSvm": {
+      "syaratSvm_title_1": "Syarat Permohonan",
+      "syaratSvm_title_2": "Sijil Vokasional Malaysia (SVM)",
+      "syaratSvm_0": "Warganegara Malaysia",
+      "syaratSvm_1": "Bersekolah di SMK atau Sekolah Bantuan Kerajaan",
+      "syaratSvm_2": "Memohon secara online dan menduduki PKSK (Pentaksiran Kemasukan Sekolah Khusus)",
+      "syaratSvm_3": "Memperoleh markah PBD, PAJSK dan Pentaksiran Psikometrik",
+      "syaratSvm_4": "Tidak rabun / buta warna",
+      "syaratSvm_5": "Bebas sakit kronik",
+      "syaratSvm_6": "Berminat dengan program dipohon"
+    },
+    "syaratDvm": {
+      "syaratDvm_title_1": "Syarat Permohonan",
+      "syaratDvm_title_2": "Diploma Vokasional Malaysia (DVM)",
+      "syaratDvm_0": "Lulus Sijil Vokasional Malaysia dan mendapat sekurang-kurangnya 3 kepujian termasuk Kepujian Bahasa Melayu 1104",
+      "syaratDvm_1": "Mencapai kepujian kursus Matematik setara Gred 2.0 di peringkat Sijil Vokasional Malaysia",
+      "syaratDvm_2": "Menduduki modul tambahan kursus Matematik yang telah ditetapkan bagi pelajar yang tidak mencapai setara Gred 2.0"
+    },
+    "syaratTambahan" : {
+      "syaratTambahan_title":"Maklumat Tambahan:-",
+      "syaratTambahan_1": "Bagi lepasan Tingkatan 3, anda boleh mengikuti pengajian untuk mendapatkan Sijil Vokasional Malaysia (SVM) sebelum melanjutkan pengajian di peringkat DVM.",
+      "syaratTambahan_2": "Murid yang berjaya di peringkat Sijil akan dianugerahkan:-",
+      "syaratTambahan_3": "Sijil Vokasional Malaysia (SVM)",
+      "syaratTambahan_4": "Layak menyambung pengajian di peringkat Diploma di Kolej Vokasional yang sama jika melepasi syarat kemasukan yang ditetapkan",
+      "syaratTambahan_5": "Murid yang tidak melepasi syarat kemasukan ke peringkat Diploma akan menyambung pengajian di Kolej Vokasional yang sama dalam bidang kemahiran dan dianugerahkan Sijil Kemahiran Malaysia (SKM) berdasarkan tahap kompetensi yang dicapai",
+      "syaratTambahan_6": "Murid yang lulus pengajian di peringkat Diploma akan dianugerahkan Diploma oleh Senat Kolej Vokasional, Kementerian Pendidikan Malaysia"
     }
   }
 }

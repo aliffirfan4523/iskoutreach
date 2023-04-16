@@ -1,14 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:iskoutreach/src/view/widget/rounded_image.dart';
-import 'package:iskoutreach/src/view/widget/side_nav_bar.dart';
 
+import '../Tempoh Pengajian/tempoh_pengajian.dart';
 import '../widget/Unordered_List.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
+import '../widget/side_drawer.dart';
 
 
 final List<String> imgList = [
@@ -29,15 +28,27 @@ final List<String> imgList = [
 class Pengenalan extends StatelessWidget {
   Pengenalan({super.key});
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: customAppBar(
-            context: context,
-            title: "Pengenalan",
-            icon: FontAwesome5.desktop,
-            heroTag: 'pengenalan'),
+        key: _scaffoldKey,
+        endDrawer: sideDrawer(),
+        appBar: CustomAppBar(
+          title: "Pengenalan",
+          icon: FontAwesome5.desktop,
+          heroTag: 'pengenalan', 
+        ),
+        bottomNavigationBar: BottomBar(
+          currentPage: 1, 
+          nextPage: TempohPengajian(), 
+          previousPage: Icon(Icons.directions), 
+          totalPages: 9,
+          isNextPageExist: true,
+          isPrevPageExist: false,
+        ),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
@@ -46,7 +57,7 @@ class Pengenalan extends StatelessWidget {
               height: 30,
             ),
             Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
@@ -64,7 +75,7 @@ class Pengenalan extends StatelessWidget {
               top: 20,
             ),
             Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
@@ -91,7 +102,7 @@ class Pengenalan extends StatelessWidget {
             ),
             //penerangan bidang pengajian
             Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
@@ -105,8 +116,8 @@ class Pengenalan extends StatelessWidget {
               left: 20,
               right: 20,
               text:
-                tr("pengenalan.level_of_study_details.description"),
-              top: 30,
+                tr("pengenalan.level_of_study_details.level_of_study_description"),
+              top: 20,
             ),
             NumberedListItem(
               bottom: 5,
@@ -127,7 +138,7 @@ class Pengenalan extends StatelessWidget {
 
             //Peluang kerjaya
             Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 child: Text(
@@ -140,14 +151,14 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.description"),
+              text: tr("pengenalan.career_opportunities_details.career_opportunities_description"),
               top: 20,
             ),
             NumberedListItem(
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.1"),
+              text: tr("pengenalan.career_opportunities_details.details_1"),
               top: 5,
               number: 1,
             ),
@@ -155,7 +166,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.2"),
+              text: tr("pengenalan.career_opportunities_details.details_2"),
               top: 5,
               number: 2,
             ),
@@ -163,7 +174,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.3"),
+              text: tr("pengenalan.career_opportunities_details.details_3"),
               top: 5,
               number: 3,
             ),
@@ -171,7 +182,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.4"),
+              text: tr("pengenalan.career_opportunities_details.details_4"),
               top: 5,
               number: 4,
             ),
@@ -179,7 +190,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.5"),
+              text: tr("pengenalan.career_opportunities_details.details_5"),
               top: 5,
               number: 5,
             ),
@@ -187,7 +198,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.6"),
+              text: tr("pengenalan.career_opportunities_details.details_6"),
               top: 5,
               number: 6,
             ),
@@ -195,7 +206,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.7"),
+              text: tr("pengenalan.career_opportunities_details.details_7"),
               top: 5,
               number: 7,
             ),
@@ -203,7 +214,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 30,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.8"),
+              text: tr("pengenalan.career_opportunities_details.details_8"),
               top: 5,
               number: 8,
             ),

@@ -14,57 +14,7 @@ import '../Syarat Permohonan/syarat_permohonan_view.dart';
 import '../Tempoh Pengajian/tempoh_pengajian.dart';
 
 
-List<IconTextButton> buttonList = [
-  IconTextButton(
-      icon: FontAwesome5.desktop,
-      text: tr("pengenalan.title"),
-      location: Pengenalan(),
-      heroTag: 'pengenalan'),
-  //tempoh pengajian
-  IconTextButton(
-      icon: Icons.calendar_view_month_rounded,
-      text: "Tempoh \nPengajian",
-      location: const TempohPengajian(),
-      heroTag: 'tempoh_pengajian'),
-  //senarai kursus yang ditawarkan
-  IconTextButton(
-      icon: Icons.subject_rounded,
-      text: "Senarai Kursus \nDitawarkan",
-      location: const SenaraiKursus(),
-      heroTag: 'senarai_kursus_ditawarkan'),
-  //pengiktirafan
-  IconTextButton(
-      icon: FontAwesomeIcons.award,
-      text: "Pengiktirafan",
-      location: const Pengiktirafan(),
-      heroTag: 'pengiktirafan'),
-  IconTextButton(
-      icon: FontAwesomeIcons.handshake,
-      text: "Program \nIBM-PTech",
-      location: KerjasamaIBM(),
-      heroTag: 'kerjasama_ibm'),
-  //senarai pensyarah
-  IconTextButton(
-      icon: Icons.person_rounded,
-      text: "Senarai \nPensyarah",
-      location: SenaraiPensyarah(),
-      heroTag: 'senarai_pensyarah'),
-  IconTextButton(
-      icon: FontAwesome5.question_circle,
-      text: "Syarat \nPermohonan",
-      location: SyaratPermohonan(),
-      heroTag: 'syarat_permohonan'),
-  IconTextButton(
-      icon: FontAwesome5.running,
-      text: "Aktiviti\nPelajar",
-      location: AktivitiPelajarView(),
-      heroTag: 'Aktiviti_Pelajar'),
-  IconTextButton(
-      icon: FontAwesome5.phone,
-      text: "Pertanyaan \nLanjut",
-      location: PertanyaanLanjut(),
-      heroTag: 'pertanyaan_lanjut'),
-];
+
 
 class MenuButton extends StatefulWidget {
   const MenuButton({
@@ -78,8 +28,65 @@ class MenuButton extends StatefulWidget {
 class _MenuButtonState extends State<MenuButton> {
   @override
   Widget build(BuildContext context) {
+    
+    List<IconTextButton> buttonList = [
+      IconTextButton(
+          icon: FontAwesome5.desktop,
+          text: tr("pengenalan.title"),
+          location: Pengenalan(),
+          heroTag: 'pengenalan'),
+      //tempoh pengajian
+      IconTextButton(
+          icon: Icons.calendar_view_month_rounded,
+          text: tr("tempoh_pengajian.tempoh_pengajian_mb_title"),
+          location: TempohPengajian(),
+          heroTag: 'tempoh_pengajian'),
+      //senarai kursus yang ditawarkan
+      IconTextButton(
+          icon: Icons.subject_rounded,
+          text: "Senarai Kursus \nDitawarkan",
+          location: const SenaraiKursus(),
+          heroTag: 'senarai_kursus_ditawarkan'),
+      //pengiktirafan
+      IconTextButton(
+          icon: FontAwesomeIcons.award,
+          text: tr("pengiktirafan.pengiktirafan_mb_title"),
+          location: const Pengiktirafan(),
+          heroTag: 'pengiktirafan'),
+      IconTextButton(
+          icon: FontAwesomeIcons.handshake,
+          text: tr("program_ibm.program_ibm_mb_title"),
+          location: KerjasamaIBM(),
+          heroTag: 'kerjasama_ibm'),
+      //senarai pensyarah
+      IconTextButton(
+          icon: Icons.person_rounded,
+          text: tr("senarai_pensyarah.senarai_pensyarah_mb_title"),
+          location: SenaraiPensyarah(),
+          heroTag: 'senarai_pensyarah'),
+      IconTextButton(
+          icon: FontAwesome5.question_circle,
+          text: tr("syarat_permohonan.syarat_permohonan_mb_title"),
+          location: SyaratPermohonan(),
+          heroTag: 'syarat_permohonan'),
+      IconTextButton(
+          icon: FontAwesome5.running,
+          text: "Aktiviti\nPelajar",
+          location: AktivitiPelajarView(),
+          heroTag: 'Aktiviti_Pelajar'),
+      IconTextButton(
+          icon: FontAwesome5.phone,
+          text: "Pertanyaan \nLanjut",
+          location: PertanyaanLanjut(),
+          heroTag: 'pertanyaan_lanjut'),
+    ];
+
     return Container(
-      margin: const EdgeInsets.only(left: 10, right: 10),
+      constraints: BoxConstraints(
+        //maxWidth: 500,
+        minWidth: 300,
+      ),
+      width: MediaQuery.of(context).size.width * 0.8,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

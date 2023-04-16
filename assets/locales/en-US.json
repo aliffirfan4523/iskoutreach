@@ -1,5 +1,5 @@
 {
-  "welcome-mainpage": "Welcome to \nISK Outreach",
+  "welcome-mainpage": "Welcome to \nI S K  O U T R E A C H",
   "description": "This is an application that provides information about the Computer System and Network Technology course at Sungai Buloh Vocational College",
 
   "pengenalan": {
@@ -16,21 +16,110 @@
     },
 
     "level_of_study_details": {
-      "description": "This program offers 2 levels of study, namely:-",
+      "level_of_study_description": "This program offers 2 levels of study, namely:-",
       "svm": "Malaysian Vocational Certificate (SVM)",
       "dvm": "Malaysian Vocational Diploma (DVM)"
     },
 
     "career_opportunities_details": {
-      "description": "Among the career opportunities for students of this program:",
-      "1": "Assistant Computer Engineer",
-      "2": "Assistant Network Engineer",
-      "3": "Network System Administrator",
-      "4": "Network Systems Analyst",
-      "5": "Network Technician",
-      "6": "Computer Technician",
-      "7": "Network System Services",
-      "8": "Computer / Network Store Entrepreneur"
+      "career_opportunities_description": "Among the career opportunities for students of this program:",
+      "details_1": "Assistant Computer Engineer",
+      "details_2": "Assistant Network Engineer",
+      "details_3": "Network System Administrator",
+      "details_4": "Network Systems Analyst",
+      "details_5": "Network Technician",
+      "details_6": "Computer Technician",
+      "details_7": "Network System Services",
+      "details_8": "Computer / Network Store Entrepreneur"
+    }
+  },
+
+  "tempoh_pengajian": {
+    "tempoh_pengajian_title": "Study Period",
+    "tempoh_pengajian_mb_title": "Study \nPeriod",
+    "svm": {
+      "svm_period": "Malaysian Vocational Certificate (SVM) Study Period ",
+      "svm_1": "Conducted for 4 semesters that is 2 years.",
+      "svm_2": "Each course implemented in one SVM semester takes 20 weeks.",
+      "svm_3": "Consists of 17 weeks of teaching and learning followed by 3 weeks of final assessment.",
+      "svm_image_link": "assets/images/tempoh_pengajian/svm_en.png"
+    },
+    "dvm": {
+      "dvm_period": "Malaysian Vocational Diploma (DVM) Study Period",
+      "dvm_1": "Conducted for 5 semesters of 2 years and 6 months.",
+      "dvm_2": "Each student who passes the entry requirements for the Malaysian Vocational Diploma will continue learning for 4 semesters and will undergo On-Job-Training (OJT) for 6 months in the 5th semester",
+      "dvm_image_link": "assets/images/tempoh_pengajian/dvm_en.png"
+    }
+  },
+
+  "pengiktirafan": {
+    "pengiktirafan_title": "Recognition",
+    "pengiktirafan_mb_title": "Recognition",
+    "pengiktirafan_description": "The Computer and Network Systems Technology Program has been certified that the academic qualifications awarded are in line with the standards and quality set by the Malaysian Board of Technologists (MBOT).",
+    "pengiktirafan_image_link": "assets/images/MBOT.png",
+    "mbot": {
+      "what_is_mbot": "What is MBOT?",
+      "mbot_description_1": "The Malaysian Board of Technologists (MBOT) is a professional body that gives Professional Recognition to Technologists and Technicians in related technological and technical fields recognized by the Board.",
+      "mbot_description_2": "MBOT recognition is required to enable diploma graduates to continue their studies at a higher level."
+    }
+  },
+
+  "program_ibm": {
+    "program_ibm_title": "IBM-PTech Program",
+    "program_ibm_mb_title": "IBM-PTech Program",
+    "program_ibm_main_title": "IBM-PTech Collaboration Program between IBM and Sungai Buloh Vocational College",
+    "ibm_logo": "assets/images/logo_IBM.png",
+    "x_logo": "assets/images/logo_x.jpg",
+    "kv_logo": "assets/images/logo_kv.png",
+    "synopsis": {
+      "synopsis_title": "Synopsis",
+      "synopsis_description_1": "The Pathways in Technology Early College High Schools (P-TECH) program is a collaboration between the Ministry of Education Malaysia and the Multimedia Development Corporation (MDEC) together with IBM to prepare Malaysian youths for technology-related careers.",
+      "synopsis_description_2": "The P-TECH program was implemented in 2020 together with students from Sungai Buloh Vocational College.",
+      "synopsis_description_3": "This program will be implemented for 4 years starting when the students are in year 1 SVM until year 2 DVM.",
+      "synopsis_description_4": "Students will be exposed to 6 learning modules with mentors who will be supervised by IBM Malaysia.",
+      "synopsis_description_5": "IBM's aim is to produce 'new collars' among students to increase their self-worth by gaining skills, improving their existing skills, acquiring new skills, and mastering cross-domain skills."
+    },
+    "organisation_chart": {
+      "organisation_chart_title": "Organisation Chart",
+      "organisation_chart_image_link": "assets/images/jpeg/carta.jpeg"
+    }
+  },
+
+  "senarai_pensyarah": {
+    "senarai_pensyarah_title": "List of Lecturers",
+    "senarai_pensyarah_mb_title": "List of \nLecturers",
+    "senarai_pensyarah_description": "There are 11 experienced and dedicated educators who will assist students in the learning process."
+  },
+
+  "syarat_permohonan":{
+    "syarat_permohonan_title": "Application Conditions",
+    "syarat_permohonan_mb_title": "Application \nConditions",
+    "syaratSvm": {
+      "syaratSvm_title_1": "Application Conditions",
+      "syaratSvm_title_2": "Malaysian Vocational Certificate (SVM)",
+      "syaratSvm_0": "Malaysian Citizen",
+      "syaratSvm_1": "Study at SMK or Government Aid School",
+      "syaratSvm_2": "Apply online and sit for PKSK (Special School Admission Assessment)",
+      "syaratSvm_3": "Obtaining PBD, PAJSK and Psychometric Assessment scores",
+      "syaratSvm_4": "Non-sighted / color blind",
+      "syaratSvm_5": "Free from chronic pain",
+      "syaratSvm_6": "Interested in the program applied for"
+    },
+    "syaratDvm": {
+      "syaratDvm_title_1": "Application conditions",
+      "syaratDvm_title_2": "Malaysian Vocational Diploma (DVM)",
+      "syaratDvm_0": "Pass the Malaysian Vocational Certificate and get at least 3 honors including Malay Language Honors 1104",
+      "syaratDvm_1": "Achieving Honors Mathematics course equivalent to Grade 2.0 at the Malaysian Vocational Certificate level",
+      "syaratDvm_2": "Sit the additional module of the Mathematics course that has been set for students who do not achieve the equivalent of Grade 2.0"
+    },
+    "syaratTambahan" : {
+      "syaratTambahan_title":"Additional Information:-",
+      "syaratTambahan_1": "For Form 3 graduates, you can study to obtain the Malaysian Vocational Certificate (SVM) before continuing your studies at the DVM level.",
+      "syaratTambahan_2": "Students who succeed at the Certificate level will be awarded:-",
+      "syaratTambahan_3": "Malaysian Vocational Certificate (SVM)",
+      "syaratTambahan_4": "Eligible to continue studies at the Diploma level at the same Vocational College if passing the prescribed entry requirements",
+      "syaratTambahan_5": "Students who do not pass the entry requirements for the Diploma level will continue their studies at the same Vocational College in the same field of skills and be awarded the Malaysian Skills Certificate (SKM) based on the level of competence achieved",
+      "syaratTambahan_6": "Students who pass their studies at the Diploma level will be awarded a Diploma by the Vocational College Senate, Ministry of Education Malaysia"
     }
   }
 }
