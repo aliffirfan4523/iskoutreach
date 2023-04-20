@@ -31,11 +31,6 @@ class TempohPengajian extends StatelessWidget {
         ),
         bottomNavigationBar: BottomBar(
           currentPage: 1, 
-          nextPage: SenaraiKursus(), 
-          previousPage: Pengenalan(), 
-          totalPages: 9,
-          isNextPageExist: true,
-          isPrevPageExist: true,
         ),
         body: SingleChildScrollView(
             child: Column(

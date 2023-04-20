@@ -7,6 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../model/text_model.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
 
@@ -26,6 +27,9 @@ class KerjasamaIBM extends StatelessWidget {
               title: tr("program_ibm.program_ibm_title"),
               icon: FontAwesome5.handshake,
               heroTag: 'kerjasama_ibm',
+          ),
+          bottomNavigationBar: BottomBar(
+            currentPage: 4, 
           ),
           body: SingleChildScrollView(
               child: Column(

@@ -5,6 +5,7 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
 
@@ -20,11 +21,13 @@ class SyaratPermohonan extends StatelessWidget {
         key: _scaffoldKey,
         endDrawer: sideDrawer(),
         appBar: CustomAppBar(
-            title: tr("syarat_permohonan.syarat_permohonan_title"),
-            icon: FontAwesome5.question_circle,
-            heroTag: 'syarat_permohonan',
-            
-            ),
+          title: tr("syarat_permohonan.syarat_permohonan_title"),
+          icon: FontAwesome5.question_circle,
+          heroTag: 'syarat_permohonan',
+        ),
+        bottomNavigationBar: BottomBar(
+          currentPage: 6, 
+        ),
         body: SingleChildScrollView(
             child: Column(
           // ignore: prefer_const_literals_to_create_immutables
@@ -36,14 +39,14 @@ class SyaratPermohonan extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 tr("syarat_permohonan.syaratSvm.syaratSvm_title_1"),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             Align(
               alignment: Alignment.center,
               child: Text(
                 tr("syarat_permohonan.syaratSvm.syaratSvm_title_2"),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             const SizedBox(
@@ -70,14 +73,14 @@ class SyaratPermohonan extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 tr("syarat_permohonan.syaratDvm.syaratDvm_title_1"),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             Align(
               alignment: Alignment.center,
               child: Text(
                 tr("syarat_permohonan.syaratDvm.syaratDvm_title_2"),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             const SizedBox(
@@ -97,14 +100,14 @@ class SyaratPermohonan extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Align(
               alignment: Alignment.center,
               child: Text(
                 tr("syarat_permohonan.syaratTambahan.syaratTambahan_title"),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
             UnorderedListItem(
@@ -151,7 +154,7 @@ class SyaratPermohonan extends StatelessWidget {
               text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_6"),
               top: 10,
             ),
-            SizedBox(height: 30)
+            const SizedBox(height: 30)
           ],
         )),
       ),

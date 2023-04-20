@@ -44,7 +44,7 @@ class _MenuButtonState extends State<MenuButton> {
       //senarai kursus yang ditawarkan
       IconTextButton(
           icon: Icons.subject_rounded,
-          text: "Senarai Kursus \nDitawarkan",
+          text: tr("senarai_kursus.senarai_kursus_mb_title"),
           location: const SenaraiKursus(),
           heroTag: 'senarai_kursus_ditawarkan'),
       //pengiktirafan
@@ -71,12 +71,12 @@ class _MenuButtonState extends State<MenuButton> {
           heroTag: 'syarat_permohonan'),
       IconTextButton(
           icon: FontAwesome5.running,
-          text: "Aktiviti\nPelajar",
+          text: tr("aktiviti_pelajar.aktiviti_pelajar_mb_title"),
           location: AktivitiPelajarView(),
           heroTag: 'Aktiviti_Pelajar'),
       IconTextButton(
           icon: FontAwesome5.phone,
-          text: "Pertanyaan \nLanjut",
+          text: tr("pertanyaan_lanjut.pertanyaan_lanjut_mb_title"),
           location: PertanyaanLanjut(),
           heroTag: 'pertanyaan_lanjut'),
     ];

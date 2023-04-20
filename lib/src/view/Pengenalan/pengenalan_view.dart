@@ -37,17 +37,12 @@ class Pengenalan extends StatelessWidget {
         key: _scaffoldKey,
         endDrawer: sideDrawer(),
         appBar: CustomAppBar(
-          title: "Pengenalan",
+          title: tr("pengenalan.title"),
           icon: FontAwesome5.desktop,
           heroTag: 'pengenalan', 
         ),
         bottomNavigationBar: BottomBar(
-          currentPage: 1, 
-          nextPage: TempohPengajian(), 
-          previousPage: Icon(Icons.directions), 
-          totalPages: 9,
-          isNextPageExist: true,
-          isPrevPageExist: false,
+          currentPage: 0, 
         ),
         body: SingleChildScrollView(
             child: Column(

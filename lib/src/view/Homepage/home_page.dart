@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iskoutreach/src/view/widget/rounded_image.dart';
 
 import '../../Splash Screen/splash_screen_animation.dart';
 import '../../controller/color_controller.dart';
@@ -18,9 +17,9 @@ import '../../controller/theme_mode_controller.dart';
 import '../../controller/url_controller.dart';
 import '../Animation/lang_change_animation.dart';
 import '../Settings/setting_view.dart';
-import '../widget/custom_sliverbar.dart';
 import '../widget/menu_button.dart';
 import '../widget/side_drawer.dart';
+import 'home_page_image.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -56,15 +55,15 @@ class _HomePageState extends State<HomePage> {
               onPressed:() {
                 launchRegisterUrl();
               },
-              label: Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
-              icon: Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
+              label: const Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
+              icon: const Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
               backgroundColor: Colors.indigo.shade900,
             ),
             body: CustomScrollView(
               slivers: <Widget>[
               SliverAppBar(
                 leading: IconButton(
-                  icon: Icon(Icons.menu),
+                  icon: const Icon(Icons.menu),
                   onPressed: () {
                     _scaffoldKey.currentState?.openDrawer();
                   },
@@ -86,9 +85,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 actions: [
                   IconButton(
-                    icon: Icon(Icons.settings),
+                    icon: const Icon(Icons.settings),
                     onPressed: (){
-                      Get.to(Setting());
+                      Get.to(const Setting());
                     },
                   )
                 ],
@@ -100,7 +99,7 @@ class _HomePageState extends State<HomePage> {
 
               SliverAppBar(
                 automaticallyImplyLeading: false,
-                backgroundColor: Colors.indigo.shade600,
+                //backgroundColor: Colors.indigo.shade600,
                 expandedHeight: MediaQuery.of(context).size.height * 0.3,
                 floating: true,
                 pinned: true,
@@ -120,11 +119,11 @@ class _HomePageState extends State<HomePage> {
                           sigmaY: 10.0,
                           ),
                         child: Container(
-                          color: Colors.black.withOpacity(0.3),
+                          color: Colors.black.withOpacity(0.6),
                           child: Text(
                             tr("welcome-mainpage"),
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
                               color: Colors.white,
                             ),
@@ -133,16 +132,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  background: Swiper(
-                    loop: true,
-                    itemCount: homepageimglist.length,
-                    itemBuilder: (BuildContext context, int index) => Image.asset(
-                      homepageimglist[index],
-                      fit: BoxFit.cover,
-                      ),
-                    autoplay: true,
-                    )
-                  ),
+                  background: HomePageImage()
+                ),
               ),
               SliverToBoxAdapter(
                 child: SizedBox(height: MediaQuery.of(context).size.height*0.02), // Add desired height here
@@ -172,9 +163,9 @@ class _HomePageState extends State<HomePage> {
                 child: SizedBox(height: MediaQuery.of(context).size.height*0.02), // Add desired height here
               ),
               //Menu button section
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(20.0),
                   child: MenuButton(),
                 ), // Add desired height here
               ),

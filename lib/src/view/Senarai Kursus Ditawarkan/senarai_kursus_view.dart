@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../model/senarai_subjek_model.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
 
@@ -29,10 +31,13 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
         key: _scaffoldKey,
         endDrawer: sideDrawer(),
         appBar: CustomAppBar(
-            title: "Senarai Kursus",
+            title: tr("senarai_kursus.senarai_kursus_title"),
             icon: Icons.subject_rounded,
             heroTag: 'senarai_kursus_ditawarkan',
             ),
+        bottomNavigationBar: BottomBar(
+          currentPage: 2, 
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -40,7 +45,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                 padding: EdgeInsets.only(top:20, bottom: 20),
                 width: MediaQuery.of(context).size.width-40,
                 child: Text(
-                  "Berikut adalah senarai subjek yang ditawarkan bagi Sijil Vokasional Malaysia (SVM) dan Diploma Vokasional Malaysia (DVM) kursus teknologi sistem komputer dan rangkaian.",
+                  tr("senarai_kursus.senarai_kursus_desc"),
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w300
@@ -48,10 +53,10 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                   textAlign: TextAlign.justify,
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
-                  "Senarai subjek yang ditawarkan bagi Sijil Vokasional Malaysia",
+                  tr("senarai_kursus.svm.svm_title"),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold
@@ -68,19 +73,20 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return _buildPlayerModelList(
-                      isSvm: true,
+                      isSvm: false,
                       index: index,
-                      tahun: senaraiSubjekSvm[index].tahun,
-                      subjek: senaraiSubjekSvm[index].subjek,
+                      tahun: tr("senarai_kursus.svm.sem_${index+1}.sem_${index+1}_title"),
+                      subjek: "senarai_kursus.svm.sem_${index+1}.sem_${index+1}_",
+                      tilesquantity: 3
                     );
                   },
                 ),
               ),
               const SizedBox(height: 10),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
-                  "Senarai subjek yang ditawarkan bagi Diploma Vokasional Malaysia",
+                  tr("senarai_kursus.dvm.dvm_title"),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold
@@ -94,14 +100,15 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                   key: Key(selectedTileDvm.toString()),                  
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
-                  itemCount: senaraiSubjekDvm.length,
+                  itemCount: 4,
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return _buildPlayerModelList(
                       isSvm: false,
                       index: index,
-                      tahun: senaraiSubjekDvm[index].tahun,
-                      subjek: senaraiSubjekDvm[index].subjek,
+                      tahun: tr("senarai_kursus.dvm.sem_${index+1}.sem_${index+1}_title"),
+                      subjek: "senarai_kursus.dvm.sem_${index+1}.sem_${index+1}_",
+                      tilesquantity: 10
                     );
                   },
                 ),
@@ -114,7 +121,14 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
     );
   }
 
-  Widget _buildPlayerModelList({required bool isSvm, required int index, required String tahun, required List<String> subjek}) {
+  Widget _buildPlayerModelList({
+    required bool isSvm,
+    required int index, 
+    required String tahun, 
+    required String subjek,
+    required int tilesquantity
+
+    }) {
     int currentInt = isSvm ? selectedTileSvm : selectedTileDvm;
     return Card(
       child: ExpansionTile(
@@ -137,13 +151,13 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
           Builder(
             builder: (BuildContext context) {
               return ListView.builder(
-                itemCount: subjek.length,
+                itemCount: tilesquantity,
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     title: Text(
-                      subjek[index],
+                      tr("$subjek${index+1}"),
                       style: const TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 13,
