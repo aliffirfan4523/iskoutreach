@@ -66,7 +66,7 @@
 
   "program_ibm": {
     "program_ibm_title": "IBM-PTech Program",
-    "program_ibm_mb_title": "IBM-PTech Program",
+    "program_ibm_mb_title": "IBM-PTech \nProgram",
     "program_ibm_main_title": "IBM-PTech Collaboration Program between IBM and Sungai Buloh Vocational College",
     "ibm_logo": "assets/images/logo_IBM.png",
     "x_logo": "assets/images/logo_x.jpg",
@@ -91,7 +91,7 @@
     "senarai_pensyarah_description": "There are 11 experienced and dedicated educators who will assist students in the learning process."
   },
 
-  "syarat_permohonan":{
+  "syarat_permohonan": {
     "syarat_permohonan_title": "Application Conditions",
     "syarat_permohonan_mb_title": "Application \nConditions",
     "syaratSvm": {
@@ -112,8 +112,8 @@
       "syaratDvm_1": "Achieving Honors Mathematics course equivalent to Grade 2.0 at the Malaysian Vocational Certificate level",
       "syaratDvm_2": "Sit the additional module of the Mathematics course that has been set for students who do not achieve the equivalent of Grade 2.0"
     },
-    "syaratTambahan" : {
-      "syaratTambahan_title":"Additional Information:-",
+    "syaratTambahan": {
+      "syaratTambahan_title": "Additional Information:-",
       "syaratTambahan_1": "For Form 3 graduates, you can study to obtain the Malaysian Vocational Certificate (SVM) before continuing your studies at the DVM level.",
       "syaratTambahan_2": "Students who succeed at the Certificate level will be awarded:-",
       "syaratTambahan_3": "Malaysian Vocational Certificate (SVM)",
@@ -121,5 +121,137 @@
       "syaratTambahan_5": "Students who do not pass the entry requirements for the Diploma level will continue their studies at the same Vocational College in the same field of skills and be awarded the Malaysian Skills Certificate (SKM) based on the level of competence achieved",
       "syaratTambahan_6": "Students who pass their studies at the Diploma level will be awarded a Diploma by the Vocational College Senate, Ministry of Education Malaysia"
     }
+  },
+
+  "pertanyaan_lanjut": {
+    "pertanyaan_lanjut_title": "Further Question",
+    "pertanyaan_lanjut_mb_title": "Further\nQuestions",
+    "pertanyaan_lanjut_1": "Any further questions can be contacted via the phone number or email below",
+    "pertanyaan_lanjut_2": "Department of Information Technology",
+    "pertanyaan_lanjut_3": "Pn. Rohani binti Karim \n(Head of Department)",
+    "pertanyaan_lanjut_4": "Ts Norsidah binti Hashim \n(Program Leader)"
+  },
+
+  "senarai_kursus": {
+    "senarai_kursus_title": "List of Courses Offered",
+    "senarai_kursus_mb_title": "List of \nCourses Offered",
+    "senarai_kursus_desc": "The following is a list of subjects offered for the Malaysian Vocational Certificate (Sijil Vokasional Malaysia or SVM) and the Malaysian Vocational Diploma (Diploma Vokasional Malaysia or DVM) courses in computer system technology and networking course.",
+    "svm": {
+      "svm_title": "List of subjects offered for the Malaysian Vocational Certificate",
+      "sem_1": {
+        "sem_1_title": "Year 1 Semester 1",
+        "sem_1_1": "KSK-1014 COMPUTER SYSTEM HARDWARE INSTALLATION",
+        "sem_1_2": "KSK-1024 SERVER HARDWARE INSTALLATION",
+        "sem_1_3": "KSK-1033 IP ADDRESS AND SUBNETTING"
+      },
+      "sem_2": {
+        "sem_2_title": "Year 1 Semester 2",
+        "sem_2_1": "KSK-2013 COMPUTER SYSTEM SOFTWARE INSTALLATION",
+        "sem_2_2": "KSK-2023 SERVER SOFTWARE INSTALLATION",
+        "sem_2_3": "KSK-2033 NETWORK CABLING PREPARATION"
+      },
+      "sem_3": {
+        "sem_3_title": "Year 2 Semester 3",
+        "sem_3_1": "KSK-3014 NETWORK CABLING INSTALLATION",
+        "sem_3_2": "KSK-3024 COMPUTER NETWORK INSTALLATION",
+        "sem_3_3": "KSK-3033 SWITCHING AND ROUTING MANAGEMENT"
+      },
+      "sem_4": {
+        "sem_4_title": "Year 2 Semester 4",
+        "sem_4_1": "KSK-4014 COMPUTER NETWORK CONNECTIVITY",
+        "sem_4_2": "KSK-4024 COMPUTER NETWORK MAINTENANCE",
+        "sem_4_3": "KSK-4033 MOBILE DEVICE SETUP"
+      }
+    },
+    "dvm": {
+      "dvm_title": "List of subjects offered for the Malaysian Vocational Diploma",
+      "sem_1": {
+        "sem_1_title": "Year 3 Semester 1",
+        "sem_1_1": "A01-1003 MALAY LANGUAGE",
+        "sem_1_2": "A02-1001 ENGLISH LANGUAGE",
+        "sem_1_3": "A03-1001 MATHEMATICS",
+        "sem_1_4": "A04-1001 SCIENCES",
+        "sem_1_5": "A05-1001 HISTORY",
+        "sem_1_6": "A06-1001 ISLAMIC EDUCATION",
+        "sem_1_7": "A07-1001 MORAL EDUCATION",
+        "sem_1_8": "KSK-1014 COMPUTER SYSTEM HARDWARE INSTALLATION",
+        "sem_1_9": "KSK-1024 SERVER HARDWARE INSTALLATION",
+        "sem_1_10": "KSK-1033 IP ADDRESS AND SUBNETTING"
+      },
+      "sem_2": {
+        "sem_2_title": "Year 3 Semester 2",
+        "sem_2_1": "A01-2003 MALAY LANGUAGE",
+        "sem_2_2": "A02-2001 ENGLISH LANGUAGE",
+        "sem_2_3": "A03-2001 MATHEMATICS",
+        "sem_2_4": "A04-2001 SCIENCES",
+        "sem_2_5": "A05-2001 HISTORY",
+        "sem_2_6": "A06-2001 ISLAMIC EDUCATION",
+        "sem_2_7": "A07-2001 MORAL EDUCATION",
+        "sem_2_8": "KSK-2013 COMPUTER SYSTEM HARDWARE INSTALLATION",
+        "sem_2_9": "KSK-2023 SERVER HARDWARE INSTALLATION",
+        "sem_2_10": "KSK-2033 NETWORK CABLING PREPARATION"
+      },
+      "sem_3": {
+        "sem_3_title": "Year 4 Semester 3",
+        "sem_3_1": "A01-3003 MALAY LANGUAGE",
+        "sem_3_2": "A02-3001 ENGLISH LANGUAGE",
+        "sem_3_3": "AMT-3091 MATHEMATICS FOR TECHNOLOGY",
+        "sem_3_4": "AMT-3121 SCIENCES FOR TECHNOLOGY",
+        "sem_3_5": "A05-3001 HISTORY",
+        "sem_3_6": "A06-3001 ISLAMIC EDUCATION",
+        "sem_3_7": "A07-3001 MORAL EDUCATION",
+        "sem_3_8": "KSK-3014 NETWORK CABLING INSTALLATION",
+        "sem_3_9": "KSK-3024 COMPUTER NETWORK INSTALLATION",
+        "sem_3_10": "KSK-3033 SWITCHING AND ROUTING MANAGEMENT"
+      },
+      "sem_4": {
+        "sem_4_title": "Year 4 Semester 4",
+        "sem_4_1": "A01-4003 MALAY LANGUAGE",
+        "sem_4_2": "A02-4001 ENGLISH",
+        "sem_4_3": "AMT-4091 MATHEMATICS FOR TECHNOLOGY",
+        "sem_4_4": "AMT-4121 SCIENCES FOR TECHNOLOGY",
+        "sem_4_5": "A05-4001 HISTORY",
+        "sem_4_6": "A06-4001 ISLAMIC EDUCATION",
+        "sem_4_7": "A07-4001 MORAL EDUCATION",
+        "sem_4_8": "KSK-4014 COMPUTER NETWORK CONNECTIVITY",
+        "sem_4_9": "KSK-4024 COMPUTER NETWORK MAINTENANCE",
+        "sem_4_10": "KSK-4033 MOBILE DEVICE SETUP"
+      }
+    }
+  },
+  "aktiviti_pelajar": {
+    "aktiviti_pelajar_title": "Activity Student",
+    "aktiviti_pelajar_mb_title": "Activity\nStudent",
+    "aktiviti_pelajar_1": "Among student activities such as network cable installation, server system configuration, computer maintenance and others",
+    "amali_1": "Students practice installing conduit on the wall",
+    "amali_2": "Students practice installing conduit on the wall",
+    "amali_3": "Students practice installing network cables to patch cords",
+    "amali_4": "Students practice installing network cables to patch cords",
+    "amali_5": "Students practice installing network cables to patch cords",
+    "amali_6": "Students practice installing network cables to patch cords",
+    "amali_7": "Students practice installing network cables to conduit pipes",
+    "amali_8": "Results of network cable installation by students",
+    "amali_9": "Results of network cable installation by students",
+    "amali_10": "Students do a network simulation using Cisco Packet Tracer",
+    "amali_11": "Students do server configuration",
+    "amali_12": "Students make network configuration",
+    "amali_13": "Students make network configuration",
+    "amali_15": "Results of computer installation by students",
+    "amali_16": "Results of computer installation by students",
+    "amali_17": "Students clean computer equipment",
+    "amali_18": "Students clean computer equipment",
+    "amali_19": "Students clean computer equipment",
+    "amali_20": "Simulation of computer system security testing by students",
+    "amali_21": "Simulation of computer system security testing by students",
+    "amali_22": "Results of creation of Smart Home replicas by students and teachers"
+  },
+
+  "tetapan":{
+    "tetapan_title": "Settings",
+    "tetapan_mb_title": "Settings",
+    "tetapan_1": "Change Language",
+    "tetapan_1_ms": "Malay",
+    "tetapan_1_en": "English",
+    "tetapan_2": "Change Theme"
   }
 }

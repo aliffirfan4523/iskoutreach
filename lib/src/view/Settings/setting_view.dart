@@ -29,8 +29,8 @@ class _SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
   	var languageList = [    
-	    'English',
-	    'Malay',
+	    tr("tetapan.tetapan_1_en"),
+	    tr("tetapan.tetapan_1_ms")
 	  ];
 
     return SafeArea(
@@ -38,17 +38,17 @@ class _SettingState extends State<Setting> {
         key: _scaffoldKey,
         endDrawer: sideDrawer(),
       	appBar: CustomAppBar(
-      		title: "Setting",
+      		title: tr("tetapan.tetapan_title"),
           icon: Icons.settings_rounded,
       		heroTag: 'Setting',
         ),
         body: Column(
         	children: [
-        		Spacer(flex: 1,),
+        		const SizedBox(height: 50,),
         		SizedBox(
         			height: 60,
         		  child: ListTile(
-        		  	title:  Text("Change Language"),
+        		  	title:  Text(tr("tetapan.tetapan_1")),
         		  	trailing: DropdownButton(
               
 		              // Initial Value
@@ -68,11 +68,11 @@ class _SettingState extends State<Setting> {
 		              // change button value to selected value
 		              onChanged: (String? newValue) { 
 		                if(newValue=="Malay"){
-								    	final newLocale = Locale('ms', 'MY');
+								    	final newLocale = const Locale('ms', 'MY');
                     Navigator.pop(context);
                     Get.to(() => LangChangeAnimation(newLocale: newLocale,),transition: Transition.fadeIn);
 								    } else if(newValue=="English"){
-								    	final _newLocale = Locale('en', 'US');
+								    	final _newLocale = const Locale('en', 'US');
                     Navigator.pop(context);
                     Get.to(() => LangChangeAnimation(newLocale: _newLocale,),transition: Transition.fadeIn);
 								    }
@@ -80,8 +80,9 @@ class _SettingState extends State<Setting> {
 		            ),
         		  ),
         		),
+        		const Divider(),
         		ListTile(
-        			title:  Text("Change Theme"),
+        			title:  Text(tr("tetapan.tetapan_2")),
         			trailing: ToggleSwitch(
 								  initialLabelIndex: _isLightTheme.value ? 1 : 0,
 								  totalSwitches: 2,
@@ -100,7 +101,7 @@ class _SettingState extends State<Setting> {
 								  },
 								),
         		),
-        		Spacer(flex: 7,),
+        		const Spacer(flex: 7,),
         	],
         ),
 	  	),

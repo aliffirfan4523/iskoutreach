@@ -6,6 +6,7 @@ import 'package:iskoutreach/src/view/widget/Unordered_List.dart';
 
 import '../../model/text_model.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
 class Pengiktirafan extends StatefulWidget {
@@ -30,6 +31,9 @@ class _PengiktirafanState extends State<Pengiktirafan> {
             icon: FontAwesomeIcons.award,
             heroTag: 'pengiktirafan',
             ),
+        bottomNavigationBar: BottomBar(
+          currentPage: 3, 
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [

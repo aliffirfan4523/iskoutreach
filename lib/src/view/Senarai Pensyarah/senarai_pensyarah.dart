@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../model/card_model.dart';
 import '../widget/Unordered_List.dart';
 import '../widget/custom_appbar.dart';
+import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
 class SenaraiPensyarah extends StatefulWidget {
@@ -25,10 +26,13 @@ class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
       key: _scaffoldKey,
       endDrawer: sideDrawer(),
       appBar: CustomAppBar(
-          title: tr("senarai_pensyarah.senarai_pensyarah_title"),
-          icon: Icons.person_rounded,
-          heroTag: 'senarai_pensyarah',
-          ),
+        title: tr("senarai_pensyarah.senarai_pensyarah_title"),
+        icon: Icons.person_rounded,
+        heroTag: 'senarai_pensyarah',
+      ),
+      bottomNavigationBar: BottomBar(
+          currentPage: 5, 
+        ),
       body: Column(
         children: [
           SizedBox(
