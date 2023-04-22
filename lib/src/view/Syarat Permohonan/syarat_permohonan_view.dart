@@ -19,7 +19,7 @@ class SyaratPermohonan extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
           title: tr("syarat_permohonan.syarat_permohonan_title"),
           icon: FontAwesome5.question_circle,

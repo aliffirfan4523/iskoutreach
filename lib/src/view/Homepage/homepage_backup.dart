@@ -5,10 +5,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iskoutreach/src/view/widget/rounded_image.dart';
 
 import '../../controller/theme_controller.dart';
-import '../../controller/theme_mode_controller.dart';
 import '../widget/menu_button.dart';
 
 class HomePageBK extends StatefulWidget {

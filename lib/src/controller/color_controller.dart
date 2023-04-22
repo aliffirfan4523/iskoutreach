@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iskoutreach/src/controller/theme_mode_controller.dart';
+import 'package:iskoutreach/src/controller/theme_controller.dart';
 
 final _isLightTheme = themeModeController.isLightTheme;
 

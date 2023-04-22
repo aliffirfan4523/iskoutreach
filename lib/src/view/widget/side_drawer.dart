@@ -15,7 +15,8 @@ import '../Syarat Permohonan/syarat_permohonan_view.dart';
 import '../Tempoh Pengajian/tempoh_pengajian.dart';
 import 'menu_button.dart';
 
-Drawer sideDrawer(){
+Padding sideDrawer({bool isEndDrawer = false}){
+
   List<IconTextButton> buttonList = [
       IconTextButton(
           icon: FontAwesome5.desktop,
@@ -73,56 +74,67 @@ Drawer sideDrawer(){
           heroTag: 'tetapan'),
     ];
   
-  return Drawer(
-    child: ListView.builder(
-      itemCount: buttonList.length + 1,
-      itemBuilder: (BuildContext context, int index) {
-        if (index == 0) {
-          // Drawer header
-          return SizedBox(
-            height: MediaQuery.of(context).size.height/10,
-            child: DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.indigo.shade600,
-                ),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 20, top: 20),
+    child: ClipRRect(
+      borderRadius: BorderRadius.only(
+        bottomLeft: isEndDrawer ? Radius.circular(25) : Radius.circular(0),
+        bottomRight: isEndDrawer ? Radius.circular(0) : Radius.circular(25),
+        topLeft: isEndDrawer ? Radius.circular(25) : Radius.circular(0),
+        topRight: isEndDrawer ? Radius.circular(0) : Radius.circular(25),
+      ),
+      child: Drawer(
+        child: ListView.builder(
+          itemCount: buttonList.length + 1,
+          itemBuilder: (BuildContext context, int index) {
+            if (index == 0) {
+              // Drawer header
+              return SizedBox(
+                height: MediaQuery.of(context).size.height/10,
+                child: DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: Colors.indigo.shade600,
+                    ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                      Image.asset(
+                        "assets/images/logo.png",
+                        width: 60,
+                        height: 40,
+                        ),
+                      Image.asset(
+                        "assets/images/sec_logo.png",
+                        width: 70,
+                        height: 60,
+                        ),
+                      ],
+                      ),
+                    ),
+                  ),
+                );
+              } else {
+                // Drawer button
+                final button = buttonList[index - 1];
+                return Column(
                   children: [
-                  Image.asset(
-                    "assets/images/logo.png",
-                    width: 60,
-                    height: 40,
-                    ),
-                  Image.asset(
-                    "assets/images/sec_logo.png",
-                    width: 70,
-                    height: 60,
-                    ),
+                  ListTile(
+                    leading: Icon(button.icon),
+                    title: Text(button.text),
+                    onTap: () {
+                      // Navigate to the corresponding screen when button is tapped
+                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => button.location));
+                      },
+                      ),
+                  Divider()
                   ],
-                  ),
-                ),
+                  );
+              }
+              },
               ),
-            );
-          } else {
-            // Drawer button
-            final button = buttonList[index - 1];
-            return Column(
-              children: [
-              ListTile(
-                leading: Icon(button.icon),
-                title: Text(button.text),
-                onTap: () {
-                  // Navigate to the corresponding screen when button is tapped
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => button.location));
-                  },
-                  ),
-              Divider()
-              ],
-              );
-          }
-          },
-          ),
-    );
+        ),
+    ),
+  );
 }

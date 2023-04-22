@@ -25,7 +25,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
             title: tr("pengiktirafan.pengiktirafan_title"),
             icon: FontAwesomeIcons.award,

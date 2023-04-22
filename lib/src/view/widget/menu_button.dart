@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import '../Aktiviti Pelajar/aktiviti_pelajar_view.dart';
 import '../Pengenalan/pengenalan_view.dart';
 import '../Pengiktirafan/pengiktirafan_view.dart';
@@ -160,10 +161,8 @@ class IconTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => location),
-        );
+        Get.off(location, transition: Transition.cupertino, duration: const Duration(milliseconds: 500));
+        
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),

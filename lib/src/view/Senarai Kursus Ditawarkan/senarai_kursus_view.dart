@@ -29,7 +29,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
             title: tr("senarai_kursus.senarai_kursus_title"),
             icon: Icons.subject_rounded,

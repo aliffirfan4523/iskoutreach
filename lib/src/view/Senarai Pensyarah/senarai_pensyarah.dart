@@ -24,7 +24,7 @@ class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
 
     return Scaffold(
       key: _scaffoldKey,
-      endDrawer: sideDrawer(),
+      endDrawer: sideDrawer(isEndDrawer: true),
       appBar: CustomAppBar(
         title: tr("senarai_pensyarah.senarai_pensyarah_title"),
         icon: Icons.person_rounded,

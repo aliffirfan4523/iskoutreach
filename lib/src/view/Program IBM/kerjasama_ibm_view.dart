@@ -22,7 +22,7 @@ class KerjasamaIBM extends StatelessWidget {
       child: ScaffoldMessenger(
         child: Scaffold(
           key: _scaffoldKey,
-          endDrawer: sideDrawer(),
+          endDrawer: sideDrawer(isEndDrawer: true),
           appBar: CustomAppBar(
               title: tr("program_ibm.program_ibm_title"),
               icon: FontAwesome5.handshake,

@@ -44,15 +44,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-      title: Text(
-        title,
-        style: const TextStyle(fontSize: 15),
+      title: Row(
+        children: [
+          Icon(icon, color: Colors.white,),
+          SizedBox(width: 10,),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 15),
+          ),
+        ],
       ),
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
         onPressed: () {
-          Get.off(HomePage(), transition: Transition.fade);
+          Get.off(HomePage(), transition: Transition.cupertino, duration: const Duration(milliseconds: 100));
         },
         icon: const Icon(
           FontAwesomeIcons.caretLeft,
@@ -63,11 +69,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Hero(
           tag: heroTag,
           child: Padding(
-            padding: const EdgeInsets.only(right: 50.0),
+            padding: const EdgeInsets.only(right: 30.0),
             child: Material(
-              color: Colors.indigo.shade600,
+              color: Colors.transparent,
               child: IconButton(
-                icon: Icon(icon),
+                icon: Icon(Icons.list_rounded),
                 color: Colors.white,
                 onPressed: (){
                   Scaffold.of(context).openEndDrawer();

@@ -21,7 +21,7 @@ class PertanyaanLanjut extends StatelessWidget {
     return SafeArea(
 			child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
       	appBar: CustomAppBar(
           title: tr("pertanyaan_lanjut.pertanyaan_lanjut_title"),
           icon: FontAwesome5.phone,

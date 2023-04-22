@@ -23,7 +23,7 @@ class AktivitiPelajarView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
             title: tr("aktiviti_pelajar.aktiviti_pelajar_title"),
             icon: FontAwesome5.running,

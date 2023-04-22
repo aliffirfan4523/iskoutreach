@@ -35,7 +35,7 @@ class Pengenalan extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
           title: tr("pengenalan.title"),
           icon: FontAwesome5.desktop,

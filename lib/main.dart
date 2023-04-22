@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
@@ -12,7 +13,6 @@ import 'package:iskoutreach/src/view/widget/introduction_Screen.dart';
 import 'src/Splash Screen/splash_screen.dart';
 import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
-import 'src/controller/theme_mode_controller.dart';
 import 'src/view/widget/side_drawer.dart';
 
 
@@ -51,7 +51,7 @@ class IskApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: SplashScreen(),
+      home: FeatureDiscovery(child: HomePage()),
       routes: {
         '/HomePage': (context) => HomePage(),
         '/SplashScreenAnimation': (context) => SplashScreenAnimation(),

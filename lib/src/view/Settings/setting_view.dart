@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../controller/theme_controller.dart';
-import '../../controller/theme_mode_controller.dart';
 import '../Animation/lang_change_animation.dart';
 import '../widget/custom_appbar.dart';
 import '../widget/side_drawer.dart';
@@ -36,7 +35,7 @@ class _SettingState extends State<Setting> {
     return SafeArea(
 			child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
       	appBar: CustomAppBar(
       		title: tr("tetapan.tetapan_title"),
           icon: Icons.settings_rounded,

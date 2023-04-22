@@ -23,7 +23,7 @@ class TempohPengajian extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        endDrawer: sideDrawer(),
+        endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
           title: tr("tempoh_pengajian.tempoh_pengajian_title"),
           icon: Icons.calendar_view_month_rounded,

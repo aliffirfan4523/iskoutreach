@@ -5,6 +5,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
@@ -13,10 +14,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../Splash Screen/splash_screen_animation.dart';
 import '../../controller/color_controller.dart';
 import '../../controller/theme_controller.dart';
-import '../../controller/theme_mode_controller.dart';
 import '../../controller/url_controller.dart';
 import '../Animation/lang_change_animation.dart';
 import '../Settings/setting_view.dart';
+import '../widget/DescribedFeatureOverlay.dart';
 import '../widget/menu_button.dart';
 import '../widget/side_drawer.dart';
 import 'home_page_image.dart';
@@ -35,6 +36,11 @@ class _HomePageState extends State<HomePage> {
     @override
     void initState() {
       super.initState();
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      FeatureDiscovery.discoverFeatures(context, <String>[
+          'feature1',
+        ]);
+      });
       ColorController.getColor();
       themeModeController.getThemeStatus();
     }
@@ -58,6 +64,7 @@ class _HomePageState extends State<HomePage> {
               label: const Text('Daftar Sekarang', style: TextStyle(color: Colors.white),),
               icon: const Icon(FontAwesome5.arrow_circle_up,color: Colors.white),
               backgroundColor: Colors.indigo.shade900,
+              foregroundColor: Colors.indigo.shade600,
             ),
             body: CustomScrollView(
               slivers: <Widget>[
@@ -78,8 +85,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Image.asset(
                       "assets/images/sec_logo.png",
-                      width: 70,
-                      height: 60,
+                      width: 100,
+                      height: 90,
                     ),
                   ],
                 ),
@@ -119,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                           sigmaY: 10.0,
                           ),
                         child: Container(
+                          padding: const EdgeInsets.all(5.0),
                           color: Colors.black.withOpacity(0.6),
                           child: Text(
                             tr("welcome-mainpage"),
@@ -163,10 +171,16 @@ class _HomePageState extends State<HomePage> {
                 child: SizedBox(height: MediaQuery.of(context).size.height*0.02), // Add desired height here
               ),
               //Menu button section
-              const SliverToBoxAdapter(
+              SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: MenuButton(),
+                  child: DescribedFeatureOverlay(
+                    description: Text("This is menu button"),
+                    featureId: 'feature1',
+                    tapTarget: MenuButton(),
+                    title: Text("This is menu button"),
+                    child: MenuButton()
+                    ),
                 ), // Add desired height here
               ),
           ],
