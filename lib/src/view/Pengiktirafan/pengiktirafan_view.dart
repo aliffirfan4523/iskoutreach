@@ -38,7 +38,7 @@ class _PengiktirafanState extends State<Pengiktirafan> {
           child: Column(
             children: [
               const SizedBox(
-                height: 70,
+                height: 20,
               ),
               UnorderedListItem(
                 bottom: 15,

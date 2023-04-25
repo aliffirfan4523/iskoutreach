@@ -49,7 +49,7 @@ class Pengenalan extends StatelessWidget {
           children: <Widget>[
             //penerangan program
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             Align(
               alignment: Alignment.centerLeft,

@@ -41,6 +41,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              const SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.only(top:20, bottom: 20),
                 width: MediaQuery.of(context).size.width-40,
@@ -61,6 +62,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                     fontSize: 16,
                     fontWeight: FontWeight.bold
                   ),
+                  textAlign: TextAlign.justify,
                 ),
               ),
               Padding(
@@ -73,7 +75,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return _buildPlayerModelList(
-                      isSvm: false,
+                      isSvm: true,
                       index: index,
                       tahun: tr("senarai_kursus.svm.sem_${index+1}.sem_${index+1}_title"),
                       subjek: "senarai_kursus.svm.sem_${index+1}.sem_${index+1}_",
@@ -136,13 +138,17 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
           if (newState) {
             if(isSvm){
               setState(() {
-              currentInt = index;
+              selectedTileSvm = index;
               });
-            } 
+            } else{
+              setState(() {
+              selectedTileDvm = index;
+              });
+            }
           }
         }),
         key: Key(index.toString()),
-        initiallyExpanded: index == currentInt,
+        initiallyExpanded: isSvm ? selectedTileSvm == index: selectedTileDvm == index,
         title: Text(
           tahun,
           style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w600),
@@ -159,7 +165,7 @@ class _SenaraiKursusState extends State<SenaraiKursus> {
                     title: Text(
                       tr("$subjek${index+1}"),
                       style: const TextStyle(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w300,
                         fontSize: 13,
                       ),
                     ),

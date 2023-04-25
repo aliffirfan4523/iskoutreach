@@ -36,7 +36,7 @@ class KerjasamaIBM extends StatelessWidget {
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               const SizedBox(
-                height: 40,
+                height: 50,
               ),
               Align(
                 alignment: Alignment.center,

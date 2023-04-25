@@ -24,8 +24,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(60),
-          bottomRight: Radius.circular(60),
+          bottomLeft: Radius.circular(30),
+          bottomRight: Radius.circular(30),
         ),
       ),
       flexibleSpace: Container(
@@ -58,7 +58,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       leading: IconButton(
         onPressed: () {
-          Get.off(HomePage(), transition: Transition.cupertino, duration: const Duration(milliseconds: 100));
+          //Get.to(HomePage(), transition: Transition.cupertino, duration: const Duration(milliseconds: 100));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         icon: const Icon(
           FontAwesomeIcons.caretLeft,
@@ -66,19 +67,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       actions: [
-        Hero(
-          tag: heroTag,
-          child: Padding(
-            padding: const EdgeInsets.only(right: 30.0),
-            child: Material(
-              color: Colors.transparent,
-              child: IconButton(
-                icon: Icon(Icons.list_rounded),
-                color: Colors.white,
-                onPressed: (){
-                  Scaffold.of(context).openEndDrawer();
-                },
-              ),
+        Padding(
+          padding: const EdgeInsets.only(right: 30.0),
+          child: Material(
+            color: Colors.transparent,
+            child: IconButton(
+              icon: Icon(Icons.list_rounded),
+              color: Colors.white,
+              onPressed: (){
+                Scaffold.of(context).openEndDrawer();
+              },
             ),
           ),
         ),

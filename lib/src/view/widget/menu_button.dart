@@ -161,7 +161,7 @@ class IconTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.off(location, transition: Transition.cupertino, duration: const Duration(milliseconds: 500));
+        Get.to(location, transition: Transition.fadeIn, duration: const Duration(milliseconds: 500));
         
       },
       child: Padding(

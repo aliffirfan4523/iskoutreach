@@ -41,7 +41,7 @@ class TempohPengajian extends StatelessWidget {
               child: Text(
                 tr("tempoh_pengajian.svm.svm_period"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.justify,
               ),
             ),
             const SizedBox(height: 10),
@@ -88,10 +88,10 @@ class TempohPengajian extends StatelessWidget {
               child: Text(
                 tr("tempoh_pengajian.dvm.dvm_period"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.justify,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             UnorderedListItem(
               bottom: 5,
               left: 20,

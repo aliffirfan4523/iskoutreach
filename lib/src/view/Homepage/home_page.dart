@@ -36,11 +36,11 @@ class _HomePageState extends State<HomePage> {
     @override
     void initState() {
       super.initState();
-      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      /*WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       FeatureDiscovery.discoverFeatures(context, <String>[
           'feature1',
         ]);
-      });
+      });*/
       ColorController.getColor();
       themeModeController.getThemeStatus();
     }
@@ -174,13 +174,7 @@ class _HomePageState extends State<HomePage> {
               SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: DescribedFeatureOverlay(
-                    description: Text("This is menu button"),
-                    featureId: 'feature1',
-                    tapTarget: MenuButton(),
-                    title: Text("This is menu button"),
-                    child: MenuButton()
-                    ),
+                  child: MenuButton(),
                 ), // Add desired height here
               ),
           ],

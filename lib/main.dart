@@ -51,7 +51,7 @@ class IskApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: FeatureDiscovery(child: HomePage()),
+      home: SplashScreen(),
       routes: {
         '/HomePage': (context) => HomePage(),
         '/SplashScreenAnimation': (context) => SplashScreenAnimation(),

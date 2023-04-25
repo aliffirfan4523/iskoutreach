@@ -18,22 +18,22 @@ class UnorderedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding:
-            EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text("•  "),
-            Expanded(
-              child: Text(
-                text,
-                style: TextStyle(fontSize: 14),
-                softWrap: true,
-                textAlign: TextAlign.justify,
-              ),
+      padding: EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("•  "),
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(fontSize: 14),
+              softWrap: true,
+              textAlign: TextAlign.justify,
             ),
-          ],
-        ));
+          ),
+        ],
+      )
+    );
   }
 }
 
@@ -59,22 +59,22 @@ class NumberedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding:
-            EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text("   $number. "),
-            Expanded(
-              child: Text(
-                text,
-                style: TextStyle(fontSize: 14),
-                softWrap: true,
-                textAlign: TextAlign.justify,
-              ),
+      padding: EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("   $number. "),
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(fontSize: 14),
+              softWrap: true,
+              textAlign: TextAlign.justify,
             ),
-          ],
-        ));
+          ),
+        ],
+      )
+    );
   }
 }
 

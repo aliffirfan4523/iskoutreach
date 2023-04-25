@@ -37,44 +37,46 @@ class AktivitiPelajarImage extends StatelessWidget {
 
     final List<Widget> imageSliders = imgList.map(
       (item) => Container(
-        child: Container(
-          margin: EdgeInsets.all(5.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(25.0)),
-            child: Stack(
-              children: <Widget>[
-                Center(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(item['link']!), fit: BoxFit.fitWidth
-                      ),
-                    )
-                  )
-                ),
-                // Image.network(item['link']!, fit: BoxFit.fitWidth, width: 1000.0),
-                Positioned(
-                  bottom: 0.0,
-                  left: 0.0,
-                  right: 0.0,
-                  child: Container(
-                    color: Colors.black.withOpacity(0.5),
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 20.0
+        constraints: BoxConstraints(
+          maxWidth: 400,
+          minWidth: 300,
+        ),
+        margin: EdgeInsets.all(5.0),
+        child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+          child: Stack(
+            children: <Widget>[
+              Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(item['link']!), fit: BoxFit.fitWidth
                     ),
-                    child: Text(
-                      item['desc']!,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  )
+                )
+              ),
+              // Image.network(item['link']!, fit: BoxFit.fitWidth, width: 1000.0),
+              Positioned(
+                bottom: 0.0,
+                left: 0.0,
+                right: 0.0,
+                child: Container(
+                  color: Colors.black.withOpacity(0.5),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 20.0
+                  ),
+                  child: Text(
+                    item['desc']!,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-              ],
-            )
-          ),
+              ),
+            ],
+          )
         ),
       )
     ).toList();
@@ -82,7 +84,7 @@ class AktivitiPelajarImage extends StatelessWidget {
     return CarouselSlider(
       carouselController: _controller,
       options: CarouselOptions(
-        autoPlayInterval: Duration(milliseconds: 1000),
+        autoPlayInterval: Duration(milliseconds: 2500),
         aspectRatio: 0.8,
         enlargeCenterPage: true,
         scrollDirection: Axis.horizontal,

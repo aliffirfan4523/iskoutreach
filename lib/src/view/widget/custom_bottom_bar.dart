@@ -89,11 +89,27 @@ class BottomBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          currentPage != 0 ? 
+          SizedBox(width: 10,),
+          currentPage > 0 ? 
           Expanded(
             flex: 1,
-            child: Container(
-              color: Colors.indigo.shade800, child: buttonList[currentPage-1]
+            child: InkWell(
+              onTap: (){
+                //Get.to(buttonList[currentPage-1].location, transition: Transition.leftToRightWithFade, duration: const Duration(milliseconds: 500));
+               },
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.indigo.shade800, 
+                  borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(60),
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(60),
+                ),
+                ),
+                //The reason i do this is because i dont want to put another code just to make a fuckin button so imma use same icontextbutton and put ignorepointer to disable the ontap function the i use the inkwell from my bottombar one
+                child: IgnorePointer(ignoring: false,child: buttonList[currentPage-1]) 
+              ),
             )
           ) 
           : Expanded(flex: 1,child: Container()),
@@ -110,11 +126,33 @@ class BottomBar extends StatelessWidget {
                 ),
               ),
           ),
-          currentPage != 8 ? 
-          Expanded(flex: 1,child: Container(color: Colors.indigo.shade800, child: buttonList[currentPage+1]))
-          : Expanded(flex: 1,child: Container())
+          currentPage < 8 ? 
+          Expanded(
+            flex: 1,
+            child: InkWell(
+            onTap: (){
+              //Get.to(buttonList[currentPage+1].location, transition: Transition.rightToLeftWithFade, duration: const Duration(milliseconds: 500));
+             },
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(60),
+                  bottomRight: Radius.circular(20),
+                  topLeft: Radius.circular(60),
+                  topRight: Radius.circular(20),
+                ),
+                color: Colors.indigo.shade800, 
+              ),
+              //The reason i do this is because i dont want to put another code just to make a fuckin button so imma use same icontextbutton and put ignorepointer to disable the ontap function the i use the inkwell from my bottombar one
+              child: IgnorePointer(ignoring: false,child: buttonList[currentPage+1])
+              ),
+            )
+          )
+          : Expanded(flex: 1,child: Container()),
+          SizedBox(width: 10,)
         ],
       ),
     );
   }
 }
+

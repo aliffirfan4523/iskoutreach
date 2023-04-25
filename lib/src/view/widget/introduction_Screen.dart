@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -48,7 +49,7 @@ class IntroScreen extends StatelessWidget {
         pages: [
           PageViewModel(
             //! The title/body can either be strings or widgets.
-            titleWidget: Text("kAppIcon"),
+            titleWidget: Text(tr("welcome-mainpage"),),
             body: 'Welcome to the Flutter Catalog app!',
           ),
           PageViewModel(

@@ -69,11 +69,11 @@ class _SettingState extends State<Setting> {
 		                if(newValue=="Malay"){
 								    	final newLocale = const Locale('ms', 'MY');
                     Navigator.pop(context);
-                    Get.to(() => LangChangeAnimation(newLocale: newLocale,),transition: Transition.fadeIn);
+                    Get.to(() => LangChangeAnimation(newLocale: newLocale, firstlang: 'Malay', seclang: 'English',),transition: Transition.fadeIn);
 								    } else if(newValue=="English"){
 								    	final _newLocale = const Locale('en', 'US');
                     Navigator.pop(context);
-                    Get.to(() => LangChangeAnimation(newLocale: _newLocale,),transition: Transition.fadeIn);
+                    Get.to(() => LangChangeAnimation(newLocale: _newLocale, firstlang: 'English', seclang: 'Malay',),transition: Transition.fadeIn);
 								    }
 		              },
 		            ),
