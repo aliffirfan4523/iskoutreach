@@ -69,11 +69,11 @@ Padding sideDrawer({bool isEndDrawer = false}){
       text: tr("pertanyaan_lanjut.pertanyaan_lanjut_mb_title"),
       location: PertanyaanLanjut(),
       heroTag: 'pertanyaan_lanjut'),
-    IconTextButton(
+    /*IconTextButton(
       icon: Icons.settings_rounded,
       text: tr("tetapan.tetapan_mb_title"),
       location: Setting(),
-      heroTag: 'tetapan'),
+      heroTag: 'tetapan'),*/
     ];
   
   return Padding(
@@ -117,7 +117,7 @@ Padding sideDrawer({bool isEndDrawer = false}){
                   ),
                 ),
               );
-            } else if(index<11){
+            } else if(index<10){
               // Drawer button
               final button = buttonList[index - 1];
               return Column(

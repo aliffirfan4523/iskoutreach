@@ -48,7 +48,7 @@ class AktivitiPelajarView extends StatelessWidget {
                 ),
               ),
               UnorderedListItem(
-                bottom: 0,
+                bottom: 20,
                 left: 20,
                 right: 20,
                 text: tr("aktiviti_pelajar.aktiviti_pelajar_1"),

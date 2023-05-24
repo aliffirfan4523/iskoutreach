@@ -22,7 +22,7 @@ class _LangChangeAnimationState extends State<LangChangeAnimation> {
 	@override
 	void initState() {
 	  super.initState();
-	  Timer(Duration(seconds: 3), () async {
+	  Timer(Duration(milliseconds: 3), () async {
 	    await context.setLocale(widget.newLocale); // change `easy_localization` locale
 	    Get.updateLocale(widget.newLocale); // change `Get` locale direction
 	  });

@@ -47,8 +47,9 @@ class AktivitiPelajarImage extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Center(
-                child: Container(
+                child: Container(                
                   decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.5),
                     image: DecorationImage(
                       image: AssetImage(item['link']!), fit: BoxFit.fitWidth
                     ),
@@ -69,7 +70,7 @@ class AktivitiPelajarImage extends StatelessWidget {
                     item['desc']!,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

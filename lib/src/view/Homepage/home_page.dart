@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:theme_button/theme_button.dart';
 
 import '../../Splash Screen/splash_screen_animation.dart';
 import '../../controller/color_controller.dart';
@@ -92,11 +93,59 @@ class _HomePageState extends State<HomePage> {
                 ),
                 actions: [
                   IconButton(
-                    icon: const Icon(Icons.settings),
+                    icon: Text(context.locale.languageCode == 'en' ? "MY" : "EN",
+                      style: TextStyle(
+                        color: _isLightTheme.value ? Colors.black : Colors.white,
+                      ),
+                    ),
                     onPressed: (){
-                      Get.to(const Setting());
+                      if(context.locale.languageCode == 'en'){
+                        final newLocale = const Locale('ms', 'MY');
+                        Navigator.pop(context);
+                        context.setLocale(newLocale); // change `easy_localization` locale
+                        Get.updateLocale(newLocale); // change `Get` locale direction
+                        //Get.to(() => LangChangeAnimation(newLocale: newLocale, firstlang: 'Malay', seclang: 'English',),transition: Transition.fadeIn);
+                      } else if(context.locale.languageCode == 'ms'){
+                        final _newLocale = const Locale('en', 'US');
+                        Navigator.pop(context);
+                        context.setLocale(_newLocale); // change `easy_localization` locale
+                        Get.updateLocale(_newLocale); // change `Get` locale direction
+                        //Get.to(() => LangChangeAnimation(newLocale: _newLocale, firstlang: 'English', seclang: 'Malay',),transition: Transition.fadeIn);
+                      }
+                    },
+                  ),/*
+                  Padding(
+                    padding: const EdgeInsets.only(right:5.0),
+                    child: SizedBox(
+                      height: 30,
+                      width: 60,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(200),
+                            bottomRight: Radius.circular(200),
+                            topLeft: Radius.circular(200),
+                            topRight: Radius.circular(200),
+                          ),
+                          color: Colors.grey.withOpacity(0.1), 
+                        ),
+                        child: ThemeButton(
+                          height: 30,
+                          width: 60,
+                          onChanged: (value){
+                            toggleTheme(value);
+                          },
+                        ),
+                      ),
+                    ),
+                  ),*/
+                  IconButton(
+                    icon: _isLightTheme.value ? Icon(FontAwesome5.moon) : Icon(FontAwesome5.sun),
+                    onPressed: () { 
+                      toggleTheme(!_isLightTheme.value);
                     },
                   )
+
                 ],
               ),
 
@@ -183,8 +232,8 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 }
-void toggleTheme() {
-  if (_isLightTheme.value == true) {
+void toggleTheme(bool value) {
+  if (!value) {
     _isLightTheme.value = false;
     } else {
       _isLightTheme.value = true;
