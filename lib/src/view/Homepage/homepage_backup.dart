@@ -40,7 +40,6 @@ class _HomePageBKState extends State<HomePageBK> {
             Container(
               width: double.infinity,
               height: height - 50,
-
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -92,7 +91,7 @@ class _HomePageBKState extends State<HomePageBK> {
                     ),
                   ),
 
-                  //Image slider
+                  /*//Image slider
                   CarouselSlider(
                     options: CarouselOptions(
                       aspectRatio: 2,
@@ -101,7 +100,7 @@ class _HomePageBKState extends State<HomePageBK> {
                       autoPlay: true,
                     ),
                     items: homepageimageslider,
-                  ),
+                  ),*/
 
                   //Spacing
                   SizedBox(
@@ -148,112 +147,130 @@ class _HomePageBKState extends State<HomePageBK> {
 
   Padding TopNavBar(IconData thememodeIcon) {
     return Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //image logo
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.indigo.shade600,
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(60),
-                            topLeft: Radius.circular(60),
-                            topRight: Radius.circular(20),
-                          ),
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          //image logo
+          Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.indigo.shade600,
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(60),
+                topLeft: Radius.circular(60),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/images/logo.png",
+                  width: 40,
+                  height: 40,
+                ),
+                Image.asset(
+                  "assets/images/sec_logo.png",
+                  width: 130,
+                  height: 60,
+                ),
+              ],
+            ),
+          ),
+          //theme button
+          Row(
+            children: [
+              PopupMenuButton<int>(
+                itemBuilder: (context) => [
+                  // PopupMenuItem 1
+                  PopupMenuItem(
+                    value: 1,
+                    // row with 2 children
+                    child: Row(
+                      children: [
+                        Icon(Icons.language_rounded, color: Colors.white),
+                        SizedBox(
+                          width: 10,
                         ),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              "assets/images/logo.png",
-                              width: 40,
-                              height: 40,
-                            ),
-                            Image.asset(
-                              "assets/images/sec_logo.png",
-                              width: 130,
-                              height: 60,
-                            ),
-                          ],
-                        ),
-                      ),
-                      //theme button
-                      Row(
-                        children: [
-                          PopupMenuButton<int>(
-                            itemBuilder: (context) => [
-                              // PopupMenuItem 1
-                              PopupMenuItem( 
-                                value: 1,
-                                // row with 2 children
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.language_rounded, color: Colors.white),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text("Tukar Bahasa", style: TextStyle(color: Colors.white),)
-                                  ],
-                                ),
-                              ),
-                              // PopupMenuItem 2
-                              PopupMenuItem(
-                                value: 2,
-                                // row with two children
-                                child: Row(  
-                                  children: [
-                                    Icon(thememodeIcon, color: Colors.white),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text("Change Theme", style: TextStyle(color: Colors.white))
-                                  ],
-                                ),
-                              ),
-                            ],
-                            offset: Offset(0, 100),
-                            color: Colors.indigo.shade600,
-                            elevation: 2,
-                            // on selected we show the dialog box
-                            onSelected: (value) {
-                              // if value 1 show dialog
-                              if (value == 1) {
-                                showAdaptiveActionSheet(
-                                  barrierColor: Colors.black.withOpacity(0.5),
-                                  bottomSheetColor: Colors.indigo.shade600,
-                                 context: context,
-                                 actions: <BottomSheetAction>[
-                                    BottomSheetAction(title: Text("Bahasa Melayu", style: TextStyle(color: Colors.white)), onPressed: (context) async{
-                                      final _newLocale = Locale('ms', 'MY');
-                                      await context.setLocale(_newLocale); // change `easy_localization` locale
-                                      Get.updateLocale(_newLocale); // change `Get` locale direction
-                                      setState(() {});
-                                      Navigator.pop(context);
-                                    }),
-                                    BottomSheetAction(title: Text("English", style: TextStyle(color: Colors.white)), onPressed: (context) async {
-                                      final _newLocale = Locale('en', 'US');
-                                      await context.setLocale(_newLocale); // change `easy_localization` locale
-                                      Get.updateLocale(_newLocale); // change `Get` locale direction
-                                      setState(() {});
-                                      Navigator.pop(context);
-                                    }),
-                                 ],
-                                 cancelAction: CancelAction(title: Text("Cancel", style: TextStyle(color: Colors.red.shade400))),// onPressed parameter is optional by default will dismiss the ActionSheet
-                                );
-                                // if value 2 show dialog
-                              } else if (value == 2) {
-                                toggleTheme();
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
+                        Text(
+                          "Tukar Bahasa",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
                   ),
-                );
+                  // PopupMenuItem 2
+                  PopupMenuItem(
+                    value: 2,
+                    // row with two children
+                    child: Row(
+                      children: [
+                        Icon(thememodeIcon, color: Colors.white),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text("Change Theme",
+                            style: TextStyle(color: Colors.white))
+                      ],
+                    ),
+                  ),
+                ],
+                offset: Offset(0, 100),
+                color: Colors.indigo.shade600,
+                elevation: 2,
+                // on selected we show the dialog box
+                onSelected: (value) {
+                  // if value 1 show dialog
+                  if (value == 1) {
+                    showAdaptiveActionSheet(
+                      barrierColor: Colors.black.withOpacity(0.5),
+                      bottomSheetColor: Colors.indigo.shade600,
+                      context: context,
+                      actions: <BottomSheetAction>[
+                        BottomSheetAction(
+                            title: Text("Bahasa Melayu",
+                                style: TextStyle(color: Colors.white)),
+                            onPressed: (context) async {
+                              final _newLocale = Locale('ms', 'MY');
+                              await context.setLocale(
+                                  _newLocale); // change `easy_localization` locale
+                              Get.updateLocale(
+                                  _newLocale); // change `Get` locale direction
+                              setState(() {});
+                              Navigator.pop(context);
+                            }),
+                        BottomSheetAction(
+                            title: Text("English",
+                                style: TextStyle(color: Colors.white)),
+                            onPressed: (context) async {
+                              final _newLocale = Locale('en', 'US');
+                              await context.setLocale(
+                                  _newLocale); // change `easy_localization` locale
+                              Get.updateLocale(
+                                  _newLocale); // change `Get` locale direction
+                              setState(() {});
+                              Navigator.pop(context);
+                            }),
+                      ],
+                      cancelAction: CancelAction(
+                          title: Text("Cancel",
+                              style: TextStyle(
+                                  color: Colors.red
+                                      .shade400))), // onPressed parameter is optional by default will dismiss the ActionSheet
+                    );
+                    // if value 2 show dialog
+                  } else if (value == 2) {
+                    toggleTheme();
+                  }
+                },
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   void toggleTheme() {
@@ -270,5 +287,4 @@ class _HomePageBKState extends State<HomePageBK> {
     );
     themeModeController.saveThemeStatus();
   }
-
 }

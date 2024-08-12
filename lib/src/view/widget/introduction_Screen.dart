@@ -21,9 +21,12 @@ class IntroScreen extends StatelessWidget {
 
   void _onIntroEnd(BuildContext context) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('seen_intro', true); // save the seen_intro value as true
-    Get.off(HomePage(),transition: Transition.fade); // navigate to the main page
+    await prefs.setBool(
+        'seen_intro', true); // save the seen_intro value as true
+    Get.off(HomePage(),
+        transition: Transition.fade); // navigate to the main page
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,7 +42,7 @@ class IntroScreen extends StatelessWidget {
         onDone: () => _onIntroEnd(context),
         done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
         dotsDecorator: DotsDecorator(
-          activeColor: Theme.of(context).accentColor,
+          //activeColor: Theme.of(context).accentColor,
           size: const Size.square(10.0),
           activeSize: const Size(20.0, 10.0),
           activeShape: RoundedRectangleBorder(
@@ -49,7 +52,9 @@ class IntroScreen extends StatelessWidget {
         pages: [
           PageViewModel(
             //! The title/body can either be strings or widgets.
-            titleWidget: Text(tr("welcome-mainpage"),),
+            titleWidget: Text(
+              tr("welcome-mainpage"),
+            ),
             body: 'Welcome to the Flutter Catalog app!',
           ),
           PageViewModel(

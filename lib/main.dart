@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
-import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
@@ -15,34 +14,28 @@ import 'src/controller/color_controller.dart';
 import 'src/controller/theme_controller.dart';
 import 'src/view/widget/side_drawer.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-    .then((_) {
-      runApp(
-        EasyLocalization(
-          key: UniqueKey(),
-          supportedLocales: [Locale('en', 'US'), Locale('ms', 'MY')],
-          path: 'assets/locales',
-          fallbackLocale: Locale('ms', 'MY'),
-          startLocale: Locale('en', 'US'),
-          assetLoader: JsonAssetLoader(),
-          saveLocale: true,
-
-          child: IskApp(),
-        )
-      );
-    }
-  );
+      .then((_) {
+    runApp(EasyLocalization(
+      key: UniqueKey(),
+      supportedLocales: [Locale('en', 'US'), Locale('ms', 'MY')],
+      path: 'assets/locales',
+      fallbackLocale: Locale('ms', 'MY'),
+      startLocale: Locale('en', 'US'),
+      assetLoader: JsonAssetLoader(),
+      saveLocale: true,
+      child: IskApp(),
+    ));
+  });
 }
 
 class IskApp extends StatelessWidget {
   IskApp({
     Key? key,
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -55,14 +48,11 @@ class IskApp extends StatelessWidget {
       routes: {
         '/HomePage': (context) => HomePage(),
         '/SplashScreenAnimation': (context) => SplashScreenAnimation(),
-
       },
       theme: Themes.lightTheme,
       darkTheme: Themes.datkTheme,
       themeMode: ThemeController.theme,
       debugShowCheckedModeBanner: false,
-
     );
   }
 }
-

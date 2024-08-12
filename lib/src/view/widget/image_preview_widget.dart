@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../image_hero_animation.dart';
 
-class ImagePreview extends StatelessWidget {
+/*class ImagePreview extends StatelessWidget {
   ImagePreview({
     Key? key,
     required this.width,
@@ -33,4 +33,4 @@ class ImagePreview extends StatelessWidget {
       ),
     );
   }
-}
+}*/
