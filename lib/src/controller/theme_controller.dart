@@ -50,7 +50,7 @@ class Themes {
         color: Colors.transparent,
         elevation: 0,
         iconTheme: IconThemeData(
-          color: Color(0xFF0C0C0F),
+          color: Colors.white,
         ),
       ),
       brightness: Brightness.light,
@@ -68,7 +68,7 @@ class Themes {
         color: Colors.transparent,
         elevation: 0,
         iconTheme: IconThemeData(
-          color: Color(0xFFF5F0F0),
+          color: Colors.white,
         ),
       ),
       textTheme: getTextTheme());

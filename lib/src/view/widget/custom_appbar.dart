@@ -33,10 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomRight,
-            colors: [
-              Colors.indigo.shade600,
-              Colors.indigo.shade600,
-            ],
+            colors: [Color(0xFFFB5509), Color(0xFFFB5509)],
           ),
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(60),
@@ -46,11 +43,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       title: Row(
         children: [
-          Icon(icon, color: Colors.white,),
-          SizedBox(width: 10,),
+          Icon(
+            icon,
+            color: Colors.white,
+          ),
+          SizedBox(
+            width: 10,
+          ),
           Text(
             title,
-            style: const TextStyle(fontSize: 15),
+            style: const TextStyle(fontSize: 15, color: Colors.white),
           ),
         ],
       ),
@@ -59,7 +61,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(
         onPressed: () {
           //Get.to(HomePage(), transition: Transition.cupertino, duration: const Duration(milliseconds: 100));
-          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         icon: const Icon(
           FontAwesomeIcons.caretLeft,
@@ -74,7 +77,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: IconButton(
               icon: Icon(Icons.list_rounded),
               color: Colors.white,
-              onPressed: (){
+              onPressed: () {
                 Scaffold.of(context).openEndDrawer();
               },
             ),

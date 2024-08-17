@@ -1,5 +1,5 @@
 {
-  "welcome-mainpage": "Welcome to \nI S K  O U T R E A C H",
+  "welcome-mainpage": "WELCOME",
   "description": "This is an application that provides information about the Computer System and Network Technology course at Sungai Buloh Vocational College",
 
   "pengenalan": {
@@ -166,56 +166,58 @@
     "dvm": {
       "dvm_title": "List of subjects offered for the Malaysian Vocational Diploma",
       "sem_1": {
-        "sem_1_title": "Year 3 Semester 1",
-        "sem_1_1": "A01-1003 MALAY LANGUAGE",
-        "sem_1_2": "A02-1001 ENGLISH LANGUAGE",
-        "sem_1_3": "A03-1001 MATHEMATICS",
-        "sem_1_4": "A04-1001 SCIENCES",
-        "sem_1_5": "A05-1001 HISTORY",
-        "sem_1_6": "A06-1001 ISLAMIC EDUCATION",
-        "sem_1_7": "A07-1001 MORAL EDUCATION",
-        "sem_1_8": "KSK-1014 COMPUTER SYSTEM HARDWARE INSTALLATION",
-        "sem_1_9": "KSK-1024 SERVER HARDWARE INSTALLATION",
-        "sem_1_10": "KSK-1033 IP ADDRESS AND SUBNETTING"
+        "sem_1_title": "Year 1 Semester 1",
+        "sem_1_1": "MPU2312 ISLAMIC STUDIES",
+        "sem_1_2": "MPU2322 MORAL STUDIES",
+        "sem_1_3": "MPU2232 PROFESSIONALISM ETHICS",
+        "sem_1_4": "UMC1112 COMPUTING MATHEMATICS I",
+        "sem_1_5": "UPM1112 FUNDAMENTAL OF  MANAGEMENT",
+        "sem_1_6": "DKB1113 INTRODUCTION TO INFORMATION TECHNOLOGY",
+        "sem_1_7": "DKB1223 PROGRAMMING LANGUAGE",
+        "sem_1_8": "DKB1233 INTRODUCTION TO MULTIMEDIA ",
+        "sem_1_9": "DKB1243 DATABASE FUNDAMENTALS"
       },
       "sem_2": {
-        "sem_2_title": "Year 3 Semester 2",
-        "sem_2_1": "A01-2003 MALAY LANGUAGE",
-        "sem_2_2": "A02-2001 ENGLISH LANGUAGE",
-        "sem_2_3": "A03-2001 MATHEMATICS",
-        "sem_2_4": "A04-2001 SCIENCES",
-        "sem_2_5": "A05-2001 HISTORY",
-        "sem_2_6": "A06-2001 ISLAMIC EDUCATION",
-        "sem_2_7": "A07-2001 MORAL EDUCATION",
-        "sem_2_8": "KSK-2013 COMPUTER SYSTEM HARDWARE INSTALLATION",
-        "sem_2_9": "KSK-2023 SERVER HARDWARE INSTALLATION",
-        "sem_2_10": "KSK-2033 NETWORK CABLING PREPARATION"
+        "sem_2_title": "Year 1 Semester 2",
+        "sem_2_1": "MPU2172 APPRECIATION OF ETHICS AND CIVILIZATION",
+        "sem_2_2": "MPU2422 INTEGRITY AND ANTI-CORRUPTION",
+        "sem_2_3": "UMD2032 DISCRETE MATHEMATICS ",
+        "sem_2_4": "UMC2122 COMPUTING MATHEMATICS II",
+        "sem_2_5": "UEB2012 ENGLISH FOR BUSINESS",
+        "sem_2_6": "DKB2012 COMPUTER SYSTEM SETUP AND REPAIR",
+        "sem_2_7": "DKB2023 SYSTEM ANALYSIS AND DESIGN",
+        "sem_2_8": "DKB2332 INTERNETWORKING PROTOCOL",
+        "sem_2_9": "DKB2243 SERVER INSTALLATION AND CONFIGURATION"
       },
       "sem_3": {
-        "sem_3_title": "Year 4 Semester 3",
-        "sem_3_1": "A01-3003 MALAY LANGUAGE",
-        "sem_3_2": "A02-3001 ENGLISH LANGUAGE",
-        "sem_3_3": "AMT-3091 MATHEMATICS FOR TECHNOLOGY",
-        "sem_3_4": "AMT-3121 SCIENCES FOR TECHNOLOGY",
-        "sem_3_5": "A05-3001 HISTORY",
-        "sem_3_6": "A06-3001 ISLAMIC EDUCATION",
-        "sem_3_7": "A07-3001 MORAL EDUCATION",
-        "sem_3_8": "KSK-3014 NETWORK CABLING INSTALLATION",
-        "sem_3_9": "KSK-3024 COMPUTER NETWORK INSTALLATION",
-        "sem_3_10": "KSK-3033 SWITCHING AND ROUTING MANAGEMENT"
+        "sem_3_title": "Year 2 Semester 3",
+        "sem_3_1": "UES3012 ENTREPRENEURSHIP",
+        "sem_3_2": "UMS3112 STATISTIC",
+        "sem_3_3": "ELA3312 ARABIC LANGUAGE I ",
+        "sem_3_4": "ELM3312 MANDARIN  LANGUAGE I  ",
+        "sem_3_5": "DKB3313 SERVER MAINTENANCE ADMINISTRATION",
+        "sem_3_6": "DKB3223 COMPUTER NETWORK SECURITY DEPLOYMENT",
+        "sem_3_7": "DKB3033 COMPUTER NETWORK MAINTENANCE MANAGEMENT",
+        "sem_3_8": "DKB3043 PROJECT MANAGEMENT ",
+        "sem_3_9": "DKB3052 FINAL YEAR PROJECT 1"
       },
       "sem_4": {
-        "sem_4_title": "Year 4 Semester 4",
-        "sem_4_1": "A01-4003 MALAY LANGUAGE",
-        "sem_4_2": "A02-4001 ENGLISH",
-        "sem_4_3": "AMT-4091 MATHEMATICS FOR TECHNOLOGY",
-        "sem_4_4": "AMT-4121 SCIENCES FOR TECHNOLOGY",
-        "sem_4_5": "A05-4001 HISTORY",
-        "sem_4_6": "A06-4001 ISLAMIC EDUCATION",
-        "sem_4_7": "A07-4001 MORAL EDUCATION",
-        "sem_4_8": "KSK-4014 COMPUTER NETWORK CONNECTIVITY",
-        "sem_4_9": "KSK-4024 COMPUTER NETWORK MAINTENANCE",
-        "sem_4_10": "KSK-4033 MOBILE DEVICE SETUP"
+        "sem_4_title": "Year 2 Semester 4",
+        "sem_4_1": "ELA4322 ARABIC LANGUAGE II ",
+        "sem_4_2": "ELM4322 MANDARIN LANGUAGE II",
+        "sem_4_3": "ESD4012 DYNAMIC SKILLS",
+        "sem_4_4": "ESB4012 COMMUNICATION SKILLS",
+        "sem_4_5": "ECC4012 CO-CURRICULAR - UNIFORMED BODIES",
+        "sem_4_6": "ECC4022 CO-CURRICULAR - SPORTS AND GAMES ",
+        "sem_4_7": "DKB4213 HUMAN COMPUTER INTERACTION",
+        "sem_4_8": "DKB4023 CYBERSECURITY",
+        "sem_4_9": "DKB4232 WEB CONTENT MANAGEMENT",
+        "sem_4_10": "DKB4042 COMPUTER SYSTEM MAINTENANCE AND MANAGEMENT",
+        "sem_4_11": "DKB4054 FINAL YEAR PROJECT 2"
+      },
+      "sem_5": {
+        "sem_5_title": "Year 3 Semester 5",
+        "sem_5_1": "DJT50110 ON-THE-JOB TRAINING"
       }
     }
   },

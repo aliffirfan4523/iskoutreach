@@ -265,10 +265,7 @@ class CardWidget extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [
-                  Color.fromRGBO(70, 99, 204, 1),
-                  Color.fromRGBO(3, 23, 96, 1)
-                ]),
+                colors: [Color(0xFFFB5509), Color.fromRGBO(3, 23, 96, 1)]),
           ),
           child: Stack(children: <Widget>[
             Positioned(

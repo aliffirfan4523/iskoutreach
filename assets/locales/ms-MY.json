@@ -1,5 +1,5 @@
 {
-  "welcome-mainpage": "Selamat Datang ke \nI S K  O U T R E A C H",
+  "welcome-mainpage": "SELAMAT DATANG",
   "description": "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus Teknologi Sistem Komputer Dan Rangkaian di Kolej Vokasional Sungai Buloh",
   
   "pengenalan": {
@@ -164,58 +164,60 @@
       }
     },
     "dvm": {
-      "dvm_title": "Senarai subjek yang ditawarkan bagi Diploma Vokasional Malaysia",
+      "dvm_title": "Senarai mata pelajaran yang ditawarkan untuk Diploma Vokasional Malaysia",
       "sem_1": {
-        "sem_1_title": "Tahun 3 Semester 1",
-        "sem_1_1": "A01-1003   BAHASA MELAYU",
-        "sem_1_2": "A02-1001   BAHASA INGGERIS",
-        "sem_1_3": "A03-1001   MATHEMATICS",
-        "sem_1_4": "A04-1001   SCIENCES",
-        "sem_1_5": "A05-1001   SEJARAH",
-        "sem_1_6": "A06-1001   PENDIDIKAN ISLAM",
-        "sem_1_7": "A07-1001   PENDIDIKAN MORAL",
-        "sem_1_8": "KSK-1014   COMPUTER SYSTEM HARDWARE INSTALLATION",
-        "sem_1_9": "KSK-1024   SERVER HARDWARE INSTALLATION",
-        "sem_1_10": "KSK-1033   IP ADDRESS AND SUBNETTING"
+      "sem_1_title": "Tahun 1 Semester 1",
+      "sem_1_1": "MPU2312 PENGAJIAN ISLAM",
+      "sem_1_2": "MPU2322 PENGAJIAN MORAL",
+      "sem_1_3": "MPU2232 ETIKA PROFESIONALISME",
+      "sem_1_4": "UMC1112 MATEMATIK KOMPUTER I",
+      "sem_1_5": "UPM1112 ASAS PENGURUSAN",
+      "sem_1_6": "DKB1113 PENGENALAN KEPADA TEKNOLOGI MAKLUMAT",
+      "sem_1_7": "BAHASA PENGATURCARAAN DKB1223",
+      "sem_1_8": "DKB1233 PENGENALAN KEPADA MULTIMEDIA ",
+      "sem_1_9": "ASAS PANGKALAN DATA DKB1243"
       },
       "sem_2": {
-        "sem_2_title": "Tahun 3 Semester 2",
-        "sem_2_1": "A01-2003   BAHASA MELAYU",
-        "sem_2_2": "A02-2001   BAHASA INGGERIS",
-        "sem_2_3": "A03-2001   MATHEMATICS",
-        "sem_2_4": "A04-2001   SCIENCES",
-        "sem_2_5": "A05-2001   SEJARAH",
-        "sem_2_6": "A06-2001   PENDIDIKAN ISLAM",
-        "sem_2_7": "A07-2001   PENDIDIKAN MORAL",
-        "sem_2_8": "KSK-2013   COMPUTER SYSTEM HARDWARE INSTALLATION",
-        "sem_2_9": "KSK-2023   SERVER HARDWARE INSTALLATION",
-        "sem_2_10": "KSK-2033   NETWORK CABLING PREPARATION"
+      "sem_2_title": "Tahun 1 Semester 2",
+      "sem_2_1": "MPU2172 PENGHARGAAN ETIKA DAN TAMADUN",
+      "sem_2_2": "MPU2422 INTEGRITI DAN ANTI RASUAH",
+      "sem_2_3": "UMD2032 MATEMATIK DISKRIT ",
+      "sem_2_4": "UMC2122 MATEMATIK KOMPUTER II",
+      "sem_2_5": "UEB2012 ENGLISH FOR BUSINESS",
+      "sem_2_6": "PENYEDIAAN DAN PEMBAIKAN SISTEM KOMPUTER DKB2012",
+      "sem_2_7": "ANALISIS DAN REKA BENTUK SISTEM DKB2023",
+      "sem_2_8": "PROTOKOL KERJA ANTARABANGSA DKB2332",
+      "sem_2_9": "PEMASANGAN DAN KONFIGURASI PELAYAN DKB2243"
       },
       "sem_3": {
-        "sem_3_title": "Tahun 4 Semester 3",
-        "sem_3_1": "A01-3003   BAHASA MELAYU",
-        "sem_3_2": "A02-3001   BAHASA INGGERIS",
-        "sem_3_3": "AMT-3091   MATHEMATICS FOR TECHNOLOGY",
-        "sem_3_4": "AMT-3121   SCIENCES FOR TECHNOLOGY",
-        "sem_3_5": "A05-3001   SEJARAH",
-        "sem_3_6": "A06-3001   PENDIDIKAN ISLAM",
-        "sem_3_7": "A07-3001   PENDIDIKAN MORAL",
-        "sem_3_8": "KSK-3014   NETWORK CABLING INSTALLATION",
-        "sem_3_9": "KSK-3024   COMPUTER NETWORK INSTALLATION",
-        "sem_3_10": "KSK-3033   SWITCHING AND ROUTING MANAGEMENT"
+      "sem_3_title": "Tahun 2 Semester 3",
+      "sem_3_1": "UES3012 KEUSAHAWANAN",
+      "sem_3_2": "STATISTIK UMS3112",
+      "sem_3_3": "ELA3312 BAHASA ARAB I ",
+      "sem_3_4": "ELM3312 BAHASA MANDARIN I ",
+      "sem_3_5": "PENTADBIRAN PENYELENGGARAAN SERVER DKB3313",
+      "sem_3_6": "DKB3223 PENYELENGGARAAN KESELAMATAN RANGKAIAN KOMPUTER",
+      "sem_3_7": "DKB3033 PENGURUSAN PENYELENGGARAAN RANGKAIAN KOMPUTER",
+      "sem_3_8": "PENGURUSAN PROJEK DKB3043 ",
+      "sem_3_9": "DKB3052 PROJEK TAHUN AKHIR 1"
       },
       "sem_4": {
-        "sem_4_title": "Tahun 4 Semester 4",
-        "sem_4_1": "A01-4003   BAHASA MELAYU",
-        "sem_4_2": "A02-4001   BAHASA INGGERIS",
-        "sem_4_3": "AMT-4091   MATHEMATICS FOR TECHNOLOGY",
-        "sem_4_4": "AMT-4121   SCIENCES FOR TECHNOLOGY",
-        "sem_4_5": "A05-4001   SEJARAH",
-        "sem_4_6": "A06-4001   PENDIDIKAN ISLAM",
-        "sem_4_7": "A07-4001   PENDIDIKAN MORAL",
-        "sem_4_8": "KSK-4014   COMPUTER NETWORK CONNECTIVITY",
-        "sem_4_9": "KSK-4024   COMPUTER NETWORK MAINTENANCE",
-        "sem_4_10": "KSK-4033   MOBILE DEVICE SETUP"
+      "sem_4_title": "Tahun 2 Semester 4",
+      "sem_4_1": "ELA4322 BAHASA ARAB II ",
+      "sem_4_2": "ELM4322 BAHASA MANDARIN II",
+      "sem_4_3": "ESD4012 KEMAHIRAN DINAMIK",
+      "sem_4_4": "KEMAHIRAN KOMUNIKASI ESB4012",
+      "sem_4_5": "ECC4012 KOKURIKULUM - BADAN BERUNIFORM",
+      "sem_4_6": "ECC4022 KOKURIKULUM - SUKAN DAN PERMAINAN ",
+      "sem_4_7": "DKB4213 INTERAKSI KOMPUTER MANUSIA",
+      "sem_4_8": "DKB4023 CYBERSECURITY",
+      "sem_4_9": "DKB4232 PENGURUSAN KANDUNGAN WEB",
+      "sem_4_10": "PENYELENGGARAAN DAN PENGURUSAN SISTEM KOMPUTER DKB4042",
+      "sem_4_11": "PROJEK AKHIR TAHUN 2 DKB4054"
+      },
+      "sem_5": {
+      "sem_5_title": "Tahun 3 Semester 5",
+      "sem_5_1": "DJT50110 ON-THE-JOB TRAINING"
       }
     }
   },

@@ -14,8 +14,6 @@ class SenaraiPensyarah extends StatefulWidget {
 }
 
 class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
- 
-  
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
@@ -32,11 +30,13 @@ class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
           heroTag: 'senarai_pensyarah',
         ),
         bottomNavigationBar: BottomBar(
-          currentPage: 5, 
+          currentPage: 5,
         ),
         body: Column(
           children: [
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             UnorderedListItem(
               bottom: 20,
               left: 20,
@@ -44,15 +44,15 @@ class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
               text: tr("senarai_pensyarah.senarai_pensyarah_description"),
               top: 25,
             ),
-            SizedBox( height: 60 ),
+            SizedBox(height: 60),
             SizedBox(
               height: 300,
               child: Swiper(
                 itemBuilder: (context, index) {
                   //return cardlistpng[index];
-                  if(context.locale.languageCode == 'en'){
+                  if (context.locale.languageCode == 'en') {
                     return cardlisten[index];
-                  }else{
+                  } else {
                     return cardlistms[index];
                   }
                 },

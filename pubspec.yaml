@@ -168,6 +168,14 @@ flutter:
     - assets/images/homepage/11.jpeg
     - assets/images/homepage/12.jpg
     - assets/images/splashscreen.gif
+    - assets/images/Icon/administrator.png
+    - assets/images/Icon/handshake.png
+    - assets/images/Icon/ideabulb.png
+    - assets/images/Icon/list.png
+    - assets/images/Icon/questionmark.png
+    - assets/images/Icon/reward.png
+    - assets/images/Icon/schedule.png
+    - assets/images/Icon/teacher.png
 
     
 
