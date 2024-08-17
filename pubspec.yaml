@@ -167,7 +167,9 @@ flutter:
     - assets/images/homepage/10.jpeg
     - assets/images/homepage/11.jpeg
     - assets/images/homepage/12.jpg
+    - assets/images/homepage/13.jpg
     - assets/images/splashscreen.gif
+    
     - assets/images/Icon/administrator.png
     - assets/images/Icon/handshake.png
     - assets/images/Icon/ideabulb.png
