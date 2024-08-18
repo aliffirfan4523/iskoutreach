@@ -14,9 +14,6 @@ import '../Senarai Pensyarah/senarai_pensyarah.dart';
 import '../Syarat Permohonan/syarat_permohonan_view.dart';
 import '../Tempoh Pengajian/tempoh_pengajian.dart';
 
-
-
-
 class MenuButton extends StatefulWidget {
   const MenuButton({
     Key? key,
@@ -29,7 +26,6 @@ class MenuButton extends StatefulWidget {
 class _MenuButtonState extends State<MenuButton> {
   @override
   Widget build(BuildContext context) {
-    
     List<IconTextButton> buttonList = [
       IconTextButton(
           icon: FontAwesome5.desktop,
@@ -161,8 +157,9 @@ class IconTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(location, transition: Transition.fadeIn, duration: const Duration(milliseconds: 500));
-        
+        Get.to(location,
+            transition: Transition.fadeIn,
+            duration: const Duration(milliseconds: 500));
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -179,9 +176,9 @@ class IconTextButton extends StatelessWidget {
                   )),
               AutoSizeText(
                 text,
-                maxFontSize: 11,
-                minFontSize: 9,
-                style: const TextStyle(fontSize: 11, color: Colors.white),
+                maxFontSize: 14,
+                minFontSize: 10,
+                style: const TextStyle(color: Colors.white),
                 softWrap: true,
                 textAlign: TextAlign.center,
               ),

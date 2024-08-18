@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -61,7 +62,8 @@ class _HomePageState extends State<HomePage> {
     IconData thememodeIcon = _isLightTheme.value
         ? Icons.dark_mode_rounded
         : Icons.light_mode_rounded;
-    double height = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return SafeArea(
       child: ScaffoldMessenger(
@@ -72,165 +74,163 @@ class _HomePageState extends State<HomePage> {
                 interactive: true,
                 thickness: 10.0,
                 radius: const Radius.circular(5.0),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Stack(
-                        children: [
-                          const SizedBox(
-                            height: 500,
-                          ),
-                          Container(
-                            decoration: const BoxDecoration(
-                              color: Color(0xFFFB5509),
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20),
-                                bottomRight: Radius.circular(20),
-                              ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        const SizedBox(
+                          height: 500,
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFFB5509),
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
                             ),
-                            height: 200,
-                            width: MediaQuery.of(context).size.width,
                           ),
-                          Column(
-                            children: [
-                              AppBar(
-                                centerTitle: true,
-                                leading: IconButton(
+                          height: screenHeight * 0.23,
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                        Column(
+                          children: [
+                            AppBar(
+                              centerTitle: true,
+                              leading: IconButton(
+                                color: Colors.white,
+                                icon: const Icon(Icons.menu),
+                                onPressed: () {
+                                  _scaffoldKey.currentState?.openDrawer();
+                                },
+                              ),
+                              /*title: Text(
+                                "KSK Outreach",
+                                style: const TextStyle(
+                                  fontSize: 10,
                                   color: Colors.white,
-                                  icon: const Icon(Icons.menu),
+                                ),
+                              ),*/
+                              actions: [
+                                IconButton(
+                                  padding: const EdgeInsets.only(right: 20),
+                                  icon: Text(
+                                    context.locale.languageCode == 'en'
+                                        ? "MY"
+                                        : "EN",
+                                    style: TextStyle(
+                                      color: _isLightTheme.value
+                                          ? Colors.white
+                                          : Colors.white,
+                                    ),
+                                  ),
                                   onPressed: () {
-                                    _scaffoldKey.currentState?.openDrawer();
+                                    if (context.locale.languageCode == 'en') {
+                                      final newLocale =
+                                          const Locale('ms', 'MY');
+                                      Navigator.pop(context);
+                                      context.setLocale(
+                                          newLocale); // change `easy_localization` locale
+                                      Get.updateLocale(
+                                          newLocale); // change `Get` locale direction
+                                      //Get.to(() => LangChangeAnimation(newLocale: newLocale, firstlang: 'Malay', seclang: 'English',),transition: Transition.fadeIn);
+                                    } else if (context.locale.languageCode ==
+                                        'ms') {
+                                      final _newLocale =
+                                          const Locale('en', 'US');
+                                      Navigator.pop(context);
+                                      context.setLocale(
+                                          _newLocale); // change `easy_localization` locale
+                                      Get.updateLocale(
+                                          _newLocale); // change `Get` locale direction
+                                      //Get.to(() => LangChangeAnimation(newLocale: _newLocale, firstlang: 'English', seclang: 'Malay',),transition: Transition.fadeIn);
+                                    }
                                   },
                                 ),
-                                /*title: Text(
-                                  "KSK Outreach",
-                                  style: const TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.white,
-                                  ),
-                                ),*/
-                                actions: [
-                                  IconButton(
-                                    padding: const EdgeInsets.only(right: 20),
-                                    icon: Text(
-                                      context.locale.languageCode == 'en'
-                                          ? "MY"
-                                          : "EN",
-                                      style: TextStyle(
-                                        color: _isLightTheme.value
-                                            ? Colors.white
-                                            : Colors.white,
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      if (context.locale.languageCode == 'en') {
-                                        final newLocale =
-                                            const Locale('ms', 'MY');
-                                        Navigator.pop(context);
-                                        context.setLocale(
-                                            newLocale); // change `easy_localization` locale
-                                        Get.updateLocale(
-                                            newLocale); // change `Get` locale direction
-                                        //Get.to(() => LangChangeAnimation(newLocale: newLocale, firstlang: 'Malay', seclang: 'English',),transition: Transition.fadeIn);
-                                      } else if (context.locale.languageCode ==
-                                          'ms') {
-                                        final _newLocale =
-                                            const Locale('en', 'US');
-                                        Navigator.pop(context);
-                                        context.setLocale(
-                                            _newLocale); // change `easy_localization` locale
-                                        Get.updateLocale(
-                                            _newLocale); // change `Get` locale direction
-                                        //Get.to(() => LangChangeAnimation(newLocale: _newLocale, firstlang: 'English', seclang: 'Malay',),transition: Transition.fadeIn);
-                                      }
-                                    },
-                                  ),
-                                  /*
-                    Padding(
-                      padding: const EdgeInsets.only(right:5.0),
-                      child: SizedBox(
-                        height: 30,
-                        width: 60,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.only(
-                              bottomLeft: Radius.circular(200),
-                              bottomRight: Radius.circular(200),
-                              topLeft: Radius.circular(200),
-                              topRight: Radius.circular(200),
-                            ),
-                            color: Colors.grey.withOpacity(0.1), 
+                                /*
+                  Padding(
+                    padding: const EdgeInsets.only(right:5.0),
+                    child: SizedBox(
+                      height: 30,
+                      width: 60,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(200),
+                            bottomRight: Radius.circular(200),
+                            topLeft: Radius.circular(200),
+                            topRight: Radius.circular(200),
                           ),
-                          child: ThemeButton(
-                            height: 30,
-                            width: 60,
-                            onChanged: (value){
-                              toggleTheme(value);
-                            },
-                          ),
+                          color: Colors.grey.withOpacity(0.1), 
+                        ),
+                        child: ThemeButton(
+                          height: 30,
+                          width: 60,
+                          onChanged: (value){
+                            toggleTheme(value);
+                          },
                         ),
                       ),
-                    ),*/
-                                  IconButton(
-                                    color: Colors.white,
-                                    padding: const EdgeInsets.only(right: 20),
-                                    icon: _isLightTheme.value
-                                        ? const Icon(FontAwesome5.moon)
-                                        : const Icon(FontAwesome5.sun),
-                                    onPressed: () {
-                                      toggleTheme(!_isLightTheme.value);
-                                    },
-                                  )
-                                ],
+                    ),
+                  ),*/
+                                IconButton(
+                                  color: Colors.white,
+                                  padding: const EdgeInsets.only(right: 20),
+                                  icon: _isLightTheme.value
+                                      ? const Icon(FontAwesome5.moon)
+                                      : const Icon(FontAwesome5.sun),
+                                  onPressed: () {
+                                    toggleTheme(!_isLightTheme.value);
+                                  },
+                                )
+                              ],
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                top: 0.0,
+                                left: 50,
                               ),
-                              Container(
-                                padding: const EdgeInsets.only(
-                                  top: 0.0,
-                                  left: 50,
-                                ),
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  tr("welcome-mainpage"),
-                                  style: const TextStyle(
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 10.0, left: 30, right: 30),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(25),
-                                  child: SizedBox(
-                                    height: 175,
-                                    child: HomePageImage(),
-                                  ),
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                tr("welcome-mainpage"),
+                                style: const TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Text(
-                                  tr('description'),
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.montserrat(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10.0, left: 30, right: 30),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(25),
+                                child: SizedBox(
+                                  height: screenHeight * 0.22,
+                                  child: HomePageImage(),
                                 ),
                               ),
-                              const Divider(
-                                indent: 20,
-                                endIndent: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: AutoSizeText(
+                                tr('description'),
+                                maxFontSize: 20,
+                                minFontSize: 16,
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
-                              const SizedBox(
-                                  height: 400, child: HomepageGridview())
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                            ),
+                            const Divider(
+                              indent: 20,
+                              endIndent: 20,
+                            ),
+                            HomepageGridview()
+                          ],
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ))),
     );
