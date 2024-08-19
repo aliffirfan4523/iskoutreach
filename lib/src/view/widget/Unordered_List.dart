@@ -18,22 +18,26 @@ class UnorderedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text("•  "),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(fontSize: 14),
-              softWrap: true,
-              textAlign: TextAlign.justify,
+        padding:
+            EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "•  ",
             ),
-          ),
-        ],
-      )
-    );
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontSize: 14,
+                ),
+                softWrap: true,
+                textAlign: TextAlign.justify,
+              ),
+            ),
+          ],
+        ));
   }
 }
 
@@ -45,9 +49,7 @@ class NumberedListItem extends StatelessWidget {
       required this.right,
       required this.bottom,
       required this.text,
-      required this.number
-    }
-  );
+      required this.number});
 
   final String text;
   double top = 5;
@@ -59,22 +61,26 @@ class NumberedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text("   $number. "),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(fontSize: 14),
-              softWrap: true,
-              textAlign: TextAlign.justify,
+        padding:
+            EdgeInsets.only(left: left, right: right, bottom: bottom, top: top),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "   $number. ",
+              style: TextStyle(),
             ),
-          ),
-        ],
-      )
-    );
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontSize: 14,
+                ),
+                softWrap: true,
+                textAlign: TextAlign.justify,
+              ),
+            ),
+          ],
+        ));
   }
 }
-

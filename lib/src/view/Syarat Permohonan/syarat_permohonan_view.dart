@@ -8,7 +8,6 @@ import '../widget/custom_appbar.dart';
 import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
-
 class SyaratPermohonan extends StatelessWidget {
   SyaratPermohonan({super.key});
 
@@ -25,9 +24,6 @@ class SyaratPermohonan extends StatelessWidget {
           icon: FontAwesome5.question_circle,
           heroTag: 'syarat_permohonan',
         ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 6, 
-        ),
         body: SingleChildScrollView(
             child: Column(
           // ignore: prefer_const_literals_to_create_immutables
@@ -36,10 +32,16 @@ class SyaratPermohonan extends StatelessWidget {
               height: 40,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0,),
+              padding: EdgeInsets.only(
+                left: 20.0,
+                right: 20.0,
+              ),
               child: Text(
-                tr("syarat_permohonan.syaratSvm.syaratSvm_title_1") +" "+ tr("syarat_permohonan.syaratSvm.syaratSvm_title_2"),
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                tr("syarat_permohonan.syaratSvm.syaratSvm_title_1") +
+                    " " +
+                    tr("syarat_permohonan.syaratSvm.syaratSvm_title_2"),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 textAlign: TextAlign.justify,
               ),
             ),
@@ -64,10 +66,16 @@ class SyaratPermohonan extends StatelessWidget {
               height: 20,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0,),
+              padding: EdgeInsets.only(
+                left: 20.0,
+                right: 20.0,
+              ),
               child: Text(
-                tr("syarat_permohonan.syaratDvm.syaratDvm_title_1")+" "+tr("syarat_permohonan.syaratDvm.syaratDvm_title_2"),
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                tr("syarat_permohonan.syaratDvm.syaratDvm_title_1") +
+                    " " +
+                    tr("syarat_permohonan.syaratDvm.syaratDvm_title_2"),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 textAlign: TextAlign.justify,
               ),
             ),
@@ -92,63 +100,87 @@ class SyaratPermohonan extends StatelessWidget {
               height: 20,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0,),
-              child: Card(
-                child: ExpansionTile(
-                  title: Text(
-                    tr("syarat_permohonan.syaratTambahan.syaratTambahan_title"),
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              padding: EdgeInsets.only(
+                left: 20.0,
+                right: 20.0,
+              ),
+              child: Theme(
+                data: ThemeData().copyWith(
+                  dividerColor: Colors.transparent,
+                  textTheme: ThemeData.light().textTheme.apply(
+                        bodyColor: Colors.white,
+                        displayColor: Colors.white,
+                      ),
+                ),
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  child: ExpansionTile(
+                    backgroundColor: const Color(0xFFFB5509),
+                    collapsedBackgroundColor: Color(0xFFFB5509),
+                    title: Text(
+                      tr("syarat_permohonan.syaratTambahan.syaratTambahan_title"),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    children: [
+                      UnorderedListItem(
+                        bottom: 5,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_1"),
+                        top: 20,
+                      ),
+                      UnorderedListItem(
+                        bottom: 5,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_2"),
+                        top: 10,
+                      ),
+                      NumberedListItem(
+                        bottom: 5,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_3"),
+                        top: 5,
+                        number: 1,
+                      ),
+                      NumberedListItem(
+                        bottom: 10,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_4"),
+                        top: 5,
+                        number: 2,
+                      ),
+                      UnorderedListItem(
+                        bottom: 5,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_5"),
+                        top: 10,
+                      ),
+                      UnorderedListItem(
+                        bottom: 5,
+                        left: 20,
+                        right: 20,
+                        text: tr(
+                            "syarat_permohonan.syaratTambahan.syaratTambahan_6"),
+                        top: 10,
+                      ),
+                    ],
                   ),
-                  children: [
-                    UnorderedListItem(
-                      bottom: 5,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_1"),
-                      top: 20,
-                    ),
-                    UnorderedListItem(
-                      bottom: 5,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_2"),
-                      top: 10,
-                    ),
-                    NumberedListItem(
-                      bottom: 5,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_3"),
-                      top: 5,
-                      number: 1,
-                    ),
-                    NumberedListItem(
-                      bottom: 10,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_4"),
-                      top: 5,
-                      number: 2,
-                    ),
-                    UnorderedListItem(
-                      bottom: 5,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_5"),
-                      top: 10,
-                    ),
-                    UnorderedListItem(
-                      bottom: 5,
-                      left: 20,
-                      right: 20,
-                      text: tr("syarat_permohonan.syaratTambahan.syaratTambahan_6"),
-                      top: 10,
-                    ),
-                  ],
                 ),
               ),
             ),
-            
             const SizedBox(height: 30)
           ],
         )),

@@ -17,9 +17,8 @@ class Pengiktirafan extends StatefulWidget {
 }
 
 class _PengiktirafanState extends State<Pengiktirafan> {
-  
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,12 +26,9 @@ class _PengiktirafanState extends State<Pengiktirafan> {
         key: _scaffoldKey,
         endDrawer: sideDrawer(isEndDrawer: true),
         appBar: CustomAppBar(
-            title: tr("pengiktirafan.pengiktirafan_title"),
-            icon: FontAwesomeIcons.award,
-            heroTag: 'pengiktirafan',
-            ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 3, 
+          title: tr("pengiktirafan.pengiktirafan_title"),
+          icon: FontAwesomeIcons.award,
+          heroTag: 'pengiktirafan',
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -65,32 +61,73 @@ class _PengiktirafanState extends State<Pengiktirafan> {
                   ),
                 ),
               ),
-              ExpansionTile(
-                tilePadding: EdgeInsets.all(20),
-                title: Text(
-                  tr("pengiktirafan.mbot.what_is_mbot"),
-                  style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
+              Theme(
+                data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: const Color(0xFFFB5509),
+                  child: ExpansionTile(
+                    tilePadding: const EdgeInsets.all(20),
+                    title: Text(
+                      tr("pengiktirafan.mbot.what_is_mbot"),
+                      style: const TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
+                    children: [
+                      Container(
+                        decoration: const BoxDecoration(
+                          color: Color(0x50FB5509),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            DefaultTextStyle(
+                              style: const TextStyle(
+                                color: Colors
+                                    .white, // Set your desired text color here
+                                fontSize:
+                                    14, // Optionally, you can set font size or other text properties
+                              ),
+                              child: UnorderedListItem(
+                                bottom: 5,
+                                left: 20,
+                                right: 20,
+                                text:
+                                    tr("pengiktirafan.mbot.mbot_description_1"),
+                                top: 5,
+                              ),
+                            ),
+                            DefaultTextStyle(
+                              style: const TextStyle(
+                                color: Colors
+                                    .white, // Set your desired text color here
+                                fontSize:
+                                    14, // Optionally, you can set font size or other text properties
+                              ),
+                              child: UnorderedListItem(
+                                bottom: 20,
+                                left: 20,
+                                right: 20,
+                                text:
+                                    tr("pengiktirafan.mbot.mbot_description_2"),
+                                top: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                children: [
-                  UnorderedListItem(
-                    bottom: 5,
-                    left: 20,
-                    right: 20,
-                    text:
-                      tr("pengiktirafan.mbot.mbot_description_1"),
-                    top: 5,
-                  ),
-                  UnorderedListItem(
-                    bottom: 20,
-                    left: 20,
-                    right: 20,
-                    text:
-                      tr("pengiktirafan.mbot.mbot_description_2"),
-                    top: 10,
-                  ),
-                ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               )
             ],

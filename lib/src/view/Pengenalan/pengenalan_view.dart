@@ -9,7 +9,6 @@ import '../widget/custom_appbar.dart';
 import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
-
 final List<String> imgList = [
   "assets/images/amali/amali_1.jpg",
   "assets/images/amali/amali_2.jpg",
@@ -39,10 +38,7 @@ class Pengenalan extends StatelessWidget {
         appBar: CustomAppBar(
           title: tr("pengenalan.title"),
           icon: FontAwesome5.desktop,
-          heroTag: 'pengenalan', 
-        ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 0, 
+          heroTag: 'pengenalan',
         ),
         body: SingleChildScrollView(
             child: Column(
@@ -65,8 +61,7 @@ class Pengenalan extends StatelessWidget {
               bottom: 20,
               left: 20,
               right: 20,
-              text:
-                tr("pengenalan.title_description"),
+              text: tr("pengenalan.title_description"),
               top: 20,
             ),
             Align(
@@ -83,16 +78,14 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                tr("pengenalan.vision_mission_details.vision"),
+              text: tr("pengenalan.vision_mission_details.vision"),
               top: 20,
             ),
             UnorderedListItem(
               bottom: 30,
               left: 20,
               right: 20,
-              text:
-                tr("pengenalan.vision_mission_details.mission"),
+              text: tr("pengenalan.vision_mission_details.mission"),
               top: 5,
             ),
             //penerangan bidang pengajian
@@ -110,8 +103,8 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text:
-                tr("pengenalan.level_of_study_details.level_of_study_description"),
+              text: tr(
+                  "pengenalan.level_of_study_details.level_of_study_description"),
               top: 20,
             ),
             NumberedListItem(
@@ -146,7 +139,8 @@ class Pengenalan extends StatelessWidget {
               bottom: 5,
               left: 20,
               right: 20,
-              text: tr("pengenalan.career_opportunities_details.career_opportunities_description"),
+              text: tr(
+                  "pengenalan.career_opportunities_details.career_opportunities_description"),
               top: 20,
             ),
             NumberedListItem(

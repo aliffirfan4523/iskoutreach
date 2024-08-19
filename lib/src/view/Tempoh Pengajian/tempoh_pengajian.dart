@@ -29,15 +29,12 @@ class TempohPengajian extends StatelessWidget {
           icon: Icons.calendar_view_month_rounded,
           heroTag: 'tempoh_pengajian',
         ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 1, 
-        ),
         body: SingleChildScrollView(
             child: Column(
           children: <Widget>[
             const SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.only(left:20.0, right: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
               child: Text(
                 tr("tempoh_pengajian.svm.svm_period"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -71,9 +68,7 @@ class TempohPengajian extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
                 child: Container(
-                  constraints: BoxConstraints(
-                    maxWidth: 300
-                  ),
+                  constraints: BoxConstraints(maxWidth: 300),
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: Image.asset(
                     tr("tempoh_pengajian.svm.svm_image_link"),
@@ -84,7 +79,7 @@ class TempohPengajian extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left:20.0, right: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
               child: Text(
                 tr("tempoh_pengajian.dvm.dvm_period"),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -111,9 +106,7 @@ class TempohPengajian extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0),
                 child: Container(
-                  constraints: BoxConstraints(
-                    maxWidth: 300
-                  ),
+                  constraints: BoxConstraints(maxWidth: 300),
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: Image.asset(
                     tr("tempoh_pengajian.dvm.dvm_image_link"),

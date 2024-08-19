@@ -29,9 +29,6 @@ class _SenaraiPensyarahState extends State<SenaraiPensyarah> {
           icon: Icons.person_rounded,
           heroTag: 'senarai_pensyarah',
         ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 5,
-        ),
         body: Column(
           children: [
             SizedBox(

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -50,9 +51,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           SizedBox(
             width: 10,
           ),
-          Text(
+          AutoSizeText(
             title,
-            style: const TextStyle(fontSize: 15, color: Colors.white),
+            minFontSize: 13,
+            maxFontSize: 14,
+            style: const TextStyle(color: Colors.white),
           ),
         ],
       ),

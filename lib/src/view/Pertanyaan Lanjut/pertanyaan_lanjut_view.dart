@@ -10,25 +10,21 @@ import '../widget/custom_appbar.dart';
 import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
-
 class PertanyaanLanjut extends StatelessWidget {
   PertanyaanLanjut({super.key});
 
-    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-			child: Scaffold(
+      child: Scaffold(
         key: _scaffoldKey,
         endDrawer: sideDrawer(isEndDrawer: true),
-      	appBar: CustomAppBar(
+        appBar: CustomAppBar(
           title: tr("pertanyaan_lanjut.pertanyaan_lanjut_title"),
           icon: FontAwesome5.phone,
-      		heroTag: 'pertanyaan_lanjut',
-        ),
-        bottomNavigationBar: BottomBar(
-          currentPage: 8, 
+          heroTag: 'pertanyaan_lanjut',
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -36,14 +32,15 @@ class PertanyaanLanjut extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: const EdgeInsets.only(left:20.0,right:20.0, top: 40, bottom: 30),
+                  padding: const EdgeInsets.only(
+                      left: 20.0, right: 20.0, top: 40, bottom: 30),
                   child: Text(
                     tr("pertanyaan_lanjut.pertanyaan_lanjut_1"),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left:30, right: 30),
+                padding: const EdgeInsets.only(left: 30, right: 30),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -57,14 +54,14 @@ class PertanyaanLanjut extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                        icon: const Icon(FontAwesome5.phone),
-                        onPressed: () {
-                          if (kDebugMode) {
-                            print('test');
-                          }
-                          makePhoneCall(60361565433);
-                        },
-                        iconSize: 15,
+                      icon: const Icon(FontAwesome5.phone),
+                      onPressed: () {
+                        if (kDebugMode) {
+                          print('test');
+                        }
+                        makePhoneCall(60361565433);
+                      },
+                      iconSize: 15,
                     ),
                   ],
                 ),
@@ -73,7 +70,7 @@ class PertanyaanLanjut extends StatelessWidget {
                 height: 10,
               ),
               Padding(
-                padding: const EdgeInsets.only(left:30, right: 30),
+                padding: const EdgeInsets.only(left: 30, right: 30),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -87,14 +84,14 @@ class PertanyaanLanjut extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                        icon: const Icon(Icons.mail_rounded),
-                        onPressed: () {
-                          if (kDebugMode) {
-                            print('test');
-                          }
-                          makeEmail('rohanikarim@kvsbkpm.edu.my');
-                        },
-                        iconSize: 15,
+                      icon: const Icon(Icons.mail_rounded),
+                      onPressed: () {
+                        if (kDebugMode) {
+                          print('test');
+                        }
+                        makeEmail('rohanikarim@kvsbkpm.edu.my');
+                      },
+                      iconSize: 15,
                     ),
                   ],
                 ),
@@ -103,7 +100,7 @@ class PertanyaanLanjut extends StatelessWidget {
                 height: 10,
               ),
               Padding(
-                padding: const EdgeInsets.only(left:30, right: 30),
+                padding: const EdgeInsets.only(left: 30, right: 30),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -117,11 +114,11 @@ class PertanyaanLanjut extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                        icon: const Icon(Icons.mail_rounded),
-                        onPressed: () {
-                          makeEmail('norsidah@kvsbkpm.edu.my');
-                        },
-                        iconSize: 15,
+                      icon: const Icon(Icons.mail_rounded),
+                      onPressed: () {
+                        makeEmail('norsidah@kvsbkpm.edu.my');
+                      },
+                      iconSize: 15,
                     ),
                   ],
                 ),
@@ -129,7 +126,7 @@ class PertanyaanLanjut extends StatelessWidget {
             ],
           ),
         ),
-	  	),
+      ),
     );
   }
 }

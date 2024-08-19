@@ -63,12 +63,12 @@ Padding sideDrawer({bool isEndDrawer = false}) {
         text: tr("aktiviti_pelajar.aktiviti_pelajar_mb_title"),
         location: AktivitiPelajarView(),
         heroTag: 'Aktiviti_Pelajar'),
-    IconTextButton(
+    /*IconTextButton(
         icon: FontAwesome5.phone,
         text: tr("pertanyaan_lanjut.pertanyaan_lanjut_mb_title"),
         location: PertanyaanLanjut(),
         heroTag: 'pertanyaan_lanjut'),
-    /*IconTextButton(
+    IconTextButton(
       icon: Icons.settings_rounded,
       text: tr("tetapan.tetapan_mb_title"),
       location: Setting(),
@@ -116,7 +116,7 @@ Padding sideDrawer({bool isEndDrawer = false}) {
                   ),
                 ),
               );
-            } else if (index < 10) {
+            } else if (index < 9) {
               // Drawer button
               final button = buttonList[index - 1];
               return Column(

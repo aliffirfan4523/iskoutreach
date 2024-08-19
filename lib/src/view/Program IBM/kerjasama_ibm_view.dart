@@ -10,7 +10,6 @@ import '../widget/custom_appbar.dart';
 import '../widget/custom_bottom_bar.dart';
 import '../widget/side_drawer.dart';
 
-
 class KerjasamaIBM extends StatelessWidget {
   KerjasamaIBM({super.key});
 
@@ -24,12 +23,9 @@ class KerjasamaIBM extends StatelessWidget {
           key: _scaffoldKey,
           endDrawer: sideDrawer(isEndDrawer: true),
           appBar: CustomAppBar(
-              title: tr("program_ibm.program_ibm_title"),
-              icon: FontAwesome5.handshake,
-              heroTag: 'kerjasama_ibm',
-          ),
-          bottomNavigationBar: BottomBar(
-            currentPage: 4, 
+            title: tr("program_ibm.program_ibm_title"),
+            icon: FontAwesome5.handshake,
+            heroTag: 'kerjasama_ibm',
           ),
           body: SingleChildScrollView(
               child: Column(
@@ -41,7 +37,8 @@ class KerjasamaIBM extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+                  padding:
+                      EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
                   child: Text(
                     tr("program_ibm.program_ibm_main_title"),
                     style: TextStyle(fontWeight: FontWeight.bold),
